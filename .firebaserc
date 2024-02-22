@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "financetracker-7b65b"
-  }
+    "default": "anjesh-bhattarai",
+    ".": "anjesh-bhattarai"
+  },
+  "targets": {},
+  "etags": {}
 }
