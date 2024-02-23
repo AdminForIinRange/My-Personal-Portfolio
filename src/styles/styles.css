@@ -1,0 +1,14 @@
+.infinite-up-down-hover {
+    position: relative;
+    display: inline-block;
+    animation: upDownHover 1.25s infinite alternate;
+  }
+
+  @keyframes upDownHover {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-70px);
+    }
+  }

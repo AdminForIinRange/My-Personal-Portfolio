@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import {
   Step,
   StepDescription,
@@ -45,6 +46,11 @@ import {
   Grid,
   GridItem,
   Image,
+  Accordion,
+  AccordionItem,
+  AccordionButton,
+  AccordionPanel,
+  AccordionIcon,
   InputLeftAddon,
   InputRightAddon,
   useSteps,
@@ -55,17 +61,24 @@ import {
   Container,
   Spacer,
 } from "@chakra-ui/react";
-import HeaderTitle from "../../components/HeaderTitle";
-
-import HoveringArrow from "../../components/HoveringArrow";
-import About from "../../components/About.jsx";
-export default function Home() {
+import { ArrowDownIcon } from "@chakra-ui/icons";
+export default function HoveringArrow() {
   return (
-    <>
-    <HeaderTitle />
-    <HoveringArrow />
-    <About />
-
-    </>
-  );
+    <VStack justify="center" align="center" fontFamily={"font"}>
+    <HStack justify="center" align="center">
+      <VStack justify="left" align="left" mt="200px">
+        <Text
+          fontSize={"100px"}
+          color={"white"}
+          filter=" drop-shadow(0px 0px 10px wheat)"
+          className="infinite-up-down-hover"
+        >
+          <VStack>
+            <ArrowDownIcon />
+          </VStack>
+        </Text>
+      </VStack>
+    </HStack>
+  </VStack>
+  )
 }

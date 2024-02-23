@@ -11,11 +11,13 @@ import Home from "./pages/Home/Home.jsx";
 
 
 
+
 // router and routes
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
-      <Route path="/" element={<Home />} />
+      <Route index element={<Home />} />
+     
      
     </Route>
   )

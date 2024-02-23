@@ -27,11 +27,13 @@ const theme = extendTheme({
   styles: {
     global: {
       html: {
+     
         height: "100%",
         width: "100%",
         overflowX: "hidden",
       },
       body: {
+        background:"#1D1D21",
         height: "100%",
         width: "100%",
 
