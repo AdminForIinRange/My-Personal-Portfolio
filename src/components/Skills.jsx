@@ -153,7 +153,7 @@ export default function Skills() {
       </VStack>
 
       <Accordion
-      color={"white"}
+        color={"	#fff4c4"}
         mt={"100px"}
         defaultIndex={[]}
         allowMultiple
@@ -180,7 +180,7 @@ export default function Skills() {
         </Text>
         <AccordionItem border={" 0px"}>
           <AccordionButton
-           color={"	#b0b848"}
+            color={"	#fff4c4"}
             fontFamily={"Corben"}
             fontSize={"30px"}
             p={"1% 0% 1% 0%"}
@@ -189,19 +189,40 @@ export default function Skills() {
             <AccordionIcon />
           </AccordionButton>
 
-          <AccordionPanel border={" 0px"} p={"2% 0% 2% 0%"}>
+          <AccordionPanel border={" 0px"} p={"3%"}>
             <HStack align={"end"} gap={"120px"} flexWrap={"wrap"}>
-              <VStack w={"8%"}>
+              <VStack
+                transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
+                _hover={{
+                  transform: "scale(1.03)",
+                  filter: "drop-shadow(0px 0px 10px #ECC94B)",
+                }}
+                w={"8%"}
+              >
                 <Image src={JsLogo} borderRadius={"10px"} />
                 <Text>JavaScript</Text>
               </VStack>
 
-              <VStack w={"8%"}>
+              <VStack
+                transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
+                _hover={{
+                  transform: "scale(1.03)",
+                  filter: "drop-shadow(0px 0px 10px #0BC5EA)",
+                }}
+                w={"8%"}
+              >
                 <Image src={ReactLogo} />
                 <Text>React</Text>
               </VStack>
 
-              <VStack w={"10%"}>
+              <VStack
+                transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
+                _hover={{
+                  transform: "scale(1.03)",
+                  filter: "drop-shadow(0px 0px 10px #A0AEC0)",
+                }}
+                w={"10%"}
+              >
                 <Image
                   src={NextJSlogo}
                   style={{ filter: "brightness(0) invert(1)" }}
@@ -209,7 +230,14 @@ export default function Skills() {
                 <Text>Next.js</Text>
               </VStack>
 
-              <VStack w={"8%"}>
+              <VStack
+                transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
+                _hover={{
+                  transform: "scale(1.03)",
+                  filter: "drop-shadow(0px 0px 10px #9F7AEA)",
+                }}
+                w={"8%"}
+              >
                 <Image src={ReduxLogo} />
                 <Text>Redux</Text>
               </VStack>
@@ -222,67 +250,143 @@ export default function Skills() {
             fontFamily={"Corben"}
             fontSize={"30px"}
             p={"1% 0% 1% 0%"}
-            color={"	#b0b848"}
+            color={"	#fff4c4"}
           >
             Frontend Development Tools/Libraries
             <AccordionIcon />
           </AccordionButton>
 
-          <AccordionPanel border={" 0px"} p={"1% 0% 1% 0%"}>
+          <AccordionPanel border={" 0px"} p={"3%"}>
             <HStack align={"end"} gap={"120px"} flexWrap={"wrap"}>
-              <VStack w={"8%"}>
+              <VStack
+                transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
+                _hover={{
+                  transform: "scale(1.03)",
+                  filter: "drop-shadow(0px 0px 10px #ED8936)",
+                }}
+                w={"8%"}
+              >
                 <Image src={HTMLlogo} />
                 <Text>HTML</Text>
               </VStack>
 
-              <VStack w={"5.8%"}>
+              <VStack
+                transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
+                _hover={{
+                  transform: "scale(1.03)",
+                  filter: "drop-shadow(0px 0px 10px #4299E1)",
+                }}
+                w={"5.8%"}
+              >
                 <Image src={CSSlogo} />
                 <Text>CSS</Text>
               </VStack>
 
-              <VStack w={"10%"}>
+              <VStack
+                transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
+                _hover={{
+                  transform: "scale(1.03)",
+                  filter: "drop-shadow(0px 0px 10px #0BC5EA)",
+                }}
+                w={"10%"}
+              >
                 <Image src={tailwind} />
                 <Text>Tailwind CSS</Text>
               </VStack>
 
-              <VStack w={"8%"}>
+              <VStack
+                transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
+                _hover={{
+                  transform: "scale(1.03)",
+                  filter: "drop-shadow(0px 0px 10px #0BC5EA)",
+                }}
+                w={"8%"}
+              >
                 <Image src={chakraUIlogo} borderRadius={"100px"} />
                 <Text>Chakra UI</Text>
               </VStack>
 
-              <VStack w={"8%"}>
+              <VStack
+                transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
+                _hover={{
+                  transform: "scale(1.03)",
+                  filter: "drop-shadow(0px 0px 10px #4299E1)",
+                }}
+                w={"8%"}
+              >
                 <Image src={MaterialUI} />
                 <Text>Material UI</Text>
               </VStack>
 
-              <VStack w={"8%"}>
+              <VStack
+                transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
+                _hover={{
+                  transform: "scale(1.03)",
+                  filter: "drop-shadow(0px 0px 10px #9F7AEA)",
+                }}
+                w={"8%"}
+              >
                 <Image src={BootStrap} />
                 <Text>Bootstrap</Text>
               </VStack>
 
-              <VStack>
+              <VStack
+                transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
+                _hover={{
+                  transform: "scale(1.03)",
+                  filter: "drop-shadow(0px 0px 10px #0BC5EA)",
+                }}
+              >
                 <Text fontWeight={"bold"} fontSize={"40px"} color={"#22b5bf"}>
                   {"<ReCharts />"}
                 </Text>
                 <Text>ReCharts</Text>
               </VStack>
 
-              <VStack w={"8%"}>
+              <VStack
+                transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
+                _hover={{
+                  transform: "scale(1.03)",
+                  filter: "drop-shadow(0px 0px 10px #A0AEC0)",
+                }}
+                w={"8%"}
+              >
                 <Image src={ThreeJs} />
                 <Text>Three.js</Text>
               </VStack>
 
-              <VStack w={"8%"}>
+              <VStack
+                transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
+                _hover={{
+                  transform: "scale(1.03)",
+                  filter: "drop-shadow(0px 0px 10px #ED64A6)",
+                }}
+                w={"8%"}
+              >
                 <Image src={Sass} />
                 <Text>Sass</Text>
               </VStack>
 
-              <VStack w={"8%"}>
+              <VStack
+                transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
+                _hover={{
+                  transform: "scale(1.03)",
+                  filter: "drop-shadow(0px 0px 10px #ED64A6)",
+                }}
+                w={"8%"}
+              >
                 <Image src={Jest} />
                 <Text>Jest</Text>
               </VStack>
 
-              <VStack w={"8%"}>
+              <VStack
+                transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
+                _hover={{
+                  transform: "scale(1.03)",
+                  filter: "drop-shadow(0px 0px 10px #A0AEC0)",
+                }}
+                w={"8%"}
+              >
                 <Image src={Animatecss} borderRadius={"30px"} />
                 <Text>Animate.css</Text>
               </VStack>
@@ -292,11 +396,10 @@ export default function Skills() {
       </Accordion>
 
       <Accordion
-        color={"white"}
+        color={"	#fff4c4"}
         mt={"100px"}
         defaultIndex={[]}
         allowMultiple
-       
         w={{
           base: "90%",
           xsm: "90%",
@@ -324,20 +427,34 @@ export default function Skills() {
             fontFamily={"Corben"}
             fontSize={"30px"}
             p={"1% 0% 1% 0%"}
-            color={"	#b0b848"}
+            color={"	#fff4c4"}
           >
             Backend Technologies/Tools
             <AccordionIcon />
           </AccordionButton>
 
-          <AccordionPanel border={" 0px"} p={"1% 0% 1% 0%"}>
+          <AccordionPanel border={" 0px"} p={"3%"}>
             <HStack align={"end"} gap={"120px"} flexWrap={"wrap"}>
-              <VStack w={"8%"}>
+              <VStack
+                transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
+                _hover={{
+                  transform: "scale(1.03)",
+                  filter: "drop-shadow(0px 0px 10px #48BB78)",
+                }}
+                w={"8%"}
+              >
                 <Image src={Nodejs} />
                 <Text>Firebase</Text>
               </VStack>
 
-              <VStack w={"8%"}>
+              <VStack
+                transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
+                _hover={{
+                  transform: "scale(1.03)",
+                  filter: "drop-shadow(0px 0px 10px #A0AEC0)",
+                }}
+                w={"8%"}
+              >
                 <Text
                   fontWeight={"100"}
                   fontFamily={"Raleway"}
@@ -349,42 +466,98 @@ export default function Skills() {
                 <Text>Express</Text>
               </VStack>
 
-              <VStack w={"6%"}>
+              <VStack
+                transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
+                _hover={{
+                  transform: "scale(1.03)",
+                  filter: "drop-shadow(0px 0px 10px #ECC94B)",
+                }}
+                w={"6%"}
+              >
                 <Image src={Firebase} />
                 <Text>Firebase</Text>
               </VStack>
 
-              <VStack w={"8%"}>
+              <VStack
+                transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
+                _hover={{
+                  transform: "scale(1.03)",
+                  filter: "drop-shadow(0px 0px 10px #48BB78)",
+                }}
+                w={"8%"}
+              >
                 <Image src={mongoDB} />
                 <Text>MongoDB</Text>
               </VStack>
 
-              <VStack w={"8%"}>
+              <VStack
+                transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
+                _hover={{
+                  transform: "scale(1.03)",
+                  filter: "drop-shadow(0px 0px 10px #ED64A6)",
+                }}
+                w={"8%"}
+              >
                 <Image src={GrpahQL} />
                 <Text>GraphQL</Text>
               </VStack>
 
-              <VStack w={"8%"}>
+              <VStack
+                transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
+                _hover={{
+                  transform: "scale(1.03)",
+                  filter: "drop-shadow(0px 0px 10px #A0AEC0)",
+                }}
+                w={"8%"}
+              >
                 <Image src={SocketIO} />
                 <Text>Socket.IO</Text>
               </VStack>
 
-              <VStack w={"8%"}>
+              <VStack
+                transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
+                _hover={{
+                  transform: "scale(1.03)",
+                  filter: "drop-shadow(0px 0px 10px #ED8936)",
+                }}
+                w={"8%"}
+              >
                 <Image src={GIT} />
                 <Text>GIT</Text>
               </VStack>
 
-              <VStack w={"8%"}>
+              <VStack
+                transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
+                _hover={{
+                  transform: "scale(1.03)",
+                  filter: "drop-shadow(0px 0px 10px #A0AEC0)",
+                }}
+                w={"8%"}
+              >
                 <Image src={GTPApi} />
                 <Text>GTP API</Text>
               </VStack>
 
-              <VStack w={"6%"}>
+              <VStack
+                transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
+                _hover={{
+                  transform: "scale(1.03)",
+                  filter: "drop-shadow(0px 0px 10px #48BB78)",
+                }}
+                w={"6%"}
+              >
                 <Image src={PuppeteerJS} />
                 <Text>PuppeteerJS</Text>
               </VStack>
 
-              <VStack w={"8%"}>
+              <VStack
+                transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
+                _hover={{
+                  transform: "scale(1.03)",
+                  filter: "drop-shadow(0px 0px 10px #4299E1)",
+                }}
+                w={"8%"}
+              >
                 <Image src={Docker} />
                 <Text>Docker</Text>
               </VStack>
@@ -394,11 +567,10 @@ export default function Skills() {
       </Accordion>
 
       <Accordion
-        color={"white"}
+        color={"	#fff4c4"}
         mt={"100px"}
         defaultIndex={[]}
         allowMultiple
-       
         w={{
           base: "90%",
           xsm: "90%",
@@ -426,30 +598,58 @@ export default function Skills() {
             fontFamily={"Corben"}
             fontSize={"30px"}
             p={"1% 0% 1% 0%"}
-            color={"	#b0b848"}
+            color={"	#fff4c4"}
           >
             Extra workplace/development tools
             <AccordionIcon />
           </AccordionButton>
 
-          <AccordionPanel border={" 0px"} p={"1% 0% 1% 0%"}>
+          <AccordionPanel border={" 0px"} p={"3%"}>
             <HStack align={"end"} gap={"120px"} flexWrap={"wrap"}>
-              <VStack w={"8%"}>
+              <VStack
+                transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
+                _hover={{
+                  transform: "scale(1.03)",
+                  filter: "drop-shadow(0px 0px 10px #9F7AEA)",
+                }}
+                w={"8%"}
+              >
                 <Image src={Vite} />
                 <Text>Vite</Text>
               </VStack>
 
-              <VStack w={"6.5%"}>
+              <VStack
+                transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
+                _hover={{
+                  transform: "scale(1.03)",
+                  filter: "drop-shadow(0px 0px 10px #4299E1)",
+                }}
+                w={"6.5%"}
+              >
                 <Image src={VSC} />
                 <Text>VSC</Text>
               </VStack>
 
-              <VStack w={"4.5%"}>
+              <VStack
+                transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
+                _hover={{
+                  transform: "scale(1.03)",
+                  filter: "drop-shadow(0px 0px 10px #A0AEC0)",
+                }}
+                w={"4.5%"}
+              >
                 <Image src={Figma} />
                 <Text>Figma</Text>
               </VStack>
 
-              <VStack w={"8%"}>
+              <VStack
+                transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
+                _hover={{
+                  transform: "scale(1.03)",
+                  filter: "drop-shadow(0px 0px 10px #A0AEC0)",
+                }}
+                w={"8%"}
+              >
                 <Image
                   src={Github}
                   style={{ filter: "brightness(0) invert(1)" }}

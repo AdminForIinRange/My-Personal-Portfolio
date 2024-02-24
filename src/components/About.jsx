@@ -113,6 +113,18 @@ export default function About() {
       </VStack>
 
       <HStack
+   flexWrap={{
+    base: "wrap",
+    xsm: "wrap",
+    ssm: "nowrap",
+    sm: "nowrap",
+    md: "nowrap",
+    lg: "nowrap",
+    xl: "nowrap",
+    xxl: "nowrap",
+    xxxl: "nowrap",
+   }}
+      fontFamily={"Raleway"}
         justify={"center"}
         align={"start"}
         mt={"100px"}
@@ -139,22 +151,24 @@ export default function About() {
           xxxl: "70%",
         }}
         fontSize={{
-          base: "10px",
-          xsm: "10px",
-          ssm: "10px",
-          sm: "10px",
-          md: "12px",
+          base: "13px",
+          xsm: "13px",
+          ssm: "13px",
+          sm: "13px",
+          md: "13px",
           lg: "14px",
           xl: "17px",
-          xxl: "17px",
-          xxxl: "17px",
+          xxl: "20px",
+          xxxl: "20px",
         }}
       >
+
+        
         <VStack align={"center"} w={"100%"}>
           <Box bgColor={"wheat"} w={"100%"} h={"300px"} borderRadius={"15px"} />
 
-          <Text   color={"	#f0d86e"} mt={"30px"}>
-            Now, as a self-taught full-stack web developer with a special focus
+          <Text  color={"	#f0d86e"} mt={"30px"} >
+            As a self-taught full-stack web developer with a special focus
             on frontend development, I bring together my diverse experiences and
             skills to craft captivating user interfaces and seamless web
             experiences.
@@ -162,11 +176,10 @@ export default function About() {
         </VStack>
 
         <VStack align={"center"} w={"100%"}>
-          <Text   color={"	#f0d86e"} mb={"30px"}>
-            Growing up in Adalaide, my dad bought a Windows XP computer me at
-            5yrs of age, I immersed myself in its interface and games, sparking
-            my interest in technology. At 14, I started coding with Unity,
-            discovering my passion for game development.
+          <Text  color={"	#f0d86e"} mb={"30px"}>
+        My dad bought a Windows XP computer me at
+            5 yrs of age, I immersed myself in its UI/UX. At 14, I started coding with Unity,
+            and later discovering my passion for Web development.
             <br />
             <br />
             Despite graduating high school with two scholarships, I found myself

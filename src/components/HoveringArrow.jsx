@@ -64,9 +64,13 @@ import {
 import { ArrowDownIcon } from "@chakra-ui/icons";
 export default function HoveringArrow() {
   return (
-    <VStack justify="center" align="center" fontFamily={"font"}>
+    <VStack justify="center" align="center" fontFamily={"font"} >
     <HStack justify="center" align="center">
-      <VStack justify="left" align="left" mt="200px">
+      <VStack justify="left" align="left" mt="200px"   transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
+                _hover={{
+                  transform: "scale(1.03)",
+                  filter: "drop-shadow(0px 0px 10px #A0AEC0)",
+                }}>
         <Text
           fontSize={"100px"}
           color={"white"}
