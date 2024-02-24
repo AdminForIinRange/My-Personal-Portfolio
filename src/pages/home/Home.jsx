@@ -59,12 +59,14 @@ import HeaderTitle from "../../components/HeaderTitle";
 
 import HoveringArrow from "../../components/HoveringArrow";
 import About from "../../components/About.jsx";
+import Skills from "../../components/Skills.jsx";
 export default function Home() {
   return (
     <>
     <HeaderTitle />
     <HoveringArrow />
     <About />
+    <Skills />
 
     </>
   );

@@ -85,7 +85,7 @@ export default function About() {
           textAlign={"left"}
           fontFamily={"Corben"}
           fontSize="35px"
-          color={"wheat"}
+          color={"	#f0d86e"}
           className="animate__animated animate__fadeInDown"
         >
           Hi, Welcome
@@ -153,7 +153,7 @@ export default function About() {
         <VStack align={"center"} w={"100%"}>
           <Box bgColor={"wheat"} w={"100%"} h={"300px"} borderRadius={"15px"} />
 
-          <Text color={"wheat"} mt={"10px"}>
+          <Text   color={"	#f0d86e"} mt={"30px"}>
             Now, as a self-taught full-stack web developer with a special focus
             on frontend development, I bring together my diverse experiences and
             skills to craft captivating user interfaces and seamless web
@@ -162,7 +162,7 @@ export default function About() {
         </VStack>
 
         <VStack align={"center"} w={"100%"}>
-          <Text color={"wheat"} mb={"10px"}>
+          <Text   color={"	#f0d86e"} mb={"30px"}>
             Growing up in Adalaide, my dad bought a Windows XP computer me at
             5yrs of age, I immersed myself in its interface and games, sparking
             my interest in technology. At 14, I started coding with Unity,

@@ -84,7 +84,7 @@ export default function HeaderTitle() {
             xxxl: "40px",
           }}
           fontFamily={"Corben"}
-          color={"wheat"}
+          color={"	#f0d86e"}
           className="animate__animated animate__fadeInDown"
           whiteSpace={"wrap"}
         >
@@ -122,7 +122,7 @@ export default function HeaderTitle() {
             xxl: "22.5px",
             xxxl: "22.5px",
           }}
-          color={"wheat"}
+          color={"	#f0d86e"}
           fontFamily="sans-serif"
           className="animate__animated animate__fadeInUp"
         >
