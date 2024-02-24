@@ -83,6 +83,7 @@ import ThreeJs from "../assets/Logos/e4f86d2200d2d35c30f7b1494e96b9595ebc2751.pn
 import Sass from "../assets/Logos/seal-color.png";
 import Jest from "../assets/Logos/1_i37IyHf6vnhqWIA9osxU3w.png";
 import Animatecss from "../assets/Logos/2b93f700-a724-11ea-89af-e780fd85245b.png";
+import FramerMotion from "../assets/Logos/framer-motion.svg";
 
 import Nodejs from "../assets/Logos/node-js.png";
 import Firebase from "../assets/Logos/firebase-1-logo-png-transparent.png";
@@ -389,6 +390,17 @@ export default function Skills() {
               >
                 <Image src={Animatecss} borderRadius={"30px"} />
                 <Text>Animate.css</Text>
+              </VStack>
+              <VStack
+                transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
+                _hover={{
+                  transform: "scale(1.03)",
+                  filter: "drop-shadow(0px 0px 10px #A0AEC0)",
+                }}
+                w={"8%"}
+              >
+                <Image src={FramerMotion}  />
+                <Text textAlign={"center"}>Framer Motion</Text>
               </VStack>
             </HStack>
           </AccordionPanel>

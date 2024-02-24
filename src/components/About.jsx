@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Step,
   StepDescription,
@@ -61,9 +61,34 @@ import {
   Container,
   Spacer,
 } from "@chakra-ui/react";
+
+
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+
+
+
+  function QuoteAnimation({ children }) {
+    const ref = useRef(null);
+    const isInView = useInView(ref);
+ 
+    return (
+      <Box
+       
+        ref={ref}
+        className={isInView ? "animate__animated animate__fadeInLeft animate__fast " : "animate__animated animate__fadeOutLeft animate__fast"}
+        
+      >
+        {children}
+      </Box>
+    );
+  }
+
+
+
 export default function About() {
   return (
-    <VStack justify="center" align="center">
+    <VStack justify="center" align="center" mt={"200px"}>
       <VStack
     w={{
       base: "90%",
@@ -81,15 +106,20 @@ export default function About() {
         mt="100px"
         textShadow="0px 0px 50px black"
       >
+        <QuoteAnimation>
+
         <Text
           textAlign={"left"}
           fontFamily={"Corben"}
           fontSize="35px"
           color={"	#f0d86e"}
-          className="animate__animated animate__fadeInDown"
+          
         >
           Hi, Welcome
         </Text>
+        
+        </QuoteAnimation>
+        <QuoteAnimation>
         <Text
           fontFamily={"Corben"}
           color={"wheat"}
@@ -106,10 +136,11 @@ export default function About() {
             xxxl: "120px",
           }}
           whiteSpace="nowrap"
-          className="animate__animated animate__fadeInUp"
+         
         >
           About me
         </Text>
+        </QuoteAnimation>
       </VStack>
 
       <HStack
@@ -165,7 +196,9 @@ export default function About() {
 
         
         <VStack align={"center"} w={"100%"}>
-          <Box bgColor={"wheat"} w={"100%"} h={"300px"} borderRadius={"15px"} />
+
+        <QuoteAnimation>
+          <Box bgColor={"wheat"} w={"100%"} h={"300px"} borderRadius={"15px"}  />
 
           <Text  color={"	#f0d86e"} mt={"30px"} >
             As a self-taught full-stack web developer with a special focus
@@ -173,9 +206,11 @@ export default function About() {
             skills to craft captivating user interfaces and seamless web
             experiences.
           </Text>
+          </QuoteAnimation>
         </VStack>
 
         <VStack align={"center"} w={"100%"}>
+        <QuoteAnimation>
           <Text  color={"	#f0d86e"} mb={"30px"}>
         My dad bought a Windows XP computer me at
             5 yrs of age, I immersed myself in its UI/UX. At 14, I started coding with Unity,
@@ -188,6 +223,7 @@ export default function About() {
           </Text>
 
           <Box bgColor={"wheat"} w={"100%"} h={"200px"} borderRadius={"15px"} />
+          </QuoteAnimation>
         </VStack>
       </HStack>
     </VStack>

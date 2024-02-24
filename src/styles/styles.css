@@ -18,3 +18,19 @@
 }
 
 /* styles.css */
+.infinite-up-down-hover-BoxImg {
+  position: relative;
+  display: inline-block;
+  animation: upDownHoverBoxImg 1.25s infinite alternate;
+}
+
+
+@keyframes upDownHoverBoxImg {
+  
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}

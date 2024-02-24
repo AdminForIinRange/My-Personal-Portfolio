@@ -72,11 +72,11 @@ function QuoteAnimation({ children }) {
   useEffect(() => {
     const randomNumber = Math.floor(Math.random() * 2) + 1;
     if (randomNumber === 1) {
-      setOnOpen("animate__animated animate__fadeInRight");
-      setOnClose("animate__animated animate__fadeOutLeft");
+      setOnOpen("animate__animated animate__fadeInRight animate__fast ");
+      setOnClose("animate__animated animate__fadeOutLeft animate__fast");
     } else {
-      setOnOpen("animate__animated animate__fadeInLeft");
-      setOnClose("animate__animated animate__fadeOutRight");
+      setOnOpen("animate__animated animate__fadeInLeft animate__fast ");
+      setOnClose("animate__animated animate__fadeOutRight animate__fast");
     }
   }, [isInView]);
 
@@ -108,15 +108,28 @@ export default function Quote() {
             filter: "drop-shadow(0px 0px 10px #48BB78)",
           }}
         >
-          <Text as={"span"} fontFamily={"Raleway"} fontWeight={100}>
-            The simplest explanation,
+          <Text as={"span"} fontFamily={"Raleway"} fontWeight={200}>
+            The simplest explanation
+          </Text>
+        </Box>
+        <Box
+        color={"#b0b848"}
+          transition="transform 0.3s ease-in-out, boxShadow 1s ease-in-out"
+          _hover={{
+            transform: "scale(1.03)",
+            filter: "drop-shadow(0px 0px 10px #48BB78)",
+          }}
+        >
+          <Text as={"span"} fontFamily={"Raleway"} fontWeight={200}>
+             given,
           </Text>
         </Box>
       </QuoteAnimation>
 
       <QuoteAnimation>
-        <QuoteAnimation transition="transform 0.3s ease-in-out, boxShadow 1s ease-in-out">
+        <QuoteAnimation transition="transform 0.3s ease-in-out, boxShadow 1s ease-in-out" >
           <Box
+        
           color={"#a97909"}
             transition="transform 0.3s ease-in-out, boxShadow 1s ease-in-out"
             _hover={{
@@ -126,11 +139,43 @@ export default function Quote() {
           >
             <Text as={"span"} fontWeight={400} fontFamily={"Raleway"}>
               {" "}
-              that encompasses all variables is often the closest to truth,
+              that encompasses all 
+            </Text>
+           
+
+          </Box>
+          <Box
+        
+          color={"#a97909"}
+            transition="transform 0.3s ease-in-out, boxShadow 1s ease-in-out"
+            _hover={{
+              transform: "scale(1.03)",
+              filter: "drop-shadow(0px 0px 5px #ED8936)",
+            }}
+          >
+            <Text as={"span"} fontWeight={400} fontFamily={"Raleway"}>
+              {" "}
+               variables is often 
+            </Text>
+          </Box>
+          <Box
+   
+          color={"#a97909"}
+            transition="transform 0.3s ease-in-out, boxShadow 1s ease-in-out"
+            _hover={{
+              transform: "scale(1.03)",
+              filter: "drop-shadow(0px 0px 5px #ED8936)",
+            }}
+          >
+            <Text as={"span"} fontWeight={400} fontFamily={"Raleway"}>
+              {" "}
+              the closest to truth,
             </Text>
           </Box>
         </QuoteAnimation>
       </QuoteAnimation>
+
+      
 
       <QuoteAnimation>
         <Box
@@ -143,12 +188,34 @@ export default function Quote() {
         >
           <Text as={"span"} fontWeight={700} fontFamily={"Raleway"}>
             {" "}
-            for complexity tends to obscure rather than reveal. "
-            <Text fontSize={"100px"} fontWeight={300} fontFamily={"Raleway"}>
-              -Occam's Razor
-            </Text>
+            for complexity tends to 
+           
           </Text>
         </Box>
+        <Box
+        color={"#f0d86e"}
+          transition="transform 0.3s ease-in-out, boxShadow 1s ease-in-out"
+          _hover={{
+            transform: "scale(1.03)",
+            filter: "drop-shadow(0px 0px 5px #ECC94B)",
+          }}
+        >
+          <Text as={"span"} fontWeight={700} fontFamily={"Raleway"}>
+            {" "}
+             obscure rather than reveal. "
+           
+          </Text>
+        </Box>
+       
+
+
+        <Text  transition="transform 0.3s ease-in-out, boxShadow 1s ease-in-out"  _hover={{
+            transform: "scale(1.03)",
+            filter: "drop-shadow(0px 0px 5px white)",
+          }} color={"wheat"}  fontSize={"50px"} fontWeight={300} fontFamily={"Raleway"}>
+              -Occam's Razor
+            </Text>
+        
       </QuoteAnimation>
     </>
   );
