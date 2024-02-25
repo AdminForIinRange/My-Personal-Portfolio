@@ -101,26 +101,26 @@ export default function Quote() {
     <>
       <QuoteAnimation>
         <Box
-        color={"#b0b848"}
-          transition="transform 0.3s ease-in-out, boxShadow 1s ease-in-out"
-          _hover={{
-            transform: "scale(1.03)",
-            filter: "drop-shadow(0px 0px 10px #48BB78)",
-          }}
-        >
-          <Text as={"span"} fontFamily={"Raleway"} fontWeight={200}>
+        color={"#a97909"}
+        transition="transform 0.3s ease-in-out, boxShadow 1s ease-in-out"
+        _hover={{
+          transform: "scale(1.03)",
+          filter: "drop-shadow(0px 0px 5px #ED8936)",
+        }}
+      >
+          <Text as={"span"} fontFamily={"Raleway"} fontWeight={400}>
             The simplest explanation
           </Text>
         </Box>
         <Box
-        color={"#b0b848"}
-          transition="transform 0.3s ease-in-out, boxShadow 1s ease-in-out"
-          _hover={{
-            transform: "scale(1.03)",
-            filter: "drop-shadow(0px 0px 10px #48BB78)",
-          }}
-        >
-          <Text as={"span"} fontFamily={"Raleway"} fontWeight={200}>
+        color={"#a97909"}
+        transition="transform 0.3s ease-in-out, boxShadow 1s ease-in-out"
+        _hover={{
+          transform: "scale(1.03)",
+          filter: "drop-shadow(0px 0px 5px #ED8936)",
+        }}
+      >
+          <Text as={"span"} fontFamily={"Raleway"} fontWeight={400}>
              given,
           </Text>
         </Box>
@@ -160,13 +160,13 @@ export default function Quote() {
           </Box>
           <Box
    
-          color={"#a97909"}
-            transition="transform 0.3s ease-in-out, boxShadow 1s ease-in-out"
-            _hover={{
-              transform: "scale(1.03)",
-              filter: "drop-shadow(0px 0px 5px #ED8936)",
-            }}
-          >
+   color={"#a97909"}
+   transition="transform 0.3s ease-in-out, boxShadow 1s ease-in-out"
+   _hover={{
+     transform: "scale(1.03)",
+     filter: "drop-shadow(0px 0px 5px #ED8936)",
+   }}
+ >
             <Text as={"span"} fontWeight={400} fontFamily={"Raleway"}>
               {" "}
               the closest to truth,
@@ -179,28 +179,28 @@ export default function Quote() {
 
       <QuoteAnimation>
         <Box
-        color={"#f0d86e"}
-          transition="transform 0.3s ease-in-out, boxShadow 1s ease-in-out"
-          _hover={{
-            transform: "scale(1.03)",
-            filter: "drop-shadow(0px 0px 5px #ECC94B)",
-          }}
-        >
-          <Text as={"span"} fontWeight={700} fontFamily={"Raleway"}>
+        color={"#a97909"}
+        transition="transform 0.3s ease-in-out, boxShadow 1s ease-in-out"
+        _hover={{
+          transform: "scale(1.03)",
+          filter: "drop-shadow(0px 0px 5px #ED8936)",
+        }}
+      >
+          <Text as={"span"} fontWeight={400} fontFamily={"Raleway"}>
             {" "}
             for complexity tends to 
            
           </Text>
         </Box>
         <Box
-        color={"#f0d86e"}
-          transition="transform 0.3s ease-in-out, boxShadow 1s ease-in-out"
-          _hover={{
-            transform: "scale(1.03)",
-            filter: "drop-shadow(0px 0px 5px #ECC94B)",
-          }}
-        >
-          <Text as={"span"} fontWeight={700} fontFamily={"Raleway"}>
+        color={"#a97909"}
+        transition="transform 0.3s ease-in-out, boxShadow 1s ease-in-out"
+        _hover={{
+          transform: "scale(1.03)",
+          filter: "drop-shadow(0px 0px 5px #ED8936)",
+        }}
+      >
+          <Text as={"span"} fontWeight={400} fontFamily={"Raleway"}>
             {" "}
              obscure rather than reveal. "
            
@@ -209,10 +209,12 @@ export default function Quote() {
        
 
 
-        <Text  transition="transform 0.3s ease-in-out, boxShadow 1s ease-in-out"  _hover={{
-            transform: "scale(1.03)",
-            filter: "drop-shadow(0px 0px 5px white)",
-          }} color={"wheat"}  fontSize={"50px"} fontWeight={300} fontFamily={"Raleway"}>
+        <Text   color={"#a97909"}
+        transition="transform 0.3s ease-in-out, boxShadow 1s ease-in-out"
+        _hover={{
+          transform: "scale(1.03)",
+          filter: "drop-shadow(0px 0px 5px #ED8936)",
+        }} fontSize={"50px"} fontWeight={400} fontFamily={"Raleway"}>
               -Occam's Razor
             </Text>
         

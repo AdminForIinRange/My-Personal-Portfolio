@@ -10,7 +10,7 @@ import RootLayout from "./layouts/RootLayout.jsx";
 import Home from "./pages/Home/Home.jsx";
 
 
-
+import "./styles/styles.css"
 
 // router and routes
 const router = createBrowserRouter(
