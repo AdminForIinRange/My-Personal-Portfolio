@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Step,
   StepDescription,
@@ -101,10 +101,42 @@ import Vite from "../assets/Logos/Vitejs-logo.svg";
 import VSC from "../assets/Logos/Visual_Studio_Code_1.35_icon.svg.png";
 import Figma from "../assets/Logos/1667px-Figma-logo.svg.png";
 import Github from "../assets/Logos/25231.png";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+
+function QuoteAnimation({ children }) {
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+  const [onOpen, setOnOpen] = useState();
+  const [onClose, setOnClose] = useState();
+
+  useEffect(() => {
+    const randomNumber = Math.floor(Math.random() * 2) + 1;
+    if (randomNumber === 1) {
+      setOnOpen("animate__animated animate__fadeInRight animate__fast ");
+      setOnClose("animate__animated animate__fadeOutLeft animate__fast");
+    } else {
+      setOnOpen("animate__animated animate__fadeInLeft animate__fast ");
+      setOnClose("animate__animated animate__fadeOutRight animate__fast");
+    }
+  }, [isInView]);
+
+  return (
+    <Box ref={ref} className={isInView ? onOpen : onClose}>
+      {children}
+    </Box>
+  );
+}
+
+
 
 export default function Skills() {
+
+
+  
   return (
     <VStack justify="center" align="center" mt={"300px"}>
+    
       <VStack
         w={{
           base: "90%",
@@ -124,15 +156,19 @@ export default function Skills() {
       >
         <Text
           textAlign={"left"}
-          fontFamily={"Corben"}
+          fontFamily={"Raleway"}
           fontSize="35px"
           color={"	#f0d86e"}
           className="animate__animated animate__fadeInDown"
         >
-          Acquired skills
+           <QuoteAnimation>
+           Acquired skills
+
+           </QuoteAnimation>
+     
         </Text>
         <Text
-          fontFamily={"Corben"}
+          fontFamily={"Raleway"}
           color={"wheat"}
           fontWeight="700"
           fontSize={{
@@ -149,7 +185,10 @@ export default function Skills() {
           whiteSpace="nowrap"
           className="animate__animated animate__fadeInUp"
         >
-          My Skills Sets
+           <QuoteAnimation>
+           My Skills Sets
+           </QuoteAnimation>
+         
         </Text>
       </VStack>
 
@@ -170,23 +209,31 @@ export default function Skills() {
           xxxl: "70%",
         }}
       >
+
+<QuoteAnimation>
+
+
         <Text
           color={"	#f0d86e"}
-          fontFamily={"Corben"}
+          fontFamily={"Raleway"}
           fontSize={"50px"}
           fontWeight={700}
           p={"1% 0% 1% 0%"}
         >
           Front End
         </Text>
+        </QuoteAnimation>
         <AccordionItem border={" 0px"}>
           <AccordionButton
             color={"	#fff4c4"}
-            fontFamily={"Corben"}
+            fontFamily={"Raleway"}
             fontSize={"30px"}
             p={"1% 0% 1% 0%"}
           >
+
+<QuoteAnimation>
             JavaScript Frameworks/Libraries
+            </QuoteAnimation>
             <AccordionIcon />
           </AccordionButton>
 
@@ -248,12 +295,16 @@ export default function Skills() {
 
         <AccordionItem border={" 0px"}>
           <AccordionButton
-            fontFamily={"Corben"}
+            fontFamily={"Raleway"}
             fontSize={"30px"}
             p={"1% 0% 1% 0%"}
             color={"	#fff4c4"}
           >
-            Frontend Development Tools/Libraries
+
+<QuoteAnimation>
+Frontend Development Tools/Libraries
+</QuoteAnimation>
+    
             <AccordionIcon />
           </AccordionButton>
 
@@ -425,23 +476,30 @@ export default function Skills() {
         }}
       >
         <Text
-          fontFamily={"Corben"}
+          fontFamily={"Raleway"}
           fontSize={"50px"}
           fontWeight={700}
           p={"1% 0% 1% 0%"}
           color={"	#f0d86e"}
         >
+          <QuoteAnimation>
           Backend
+          </QuoteAnimation>
+    
         </Text>
 
         <AccordionItem border={" 0px"}>
           <AccordionButton
-            fontFamily={"Corben"}
+            fontFamily={"Raleway"}
             fontSize={"30px"}
             p={"1% 0% 1% 0%"}
             color={"	#fff4c4"}
           >
-            Backend Technologies/Tools
+
+<QuoteAnimation>
+Backend Technologies/Tools
+          </QuoteAnimation>
+          
             <AccordionIcon />
           </AccordionButton>
 
@@ -456,7 +514,7 @@ export default function Skills() {
                 w={"8%"}
               >
                 <Image src={Nodejs} />
-                <Text>Firebase</Text>
+                <Text>Nodejs</Text>
               </VStack>
 
               <VStack
@@ -596,23 +654,30 @@ export default function Skills() {
         }}
       >
         <Text
-          fontFamily={"Corben"}
+          fontFamily={"Raleway"}
           fontSize={"50px"}
           fontWeight={700}
           p={"1% 0% 1% 0%"}
           color={"	#f0d86e"}
         >
-          Extra
+
+<QuoteAnimation>
+Extra
+          </QuoteAnimation>
+          
         </Text>
 
         <AccordionItem border={" 0px"}>
           <AccordionButton
-            fontFamily={"Corben"}
+            fontFamily={"Raleway"}
             fontSize={"30px"}
             p={"1% 0% 1% 0%"}
             color={"	#fff4c4"}
           >
+            <QuoteAnimation>
             Extra workplace/development tools
+          </QuoteAnimation>
+       
             <AccordionIcon />
           </AccordionButton>
 

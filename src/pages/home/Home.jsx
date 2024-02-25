@@ -6,22 +6,23 @@ import HoveringArrow from "../../components/HoveringArrow";
 import About from "../../components/About.jsx";
 import Skills from "../../components/Skills.jsx";
 import Quote from "../../components/Quote.jsx";
-
+import Projects from "../../components/Projects.jsx"
+import { Box } from "@chakra-ui/react";
 export default function Home() {
+
+  
   return (
     <>
 
 
-
-<h1 className="text-19xl font-bold underline">
-      Hello world!
-    </h1>
 
       <HeaderTitle />
       <HoveringArrow />
       <Quote />
       <About />
       <Skills />
+      <Projects />
+   
       <AnimatedCursor
         innerSize={15}
         outerSize={30}

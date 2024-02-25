@@ -27,17 +27,15 @@ const theme = extendTheme({
   styles: {
     global: {
       html: {
-     
         height: "100%",
         width: "100%",
-        overflowX: "hidden",
       },
       body: {
-        background:"#1D1D21",
+        background: "#29292f",
         height: "100%",
         width: "100%",
-
-        backgroundRepeat: "no-repeat",
+        overflowX: "hidden", // Hide horizontal scrollbar
+        overflowY: "auto",   // Show vertical scrollbar when needed
       },
     },
   },
