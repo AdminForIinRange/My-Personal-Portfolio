@@ -82,7 +82,17 @@ function QuoteAnimation({ children }) {
 
   return (
     <VStack
-      fontSize={"120px"}
+    fontSize={{
+      base: "40px",
+      xsm: "40px",
+      ssm: "50px",
+      sm: "70px",
+      md: "80px",
+      lg: "90px",
+      xl: "100px",
+      xxl: "120px",
+      xxxl: "120px",
+    }}
       mt={"200px"}
       justify={"left"}
       align={"left"}
@@ -90,6 +100,7 @@ function QuoteAnimation({ children }) {
       color={"wheat"}
       ref={ref}
       className={isInView ? onOpen : onClose}
+     
     >
       {children}
     </VStack>
@@ -205,7 +216,17 @@ export default function Quote() {
             transform: "scale(1.03)",
             filter: "drop-shadow(0px 0px 5px #ED8936)",
           }}
-          fontSize={"50px"}
+          fontSize={{
+            base: "20px",
+            xsm: "20px",
+            ssm: "20px",
+            sm: "40px",
+            md: "40px",
+            lg: "40px",
+            xl: "40px",
+            xxl: "40px",
+            xxxl: "40px",
+          }}
           fontWeight={400}
           fontFamily={"Raleway"}
         >

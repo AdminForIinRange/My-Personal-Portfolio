@@ -152,7 +152,7 @@ export default function Projects() {
         ${center.y / 100},
         ${-center.x / 100},
         0,
-        ${Math.log(distance) * 7}deg
+        ${Math.log(distance) * 5}deg
       )
     `;
 
@@ -161,8 +161,8 @@ export default function Projects() {
         circle at
         ${center.x * 2 + bounds.width / 2}px
         ${center.y * 2 + bounds.height / 2}px,
-        #fffff555,
-        #0000000f
+        rgb(255, 255, 255, 0.35),
+        rgb(0, 0, 0, 0.25)
       )
     `;
   }
@@ -177,20 +177,21 @@ export default function Projects() {
     cardRef.current.style.transform = "";
     cardRef.current.querySelector(".glow").style.backgroundImage = "";
   }
+
   return (
     <VStack justify="center" align="center" mt={"200px"}>
       <VStack
-        w={{
-          base: "90%",
-          xsm: "90%",
-          ssm: "90%",
-          sm: "80%",
-          md: "80%",
-          lg: "80%",
-          xl: "70%",
-          xxl: "70%",
-          xxxl: "90%",
-        }}
+          w={{
+            base: "90%",
+            xsm: "90%",
+            ssm: "90%",
+            sm: "90%",
+            md: "90%",
+            lg: "90%",
+            xl: "80%",
+            xxl: "70%",
+            xxxl: "70%",
+          }}
         align="left"
         justify="center"
         mt="100px"
@@ -235,13 +236,12 @@ export default function Projects() {
         align={"start"}
         mt={"100px"}
       >
-        
         <VStack align={"left"} w={"100%"}>
           <QuoteAnimation>
             <div
               style={{
                 borderRadius: "15px",
-                backgroundColor: " rgb(107,70,193, 0.5)",
+                backgroundColor: " rgb(107,70,193, 1)",
               }}
               className="card3d"
               ref={cardRef}
@@ -258,131 +258,112 @@ export default function Projects() {
               </Text>
               <Box p={"2%"} w={"600px"} h={"100%"}>
                 <Box h={"100%"} borderRadius={"15px"}>
-                  <Image src={AIGoals} borderRadius={"10px"} />
+                  <Image loading="lazy" src={AIGoals} borderRadius={"10px"} />
                 </Box>
 
                 <HStack gap={"2.5%"} w={"60%"} p={"2% 0% 0% 0%"}>
                   <VStack
-                    transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
-                    _hover={{
-                      transform: "scale(1.03)",
-                      filter: "drop-shadow(0px 0px 10px #0BC5EA)",
-                    }}
+                   
                     w={"8%"}
                   >
-                    <Image src={ReactLogo} />
+                    <Image loading="lazy" src={ReactLogo} />
                   </VStack>
 
                   <VStack
-                    transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
-                    _hover={{
-                      transform: "scale(1.03)",
-                      filter: "drop-shadow(0px 0px 10px #0BC5EA)",
-                    }}
+                    
                     w={"8%"}
                   >
-                    <Image src={ReduxLogo} />
+                    <Image loading="lazy" src={ReduxLogo} />
                   </VStack>
 
                   <VStack
-                    transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
-                    _hover={{
-                      transform: "scale(1.03)",
-                      filter: "drop-shadow(0px 0px 10px #0BC5EA)",
-                    }}
+                   
                     w={"8%"}
                   >
-                    <Image src={chakraUIlogo} borderRadius={"100px"} />
+                    <Image loading="lazy" src={chakraUIlogo} borderRadius={"100px"} />
                   </VStack>
                   <VStack
-                    transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
-                    _hover={{
-                      transform: "scale(1.03)",
-                      filter: "drop-shadow(0px 0px 10px #0BC5EA)",
-                    }}
+                   
                     w={"10%"}
                   >
-                    <Image src={tailwind} />
+                    <Image loading="lazy" src={tailwind} />
                   </VStack>
 
                   <VStack
-                    transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
-                    _hover={{
-                      transform: "scale(1.03)",
-                      filter: "drop-shadow(0px 0px 10px #A0AEC0)",
-                    }}
+                   
                     w={"8%"}
                   >
-                    <Image src={FramerMotion} />
+                    <Image loading="lazy" src={FramerMotion} />
                   </VStack>
 
                   <VStack
-                    transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
-                    _hover={{
-                      transform: "scale(1.03)",
-                      filter: "drop-shadow(0px 0px 10px #48BB78)",
-                    }}
+                    
                     w={"8%"}
                   >
-                    <Image src={Nodejs} />
+                    <Image loading="lazy" src={Nodejs} />
                   </VStack>
 
                   <VStack
-                    transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
-                    _hover={{
-                      transform: "scale(1.03)",
-                      filter: "drop-shadow(0px 0px 10px #ECC94B)",
-                    }}
+                   
                     w={"6%"}
                   >
-                    <Image src={Firebase} />
+                    <Image loading="lazy" src={Firebase} />
                   </VStack>
 
                   <VStack
-                    transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
-                    _hover={{
-                      transform: "scale(1.03)",
-                      filter: "drop-shadow(0px 0px 10px #A0AEC0)",
-                    }}
+                   
                     w={"8%"}
                   >
-                    <Image src={GTPApi} />
+                    <Image loading="lazy" src={GTPApi} />
                   </VStack>
                 </HStack>
               </Box>
 
               <div className="glow" style={{ borderRadius: "15px" }}></div>
             </div>
-            <HStack w={"25%"}>
-              <a
-                style={{ marginTop: "12.5px" }}
-                target="_blank"
-                href="https://aigoals.web.app"
-              >
-                <Button
-                  fontSize={"15px"}
-                  p={""}
-                  rightIcon={<ExternalLinkIcon />}
-                >
-                  View Live Deploy
-                </Button>
-              </a>
-              <a
-                style={{ marginTop: "12.5px" }}
-                target="_blank"
-                href="https://github.com/AdminForIinRange/AIgoals"
-              >
-                <Button
-                  fontSize={"15px"}
-                  p={""}
-                  rightIcon={<ExternalLinkIcon />}
-                >
-                  View Github
-                </Button>
-              </a>
-            </HStack>
+            
+
+            <HStack mt={"15px"} p={"2%"} align={" start"} w={"100%"} maxW={"600"} h={"100px"} bgColor={"purple.200"} borderRadius={"15px"}>
+
+<Text   fontFamily={"Raleway"} fontSize={"17px"}   > 
+Personalized tasks, insights, and seamless integration for productivity. Users input goals, track progress visually, and receive adaptive recommendations.</Text>
+
+</HStack>
+<HStack  justify={"center"} w={"100%"} transition="transform, 0.3s ease-in-out, ">
+    <a
+      style={{ marginTop: "12.5px" }}
+      target="_blank"
+      href="https://aigoals.web.app"
+    >
+      <Button
+       bgColor={"purple.400"} 
+        fontSize={"15px"}
+        p={""}
+        rightIcon={<ExternalLinkIcon />}
+      >
+        View Live Deploy
+      </Button>
+    </a>
+    <a
+      style={{ marginTop: "12.5px" }}
+      target="_blank"
+      href="https://github.com/AdminForIinRange/AIgoals"
+    >
+      <Button
+      bgColor={"purple.400"} 
+        fontSize={"15px"}
+        p={""}
+        rightIcon={<ExternalLinkIcon />}
+      >
+        View Github
+      </Button>
+    </a>
+  </HStack>
           </QuoteAnimation>
+         
         </VStack>
+
+        
       </HStack>
     </VStack>
   );

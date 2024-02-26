@@ -89,7 +89,8 @@ export default function Navbar() {
                   xxxl: "17px",
                 }}
               >
-                Anjesh Bhattarai
+                 <a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&to=bhattaraianjesh123@gmail.com">  <Text  as={"span"} textDecorationLine={"underline"} > bhattaraianjesh123@gmail.com </Text>  </a> 
+             
               </Text>
 
               <Text

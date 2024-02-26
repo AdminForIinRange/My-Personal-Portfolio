@@ -1,28 +1,27 @@
-
-import HeaderTitle from "../../components/HeaderTitle";
+import React, { Suspense } from "react";
 import AnimatedCursor from "react-animated-cursor";
 
-import HoveringArrow from "../../components/HoveringArrow";
-import About from "../../components/About.jsx";
-import Skills from "../../components/Skills.jsx";
-import Quote from "../../components/Quote.jsx";
-import Projects from "../../components/Projects.jsx"
-import { Box } from "@chakra-ui/react";
-export default function Home() {
+// Lazy load components
+const LazyHeaderTitle = React.lazy(() => import("../../components/HeaderTitle"));
+const LazyHoveringArrow = React.lazy(() => import("../../components/HoveringArrow"));
+const LazyQuote = React.lazy(() => import("../../components/Quote.jsx"));
+const LazyAbout = React.lazy(() => import("../../components/About.jsx"));
+const LazySkills = React.lazy(() => import("../../components/Skills.jsx"));
+const LazyProjects = React.lazy(() => import("../../components/Projects.jsx"));
+const LazyContact = React.lazy(() => import("../../components/Contact.jsx"));
 
-  
+export default function Home() {
   return (
     <>
-
-
-
-      <HeaderTitle />
-      <HoveringArrow />
-      <Quote />
-      <About />
-      <Skills />
-      <Projects />
-   
+      <Suspense fallback={<div>Loading...</div>}>
+        <LazyHeaderTitle />
+        <LazyHoveringArrow />
+        <LazyQuote />
+        <LazyAbout />
+        <LazySkills />
+        <LazyProjects />
+        <LazyContact />
+      </Suspense>
       <AnimatedCursor
         innerSize={15}
         outerSize={30}

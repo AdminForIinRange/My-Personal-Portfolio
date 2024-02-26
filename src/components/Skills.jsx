@@ -138,17 +138,17 @@ export default function Skills() {
     <VStack justify="center" align="center" mt={"300px"}>
     
       <VStack
-        w={{
-          base: "90%",
-          xsm: "90%",
-          ssm: "90%",
-          sm: "80%",
-          md: "80%",
-          lg: "80%",
-          xl: "70%",
-          xxl: "70%",
-          xxxl: "70%",
-        }}
+         w={{
+            base: "90%",
+            xsm: "90%",
+            ssm: "90%",
+            sm: "90%",
+            md: "90%",
+            lg: "90%",
+            xl: "80%",
+            xxl: "70%",
+            xxxl: "70%",
+          }}
         align="left"
         justify="center"
         mt="100px"
@@ -197,17 +197,17 @@ export default function Skills() {
         mt={"100px"}
         defaultIndex={[]}
         allowMultiple
-        w={{
-          base: "90%",
-          xsm: "90%",
-          ssm: "90%",
-          sm: "80%",
-          md: "80%",
-          lg: "80%",
-          xl: "70%",
-          xxl: "70%",
-          xxxl: "70%",
-        }}
+         w={{
+            base: "90%",
+            xsm: "90%",
+            ssm: "90%",
+            sm: "90%",
+            md: "90%",
+            lg: "90%",
+            xl: "80%",
+            xxl: "70%",
+            xxxl: "70%",
+          }}
       >
 
 <QuoteAnimation>
@@ -232,7 +232,20 @@ export default function Skills() {
           >
 
 <QuoteAnimation>
+
+<Text whiteSpace={"nowrap"}  fontSize={{
+          base: "20px",
+          xsm: "20px",
+          ssm: "20px",
+          sm: "20px",
+          md: "20px",
+          lg: "20px",
+          xl: "25px",
+          xxl: "25px",
+          xxxl: "25px",
+        }} >
             JavaScript Frameworks/Libraries
+            </Text>
             </QuoteAnimation>
             <AccordionIcon />
           </AccordionButton>
@@ -247,7 +260,7 @@ export default function Skills() {
                 }}
                 w={"8%"}
               >
-                <Image src={JsLogo} borderRadius={"10px"} />
+                <Image loading="lazy" src={JsLogo} borderRadius={"10px"} />
                 <Text>JavaScript</Text>
               </VStack>
 
@@ -259,7 +272,7 @@ export default function Skills() {
                 }}
                 w={"8%"}
               >
-                <Image src={ReactLogo} />
+                <Image loading="lazy" src={ReactLogo} />
                 <Text>React</Text>
               </VStack>
 
@@ -286,7 +299,7 @@ export default function Skills() {
                 }}
                 w={"8%"}
               >
-                <Image src={ReduxLogo} />
+                <Image loading="lazy" src={ReduxLogo} />
                 <Text>Redux</Text>
               </VStack>
             </HStack>
@@ -302,7 +315,20 @@ export default function Skills() {
           >
 
 <QuoteAnimation>
-Frontend Development Tools/Libraries
+  <Text whiteSpace={"nowrap"}  fontSize={{
+          base: "20px",
+          xsm: "20px",
+          ssm: "20px",
+          sm: "20px",
+          md: "20px",
+          lg: "20px",
+          xl: "25px",
+          xxl: "25px",
+          xxxl: "25px",
+        }} >
+  Frontend Development Tools/Libraries
+  </Text>
+
 </QuoteAnimation>
     
             <AccordionIcon />
@@ -316,9 +342,9 @@ Frontend Development Tools/Libraries
                   transform: "scale(1.03)",
                   filter: "drop-shadow(0px 0px 10px #ED8936)",
                 }}
-                w={"8%"}
+                w={"9.5%"}
               >
-                <Image src={HTMLlogo} />
+                <Image loading="lazy" src={HTMLlogo} />
                 <Text>HTML</Text>
               </VStack>
 
@@ -328,9 +354,9 @@ Frontend Development Tools/Libraries
                   transform: "scale(1.03)",
                   filter: "drop-shadow(0px 0px 10px #4299E1)",
                 }}
-                w={"5.8%"}
+                w={"7%"}
               >
-                <Image src={CSSlogo} />
+                <Image loading="lazy" src={CSSlogo} />
                 <Text>CSS</Text>
               </VStack>
 
@@ -342,7 +368,7 @@ Frontend Development Tools/Libraries
                 }}
                 w={"10%"}
               >
-                <Image src={tailwind} />
+                <Image loading="lazy" src={tailwind} />
                 <Text>Tailwind CSS</Text>
               </VStack>
 
@@ -354,7 +380,7 @@ Frontend Development Tools/Libraries
                 }}
                 w={"8%"}
               >
-                <Image src={chakraUIlogo} borderRadius={"100px"} />
+                <Image loading="lazy" src={chakraUIlogo} borderRadius={"100px"} />
                 <Text>Chakra UI</Text>
               </VStack>
 
@@ -366,7 +392,7 @@ Frontend Development Tools/Libraries
                 }}
                 w={"8%"}
               >
-                <Image src={MaterialUI} />
+                <Image loading="lazy" src={MaterialUI} />
                 <Text>Material UI</Text>
               </VStack>
 
@@ -378,7 +404,7 @@ Frontend Development Tools/Libraries
                 }}
                 w={"8%"}
               >
-                <Image src={BootStrap} />
+                <Image loading="lazy" src={BootStrap} />
                 <Text>Bootstrap</Text>
               </VStack>
 
@@ -389,7 +415,17 @@ Frontend Development Tools/Libraries
                   filter: "drop-shadow(0px 0px 10px #0BC5EA)",
                 }}
               >
-                <Text fontWeight={"bold"} fontSize={"40px"} color={"#22b5bf"}>
+                <Text fontWeight={"bold"}     fontSize={{
+            base: "15px",
+            xsm: "15px",
+            ssm: "15px",
+            sm: "15px",
+            md: "30px",
+            lg: "35px",
+            xl: "35px",
+            xxl: "40px",
+            xxxl: "40px",
+          }} color={"#22b5bf"}>
                   {"<ReCharts />"}
                 </Text>
                 <Text>ReCharts</Text>
@@ -403,7 +439,7 @@ Frontend Development Tools/Libraries
                 }}
                 w={"8%"}
               >
-                <Image src={ThreeJs} />
+                <Image loading="lazy" src={ThreeJs} />
                 <Text>Three.js</Text>
               </VStack>
 
@@ -415,7 +451,7 @@ Frontend Development Tools/Libraries
                 }}
                 w={"8%"}
               >
-                <Image src={Sass} />
+                <Image loading="lazy" src={Sass} />
                 <Text>Sass</Text>
               </VStack>
 
@@ -427,7 +463,7 @@ Frontend Development Tools/Libraries
                 }}
                 w={"8%"}
               >
-                <Image src={Jest} />
+                <Image loading="lazy" src={Jest} />
                 <Text>Jest</Text>
               </VStack>
 
@@ -439,7 +475,7 @@ Frontend Development Tools/Libraries
                 }}
                 w={"8%"}
               >
-                <Image src={Animatecss} borderRadius={"30px"} />
+                <Image loading="lazy" src={Animatecss} borderRadius={"30px"} />
                 <Text>Animate.css</Text>
               </VStack>
               <VStack
@@ -450,7 +486,7 @@ Frontend Development Tools/Libraries
                 }}
                 w={"8%"}
               >
-                <Image src={FramerMotion}  />
+                <Image loading="lazy" src={FramerMotion}  />
                 <Text textAlign={"center"}>Framer Motion</Text>
               </VStack>
             </HStack>
@@ -463,17 +499,17 @@ Frontend Development Tools/Libraries
         mt={"100px"}
         defaultIndex={[]}
         allowMultiple
-        w={{
-          base: "90%",
-          xsm: "90%",
-          ssm: "90%",
-          sm: "80%",
-          md: "80%",
-          lg: "80%",
-          xl: "70%",
-          xxl: "70%",
-          xxxl: "70%",
-        }}
+         w={{
+            base: "90%",
+            xsm: "90%",
+            ssm: "90%",
+            sm: "90%",
+            md: "90%",
+            lg: "90%",
+            xl: "80%",
+            xxl: "70%",
+            xxxl: "70%",
+          }}
       >
         <Text
           fontFamily={"Raleway"}
@@ -497,7 +533,21 @@ Frontend Development Tools/Libraries
           >
 
 <QuoteAnimation>
-Backend Technologies/Tools
+
+<Text whiteSpace={"nowrap"}  fontSize={{
+          base: "20px",
+          xsm: "20px",
+          ssm: "20px",
+          sm: "20px",
+          md: "20px",
+          lg: "20px",
+          xl: "25px",
+          xxl: "25px",
+          xxxl: "25px",
+        }} >
+          Backend Technologies/Tools
+        </Text>
+
           </QuoteAnimation>
           
             <AccordionIcon />
@@ -513,7 +563,7 @@ Backend Technologies/Tools
                 }}
                 w={"8%"}
               >
-                <Image src={Nodejs} />
+                <Image loading="lazy" src={Nodejs} />
                 <Text>Nodejs</Text>
               </VStack>
 
@@ -528,7 +578,17 @@ Backend Technologies/Tools
                 <Text
                   fontWeight={"100"}
                   fontFamily={"Raleway"}
-                  fontSize={"80px"}
+                  fontSize={{
+                    base: "25px",
+                    xsm: "25px",
+                    ssm: "35px",
+                    sm: "45px",
+                    md: "50px",
+                    lg: "65px",
+                    xl: "75px",
+                    xxl: "80px",
+                    xxxl: "80px",
+                  }}
                   color={"white"}
                 >
                   {`Ex`}
@@ -544,7 +604,7 @@ Backend Technologies/Tools
                 }}
                 w={"6%"}
               >
-                <Image src={Firebase} />
+                <Image loading="lazy" src={Firebase} />
                 <Text>Firebase</Text>
               </VStack>
 
@@ -556,7 +616,7 @@ Backend Technologies/Tools
                 }}
                 w={"8%"}
               >
-                <Image src={mongoDB} />
+                <Image loading="lazy" src={mongoDB} />
                 <Text>MongoDB</Text>
               </VStack>
 
@@ -568,7 +628,7 @@ Backend Technologies/Tools
                 }}
                 w={"8%"}
               >
-                <Image src={GrpahQL} />
+                <Image loading="lazy" src={GrpahQL} />
                 <Text>GraphQL</Text>
               </VStack>
 
@@ -580,7 +640,7 @@ Backend Technologies/Tools
                 }}
                 w={"8%"}
               >
-                <Image src={SocketIO} />
+                <Image loading="lazy" src={SocketIO} />
                 <Text>Socket.IO</Text>
               </VStack>
 
@@ -592,7 +652,7 @@ Backend Technologies/Tools
                 }}
                 w={"8%"}
               >
-                <Image src={GIT} />
+                <Image loading="lazy" src={GIT} />
                 <Text>GIT</Text>
               </VStack>
 
@@ -604,7 +664,7 @@ Backend Technologies/Tools
                 }}
                 w={"8%"}
               >
-                <Image src={GTPApi} />
+                <Image loading="lazy" src={GTPApi} />
                 <Text>GTP API</Text>
               </VStack>
 
@@ -616,7 +676,7 @@ Backend Technologies/Tools
                 }}
                 w={"6%"}
               >
-                <Image src={PuppeteerJS} />
+                <Image loading="lazy" src={PuppeteerJS} />
                 <Text>PuppeteerJS</Text>
               </VStack>
 
@@ -628,7 +688,7 @@ Backend Technologies/Tools
                 }}
                 w={"8%"}
               >
-                <Image src={Docker} />
+                <Image loading="lazy" src={Docker} />
                 <Text>Docker</Text>
               </VStack>
             </HStack>
@@ -645,10 +705,10 @@ Backend Technologies/Tools
           base: "90%",
           xsm: "90%",
           ssm: "90%",
-          sm: "80%",
-          md: "80%",
-          lg: "80%",
-          xl: "70%",
+          sm: "90%",
+          md: "90%",
+          lg: "90%",
+          xl: "80%",
           xxl: "70%",
           xxxl: "70%",
         }}
@@ -675,14 +735,26 @@ Extra
             color={"	#fff4c4"}
           >
             <QuoteAnimation>
-            Extra workplace/development tools
+
+            <Text whiteSpace={"nowrap"}  fontSize={{
+          base: "20px",
+          xsm: "20px",
+          ssm: "20px",
+          sm: "20px",
+          md: "20px",
+          lg: "20px",
+          xl: "25px",
+          xxl: "25px",
+          xxxl: "25px",
+        }} >  Extra workplace/development tools</Text>
+          
           </QuoteAnimation>
        
             <AccordionIcon />
           </AccordionButton>
 
           <AccordionPanel border={" 0px"} p={"3%"}>
-            <HStack align={"end"} gap={"120px"} flexWrap={"wrap"}>
+            <HStack  align={"end"} gap={"120px"} flexWrap={"wrap"}>
               <VStack
                 transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
                 _hover={{
@@ -691,7 +763,7 @@ Extra
                 }}
                 w={"8%"}
               >
-                <Image src={Vite} />
+                <Image loading="lazy" src={Vite} />
                 <Text>Vite</Text>
               </VStack>
 
@@ -703,7 +775,7 @@ Extra
                 }}
                 w={"6.5%"}
               >
-                <Image src={VSC} />
+                <Image loading="lazy" src={VSC} />
                 <Text>VSC</Text>
               </VStack>
 
@@ -715,7 +787,7 @@ Extra
                 }}
                 w={"4.5%"}
               >
-                <Image src={Figma} />
+                <Image loading="lazy" src={Figma} />
                 <Text>Figma</Text>
               </VStack>
 

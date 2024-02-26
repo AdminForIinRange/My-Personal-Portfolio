@@ -63,12 +63,7 @@ import {
 } from "@chakra-ui/react";
 
 import { useInView } from "framer-motion";
-import Baffle from "baffle-react";
-const text =
-  "Hello!, I'm a fervent self taught Full-Stack Developer specializing in frontend, with a knack for enhancing web experiences through both UI/UX and code 🖥️🎨";
 
-// Split the text into an array of words
-const words = text.split(/\s+/);
 
 function QuoteAnimation({ children }) {
   const ref = useRef(null);
@@ -98,7 +93,7 @@ function QuoteAnimation({ children }) {
   );
 }
 export default function HeaderTitle() {
-  const text = "Full Stack Developer";
+
 
   return (
     <Stack align={"center"} p={"3%"}>
