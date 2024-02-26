@@ -195,8 +195,8 @@ export default function About() {
         <VStack align={"center"} w={"100%"}>
           <QuoteAnimation>
             <Text textAlign={"left"} color={"	#f0d86e"} mt={"30px"}>
-              As a self-taught full-stack web developer with a special focus on
-              frontend development, I bring together my diverse experiences and
+              As a self-taught full-stack web developer with a specializing in
+              frontend, I bring together my diverse experiences and
               skills to craft captivating user interfaces and seamless web
               experiences.
             </Text>

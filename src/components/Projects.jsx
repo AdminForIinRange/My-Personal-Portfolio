@@ -65,7 +65,7 @@ import {
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { FaShare, FaCheck, FaComment } from "react-icons/fa";
-import AIGoals from "../assets/Screenshot 2024-02-25 192623.png";
+import AIGoals from "../assets/Screenshot 2024-02-26 124604.png";
 import JsLogo from "../assets/Logos/JavaScript-logo (1).png";
 import ReactLogo from "../assets/Logos/React-icon.svg.png";
 import NextJSlogo from "../assets/Logos/nextjs-icon-2048x1234-pqycciiu.png";
@@ -132,7 +132,6 @@ function QuoteAnimation({ children }) {
 }
 
 export default function Projects() {
- 
   const cardRef = useRef(null);
   let bounds;
 
@@ -153,7 +152,7 @@ export default function Projects() {
         ${center.y / 100},
         ${-center.x / 100},
         0,
-        ${Math.log(distance) * 2}deg
+        ${Math.log(distance) * 7}deg
       )
     `;
 
@@ -162,8 +161,8 @@ export default function Projects() {
         circle at
         ${center.x * 2 + bounds.width / 2}px
         ${center.y * 2 + bounds.height / 2}px,
-        #ffffff55,
-        #00000000
+        #fffff555,
+        #0000000f
       )
     `;
   }
@@ -237,146 +236,152 @@ export default function Projects() {
         mt={"100px"}
       >
         
-        <VStack align={"left"} w={"100%"} mb={"1000px"}>
-          <div
-          
-            style={{
-              borderRadius: "15px",
-              backgroundColor: " rgb(107,70,193, 0.2)",
-              
-            }}
-            className="card3d"
-            ref={cardRef}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-          >
-             <Text textAlign={"left"} fontSize={"30px"} color={"purple.200"} textIndent={"10px"}>
-                    AI Goals
-                </Text>
-            <Box p={"2%"} w={"600px"} h={"100%"}>
-               
-              <Box h={"100%"} borderRadius={"15px"}>
-                <Image src={AIGoals} borderRadius={"10px"} />
+        <VStack align={"left"} w={"100%"}>
+          <QuoteAnimation>
+            <div
+              style={{
+                borderRadius: "15px",
+                backgroundColor: " rgb(107,70,193, 0.5)",
+              }}
+              className="card3d"
+              ref={cardRef}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
+              <Text
+                textAlign={"left"}
+                fontSize={"30px"}
+                color={"purple.200"}
+                textIndent={"10px"}
+              >
+                AI Goals
+              </Text>
+              <Box p={"2%"} w={"600px"} h={"100%"}>
+                <Box h={"100%"} borderRadius={"15px"}>
+                  <Image src={AIGoals} borderRadius={"10px"} />
+                </Box>
+
+                <HStack gap={"2.5%"} w={"60%"} p={"2% 0% 0% 0%"}>
+                  <VStack
+                    transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
+                    _hover={{
+                      transform: "scale(1.03)",
+                      filter: "drop-shadow(0px 0px 10px #0BC5EA)",
+                    }}
+                    w={"8%"}
+                  >
+                    <Image src={ReactLogo} />
+                  </VStack>
+
+                  <VStack
+                    transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
+                    _hover={{
+                      transform: "scale(1.03)",
+                      filter: "drop-shadow(0px 0px 10px #0BC5EA)",
+                    }}
+                    w={"8%"}
+                  >
+                    <Image src={ReduxLogo} />
+                  </VStack>
+
+                  <VStack
+                    transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
+                    _hover={{
+                      transform: "scale(1.03)",
+                      filter: "drop-shadow(0px 0px 10px #0BC5EA)",
+                    }}
+                    w={"8%"}
+                  >
+                    <Image src={chakraUIlogo} borderRadius={"100px"} />
+                  </VStack>
+                  <VStack
+                    transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
+                    _hover={{
+                      transform: "scale(1.03)",
+                      filter: "drop-shadow(0px 0px 10px #0BC5EA)",
+                    }}
+                    w={"10%"}
+                  >
+                    <Image src={tailwind} />
+                  </VStack>
+
+                  <VStack
+                    transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
+                    _hover={{
+                      transform: "scale(1.03)",
+                      filter: "drop-shadow(0px 0px 10px #A0AEC0)",
+                    }}
+                    w={"8%"}
+                  >
+                    <Image src={FramerMotion} />
+                  </VStack>
+
+                  <VStack
+                    transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
+                    _hover={{
+                      transform: "scale(1.03)",
+                      filter: "drop-shadow(0px 0px 10px #48BB78)",
+                    }}
+                    w={"8%"}
+                  >
+                    <Image src={Nodejs} />
+                  </VStack>
+
+                  <VStack
+                    transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
+                    _hover={{
+                      transform: "scale(1.03)",
+                      filter: "drop-shadow(0px 0px 10px #ECC94B)",
+                    }}
+                    w={"6%"}
+                  >
+                    <Image src={Firebase} />
+                  </VStack>
+
+                  <VStack
+                    transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
+                    _hover={{
+                      transform: "scale(1.03)",
+                      filter: "drop-shadow(0px 0px 10px #A0AEC0)",
+                    }}
+                    w={"8%"}
+                  >
+                    <Image src={GTPApi} />
+                  </VStack>
+                </HStack>
               </Box>
-            
 
-              <HStack gap={"2.5%"} w={"60%"} p={"2% 0% 0% 0%"}>
-                <VStack
-                  transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
-                  _hover={{
-                    transform: "scale(1.03)",
-                    filter: "drop-shadow(0px 0px 10px #0BC5EA)",
-                  }}
-                  w={"8%"}
+              <div className="glow" style={{ borderRadius: "15px" }}></div>
+            </div>
+            <HStack w={"25%"}>
+              <a
+                style={{ marginTop: "12.5px" }}
+                target="_blank"
+                href="https://aigoals.web.app"
+              >
+                <Button
+                  fontSize={"15px"}
+                  p={""}
+                  rightIcon={<ExternalLinkIcon />}
                 >
-                  <Image src={ReactLogo} />
-                </VStack>
-
-                <VStack
-                  transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
-                  _hover={{
-                    transform: "scale(1.03)",
-                    filter: "drop-shadow(0px 0px 10px #0BC5EA)",
-                  }}
-                  w={"8%"}
+                  View Live Deploy
+                </Button>
+              </a>
+              <a
+                style={{ marginTop: "12.5px" }}
+                target="_blank"
+                href="https://github.com/AdminForIinRange/AIgoals"
+              >
+                <Button
+                  fontSize={"15px"}
+                  p={""}
+                  rightIcon={<ExternalLinkIcon />}
                 >
-                  <Image src={ReduxLogo} />
-                </VStack>
-
-                <VStack
-                  transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
-                  _hover={{
-                    transform: "scale(1.03)",
-                    filter: "drop-shadow(0px 0px 10px #0BC5EA)",
-                  }}
-                  w={"8%"}
-                >
-                  <Image src={chakraUIlogo} borderRadius={"100px"} />
-                </VStack>
-                <VStack
-                  transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
-                  _hover={{
-                    transform: "scale(1.03)",
-                    filter: "drop-shadow(0px 0px 10px #0BC5EA)",
-                  }}
-                  w={"10%"}
-                >
-                  <Image src={tailwind} />
-                </VStack>
-
-                <VStack
-                  transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
-                  _hover={{
-                    transform: "scale(1.03)",
-                    filter: "drop-shadow(0px 0px 10px #A0AEC0)",
-                  }}
-                  w={"8%"}
-                >
-                  <Image src={FramerMotion} />
-                </VStack>
-
-                <VStack
-                  transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
-                  _hover={{
-                    transform: "scale(1.03)",
-                    filter: "drop-shadow(0px 0px 10px #48BB78)",
-                  }}
-                  w={"8%"}
-                >
-                  <Image src={Nodejs} />
-                </VStack>
-
-                <VStack
-                  transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
-                  _hover={{
-                    transform: "scale(1.03)",
-                    filter: "drop-shadow(0px 0px 10px #ECC94B)",
-                  }}
-                  w={"6%"}
-                >
-                  <Image src={Firebase} />
-                </VStack>
-
-                <VStack
-                  transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
-                  _hover={{
-                    transform: "scale(1.03)",
-                    filter: "drop-shadow(0px 0px 10px #A0AEC0)",
-                  }}
-                  w={"8%"}
-                >
-                  <Image src={GTPApi} />
-                </VStack>
-              </HStack>
-            </Box>
-
-            <div className="glow" style={{ borderRadius: "15px" }}></div>
-          </div>
-          <HStack  w={"25%"}>
-
-          <a style={{marginTop:"12.5px"}} target="_blank" href="https://aigoals.web.app">
-            <Button
-            
-              fontSize={"15px"}
-              p={""}
-              rightIcon={<ExternalLinkIcon />}
-            >
-              View Live Deploy
-            </Button>
-          </a>
-          <a style={{marginTop:"12.5px"}} target="_blank" href="https://aigoals.web.app">
-            <Button
-            
-              fontSize={"15px"}
-              p={""}
-              rightIcon={<ExternalLinkIcon />}
-            >
-              View Github 
-            </Button>
-          </a>
-          </HStack>
-    
-          
+                  View Github
+                </Button>
+              </a>
+            </HStack>
+          </QuoteAnimation>
         </VStack>
       </HStack>
     </VStack>
