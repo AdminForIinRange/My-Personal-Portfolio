@@ -96,7 +96,7 @@ export default function HeaderTitle() {
 
 
   return (
-    <Stack align={"center"} p={"3%"}>
+    <Stack align={"center"} p={"3%"}   >
       <VStack
         justify="center"
         align="left"
@@ -146,15 +146,15 @@ export default function HeaderTitle() {
               color={"wheat"}
               fontWeight="700"
               fontSize={{
-                base: "20px",
-                xsm: "20px",
-                ssm: "20px",
-                sm: "40px",
-                md: "40px",
-                lg: "60px",
-                xl: "80px",
+                base: "30px",
+                xsm: "30px",
+                ssm: "50px",
+                sm: "60px",
+                md: "70px",
+                lg: "90px",
+                xl: "120px",
                 xxl: "150px",
-                xxxl: "120px",
+                xxxl: "150px",
               }}
               whiteSpace="nowrap"
             >
@@ -173,11 +173,11 @@ export default function HeaderTitle() {
           >
             <Text
               fontSize={{
-                base: "5.5px",
-                xsm: "5.5px",
-                ssm: "5.5px",
-                sm: "8.5px",
-                md: "10.5px",
+                base: "8.5px",
+                xsm: "8.5px",
+                ssm: "12.5px",
+                sm: "12.5px",
+                md: "12.5px",
                 lg: "12.5px",
                 xl: "15.5px",
                 xxl: "22.5px",

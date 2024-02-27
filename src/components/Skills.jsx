@@ -128,27 +128,21 @@ function QuoteAnimation({ children }) {
   );
 }
 
-
-
 export default function Skills() {
-
-
-  
   return (
-    <VStack justify="center" align="center" mt={"300px"}>
-    
+    <VStack justify="center" align="center" mt={"300px"}  id="Skills"  >
       <VStack
-         w={{
-            base: "90%",
-            xsm: "90%",
-            ssm: "90%",
-            sm: "90%",
-            md: "90%",
-            lg: "90%",
-            xl: "80%",
-            xxl: "70%",
-            xxxl: "70%",
-          }}
+        w={{
+          base: "90%",
+          xsm: "90%",
+          ssm: "90%",
+          sm: "90%",
+          md: "90%",
+          lg: "90%",
+          xl: "80%",
+          xxl: "70%",
+          xxxl: "70%",
+        }}
         align="left"
         justify="center"
         mt="100px"
@@ -161,11 +155,7 @@ export default function Skills() {
           color={"	#f0d86e"}
           className="animate__animated animate__fadeInDown"
         >
-           <QuoteAnimation>
-           Acquired skills
-
-           </QuoteAnimation>
-     
+          <QuoteAnimation>Acquired skills</QuoteAnimation>
         </Text>
         <Text
           fontFamily={"Raleway"}
@@ -185,10 +175,7 @@ export default function Skills() {
           whiteSpace="nowrap"
           className="animate__animated animate__fadeInUp"
         >
-           <QuoteAnimation>
-           My Skills Sets
-           </QuoteAnimation>
-         
+          <QuoteAnimation>My Skills Sets</QuoteAnimation>
         </Text>
       </VStack>
 
@@ -197,31 +184,28 @@ export default function Skills() {
         mt={"100px"}
         defaultIndex={[]}
         allowMultiple
-         w={{
-            base: "90%",
-            xsm: "90%",
-            ssm: "90%",
-            sm: "90%",
-            md: "90%",
-            lg: "90%",
-            xl: "80%",
-            xxl: "70%",
-            xxxl: "70%",
-          }}
+        w={{
+          base: "90%",
+          xsm: "90%",
+          ssm: "90%",
+          sm: "90%",
+          md: "90%",
+          lg: "90%",
+          xl: "80%",
+          xxl: "70%",
+          xxxl: "70%",
+        }}
       >
-
-<QuoteAnimation>
-
-
-        <Text
-          color={"	#f0d86e"}
-          fontFamily={"Raleway"}
-          fontSize={"50px"}
-          fontWeight={700}
-          p={"1% 0% 1% 0%"}
-        >
-          Front End
-        </Text>
+        <QuoteAnimation>
+          <Text
+            color={"	#f0d86e"}
+            fontFamily={"Raleway"}
+            fontSize={"50px"}
+            fontWeight={700}
+            p={"1% 0% 1% 0%"}
+          >
+            Front End
+          </Text>
         </QuoteAnimation>
         <AccordionItem border={" 0px"}>
           <AccordionButton
@@ -230,28 +214,39 @@ export default function Skills() {
             fontSize={"30px"}
             p={"1% 0% 1% 0%"}
           >
-
-<QuoteAnimation>
-
-<Text whiteSpace={"nowrap"}  fontSize={{
-          base: "20px",
-          xsm: "20px",
-          ssm: "20px",
-          sm: "20px",
-          md: "20px",
-          lg: "20px",
-          xl: "25px",
-          xxl: "25px",
-          xxxl: "25px",
-        }} >
-            JavaScript Frameworks/Libraries
-            </Text>
+            <QuoteAnimation>
+              <Text
+                whiteSpace={"nowrap"}
+                fontSize={{
+                  base: "20px",
+                  xsm: "20px",
+                  ssm: "20px",
+                  sm: "20px",
+                  md: "20px",
+                  lg: "20px",
+                  xl: "25px",
+                  xxl: "25px",
+                  xxxl: "25px",
+                }}
+              >
+                JavaScript Frameworks/Libraries
+              </Text>
             </QuoteAnimation>
             <AccordionIcon />
           </AccordionButton>
 
           <AccordionPanel border={" 0px"} p={"3%"}>
-            <HStack align={"end"} gap={"120px"} flexWrap={"wrap"}>
+            <HStack align={"end"} gap={{
+           base: "40px",
+           xsm: "40px",
+           ssm: "40px",
+           sm: "40px",
+           md: "40px",
+           lg: "60px",
+           xl: "60px",
+           xxl: "60px",
+           xxxl: "60px",
+         }} flexWrap={"wrap"}>
               <VStack
                 transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
                 _hover={{
@@ -313,29 +308,40 @@ export default function Skills() {
             p={"1% 0% 1% 0%"}
             color={"	#fff4c4"}
           >
+            <QuoteAnimation>
+              <Text
+                whiteSpace={"nowrap"}
+                fontSize={{
+                  base: "20px",
+                  xsm: "20px",
+                  ssm: "20px",
+                  sm: "20px",
+                  md: "20px",
+                  lg: "20px",
+                  xl: "25px",
+                  xxl: "25px",
+                  xxxl: "25px",
+                }}
+              >
+                Frontend Development Tools/Libraries
+              </Text>
+            </QuoteAnimation>
 
-<QuoteAnimation>
-  <Text whiteSpace={"nowrap"}  fontSize={{
-          base: "20px",
-          xsm: "20px",
-          ssm: "20px",
-          sm: "20px",
-          md: "20px",
-          lg: "20px",
-          xl: "25px",
-          xxl: "25px",
-          xxxl: "25px",
-        }} >
-  Frontend Development Tools/Libraries
-  </Text>
-
-</QuoteAnimation>
-    
             <AccordionIcon />
           </AccordionButton>
 
           <AccordionPanel border={" 0px"} p={"3%"}>
-            <HStack align={"end"} gap={"120px"} flexWrap={"wrap"}>
+            <HStack align={"end"} gap={{
+           base: "40px",
+           xsm: "40px",
+           ssm: "40px",
+           sm: "40px",
+           md: "40px",
+           lg: "60px",
+           xl: "60px",
+           xxl: "60px",
+           xxxl: "60px",
+         }} flexWrap={"wrap"}>
               <VStack
                 transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
                 _hover={{
@@ -380,7 +386,11 @@ export default function Skills() {
                 }}
                 w={"8%"}
               >
-                <Image loading="lazy" src={chakraUIlogo} borderRadius={"100px"} />
+                <Image
+                  loading="lazy"
+                  src={chakraUIlogo}
+                  borderRadius={"100px"}
+                />
                 <Text>Chakra UI</Text>
               </VStack>
 
@@ -415,17 +425,21 @@ export default function Skills() {
                   filter: "drop-shadow(0px 0px 10px #0BC5EA)",
                 }}
               >
-                <Text fontWeight={"bold"}     fontSize={{
-            base: "15px",
-            xsm: "15px",
-            ssm: "15px",
-            sm: "15px",
-            md: "30px",
-            lg: "35px",
-            xl: "35px",
-            xxl: "40px",
-            xxxl: "40px",
-          }} color={"#22b5bf"}>
+                <Text
+                  fontWeight={"bold"}
+                  fontSize={{
+                    base: "15px",
+                    xsm: "15px",
+                    ssm: "15px",
+                    sm: "15px",
+                    md: "30px",
+                    lg: "35px",
+                    xl: "35px",
+                    xxl: "40px",
+                    xxxl: "40px",
+                  }}
+                  color={"#22b5bf"}
+                >
                   {"<ReCharts />"}
                 </Text>
                 <Text>ReCharts</Text>
@@ -486,7 +500,7 @@ export default function Skills() {
                 }}
                 w={"8%"}
               >
-                <Image loading="lazy" src={FramerMotion}  />
+                <Image loading="lazy" src={FramerMotion} />
                 <Text textAlign={"center"}>Framer Motion</Text>
               </VStack>
             </HStack>
@@ -499,17 +513,17 @@ export default function Skills() {
         mt={"100px"}
         defaultIndex={[]}
         allowMultiple
-         w={{
-            base: "90%",
-            xsm: "90%",
-            ssm: "90%",
-            sm: "90%",
-            md: "90%",
-            lg: "90%",
-            xl: "80%",
-            xxl: "70%",
-            xxxl: "70%",
-          }}
+        w={{
+          base: "90%",
+          xsm: "90%",
+          ssm: "90%",
+          sm: "90%",
+          md: "90%",
+          lg: "90%",
+          xl: "80%",
+          xxl: "70%",
+          xxxl: "70%",
+        }}
       >
         <Text
           fontFamily={"Raleway"}
@@ -518,10 +532,7 @@ export default function Skills() {
           p={"1% 0% 1% 0%"}
           color={"	#f0d86e"}
         >
-          <QuoteAnimation>
-          Backend
-          </QuoteAnimation>
-    
+          <QuoteAnimation>Backend</QuoteAnimation>
         </Text>
 
         <AccordionItem border={" 0px"}>
@@ -531,30 +542,40 @@ export default function Skills() {
             p={"1% 0% 1% 0%"}
             color={"	#fff4c4"}
           >
+            <QuoteAnimation>
+              <Text
+                whiteSpace={"nowrap"}
+                fontSize={{
+                  base: "20px",
+                  xsm: "20px",
+                  ssm: "20px",
+                  sm: "20px",
+                  md: "20px",
+                  lg: "20px",
+                  xl: "25px",
+                  xxl: "25px",
+                  xxxl: "25px",
+                }}
+              >
+                Backend Technologies/Tools
+              </Text>
+            </QuoteAnimation>
 
-<QuoteAnimation>
-
-<Text whiteSpace={"nowrap"}  fontSize={{
-          base: "20px",
-          xsm: "20px",
-          ssm: "20px",
-          sm: "20px",
-          md: "20px",
-          lg: "20px",
-          xl: "25px",
-          xxl: "25px",
-          xxxl: "25px",
-        }} >
-          Backend Technologies/Tools
-        </Text>
-
-          </QuoteAnimation>
-          
             <AccordionIcon />
           </AccordionButton>
 
           <AccordionPanel border={" 0px"} p={"3%"}>
-            <HStack align={"end"} gap={"120px"} flexWrap={"wrap"}>
+            <HStack align={"end"} gap={{
+           base: "40px",
+           xsm: "40px",
+           ssm: "40px",
+           sm: "40px",
+           md: "40px",
+           lg: "60px",
+           xl: "60px",
+           xxl: "60px",
+           xxxl: "60px",
+         }} flexWrap={"wrap"}>
               <VStack
                 transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
                 _hover={{
@@ -720,11 +741,7 @@ export default function Skills() {
           p={"1% 0% 1% 0%"}
           color={"	#f0d86e"}
         >
-
-<QuoteAnimation>
-Extra
-          </QuoteAnimation>
-          
+          <QuoteAnimation>Extra</QuoteAnimation>
         </Text>
 
         <AccordionItem border={" 0px"}>
@@ -735,26 +752,40 @@ Extra
             color={"	#fff4c4"}
           >
             <QuoteAnimation>
+              <Text
+                whiteSpace={"nowrap"}
+                fontSize={{
+                  base: "20px",
+                  xsm: "20px",
+                  ssm: "20px",
+                  sm: "20px",
+                  md: "20px",
+                  lg: "20px",
+                  xl: "25px",
+                  xxl: "25px",
+                  xxxl: "25px",
+                }}
+              >
+                {" "}
+                Extra workplace/development tools
+              </Text>
+            </QuoteAnimation>
 
-            <Text whiteSpace={"nowrap"}  fontSize={{
-          base: "20px",
-          xsm: "20px",
-          ssm: "20px",
-          sm: "20px",
-          md: "20px",
-          lg: "20px",
-          xl: "25px",
-          xxl: "25px",
-          xxxl: "25px",
-        }} >  Extra workplace/development tools</Text>
-          
-          </QuoteAnimation>
-       
             <AccordionIcon />
           </AccordionButton>
 
           <AccordionPanel border={" 0px"} p={"3%"}>
-            <HStack  align={"end"} gap={"120px"} flexWrap={"wrap"}>
+            <HStack align={"end"} gap={{
+           base: "40px",
+           xsm: "40px",
+           ssm: "40px",
+           sm: "40px",
+           md: "40px",
+           lg: "60px",
+           xl: "60px",
+           xxl: "60px",
+           xxxl: "60px",
+         }} flexWrap={"wrap"}>
               <VStack
                 transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
                 _hover={{

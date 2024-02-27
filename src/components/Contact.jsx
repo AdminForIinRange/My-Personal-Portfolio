@@ -141,7 +141,7 @@ function QuoteAnimation({ children }) {
 
 export default function Contact() {
   return (
-    <VStack align="center" mt={"200px"}>
+    <VStack align="center" mt={"200px"} id="Contact" >
       <VStack
            w={{
             base: "90%",
@@ -196,9 +196,9 @@ export default function Contact() {
         flexWrap={{
           base: "wrap",
           xsm: "wrap",
-          ssm: "nowrap",
-          sm: "nowrap",
-          md: "nowrap",
+          ssm: "wrap",
+          sm: "wrap",
+          md: "wrap",
           lg: "nowrap",
           xl: "nowrap",
           xxl: "nowrap",
@@ -250,15 +250,13 @@ export default function Contact() {
             </Text>
 
 
-<HStack  w={"120%"} justify={"center"}>   <Divider  mt={"10px"} borderColor={"wheat"} />
-<Text color={"wheat"} ml={"20px"} fontWeight={"600"}>
-    or
-</Text>
+<HStack  w={"100%"} justify={"center"}>   <Divider  mt={"10px"} borderColor={"wheat"} />
+
 
 </HStack>
          
 
-            <Text textAlign={"left"} color={"	#f0d86e"} mt={"30px"} fontSize={"25px"}>
+            <Text textAlign={"left"} color={"	#f0d86e"} mt={"30px"} fontSize={"15px"} >
                 <HStack gap={"10px"}>
                 <Image src={Gmail} w={"4%"} />
                
@@ -272,7 +270,7 @@ export default function Contact() {
               </HStack>
             </Text>
 
-            <Text textAlign={"left"} color={"	#f0d86e"} mt={"30px"} fontSize={"25px"}>
+            <Text textAlign={"left"} color={"	#f0d86e"} mt={"30px"} fontSize={"15px"}>
                 <HStack gap={"10px"}>
                 <Image src={linkden} w={"4%"} />
                

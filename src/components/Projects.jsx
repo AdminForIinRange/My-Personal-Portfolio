@@ -97,7 +97,7 @@ import GIT from "../assets/Logos/Git_icon.svg.png";
 import GTPApi from "../assets/Logos/openai-white-logomark.png";
 import PuppeteerJS from "../assets/Logos/29446482-04f7036a-841f-11e7-9872-91d1fc2ea683.png";
 import Docker from "../assets/Logos/97_Docker_logo_logos-512.webp";
-
+import Draggable from 'react-draggable';
 import Vite from "../assets/Logos/Vitejs-logo.svg";
 
 import VSC from "../assets/Logos/Visual_Studio_Code_1.35_icon.svg.png";
@@ -106,6 +106,7 @@ import Github from "../assets/Logos/25231.png";
 
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { useNavigate } from "react-router-dom";
+import Card3D from "./Card3D";
 
 function QuoteAnimation({ children }) {
   const ref = useRef(null);
@@ -132,66 +133,40 @@ function QuoteAnimation({ children }) {
 }
 
 export default function Projects() {
-  const cardRef = useRef(null);
-  let bounds;
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
 
-  function rotateToMouse(e) {
-    const mouseX = e.clientX;
-    const mouseY = e.clientY;
-    const leftX = mouseX - bounds.x;
-    const topY = mouseY - bounds.y;
-    const center = {
-      x: leftX - bounds.width / 2,
-      y: topY - bounds.height / 2,
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth < 768); // Assuming small screen width is less than 768px
     };
-    const distance = Math.sqrt(center.x ** 2 + center.y ** 2);
 
-    cardRef.current.style.transform = `
-      scale3d(1.07, 1.07, 1.07)
-      rotate3d(
-        ${center.y / 100},
-        ${-center.x / 100},
-        0,
-        ${Math.log(distance) * 5}deg
-      )
-    `;
+    // Initial check on component mount
+    handleResize();
 
-    cardRef.current.querySelector(".glow").style.backgroundImage = `
-      radial-gradient(
-        circle at
-        ${center.x * 2 + bounds.width / 2}px
-        ${center.y * 2 + bounds.height / 2}px,
-        rgb(255, 255, 255, 0.35),
-        rgb(0, 0, 0, 0.25)
-      )
-    `;
-  }
+    // Add event listener for window resize
+    window.addEventListener('resize', handleResize);
 
-  function handleMouseEnter() {
-    bounds = cardRef.current.getBoundingClientRect();
-    document.addEventListener("mousemove", rotateToMouse);
-  }
-
-  function handleMouseLeave() {
-    document.removeEventListener("mousemove", rotateToMouse);
-    cardRef.current.style.transform = "";
-    cardRef.current.querySelector(".glow").style.backgroundImage = "";
-  }
+    // Cleanup function to remove event listener
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []); // Empty dependency array to run the effect only once on mount
 
   return (
-    <VStack justify="center" align="center" mt={"200px"}>
+    <VStack justify="center" align="center" mt={"200px"} id="Projects">
+        
       <VStack
-          w={{
-            base: "90%",
-            xsm: "90%",
-            ssm: "90%",
-            sm: "90%",
-            md: "90%",
-            lg: "90%",
-            xl: "80%",
-            xxl: "70%",
-            xxxl: "70%",
-          }}
+        w={{
+          base: "90%",
+          xsm: "90%",
+          ssm: "90%",
+          sm: "90%",
+          md: "90%",
+          lg: "90%",
+          xl: "80%",
+          xxl: "70%",
+          xxxl: "70%",
+        }}
         align="left"
         justify="center"
         mt="100px"
@@ -230,141 +205,63 @@ export default function Projects() {
         </QuoteAnimation>
       </VStack>
 
-      <HStack
-        fontFamily={"Raleway"}
-        justify={"center"}
-        align={"start"}
-        mt={"100px"}
-      >
-        <VStack align={"left"} w={"100%"}>
-          <QuoteAnimation>
-            <div
-              style={{
-                borderRadius: "15px",
-                backgroundColor: " rgb(107,70,193, 1)",
-              }}
-              className="card3d"
-              ref={cardRef}
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-            >
-              <Text
-                textAlign={"left"}
-                fontSize={"30px"}
-                color={"purple.200"}
-                textIndent={"10px"}
-              >
-                AI Goals
-              </Text>
-              <Box p={"2%"} w={"600px"} h={"100%"}>
-                <Box h={"100%"} borderRadius={"15px"}>
-                  <Image loading="lazy" src={AIGoals} borderRadius={"10px"} />
-                </Box>
+   
+      
+  <HStack
+    w={"100%"}
+    flexWrap={{
+      base: "Wrap",
+      xsm: "Wrap",
+      ssm: "Wrap",
+      sm: "Wrap",
+      md: "Wrap",
+      lg: "Wrap",
+      xl: "nowrap",
+      xxl: "nowrap",
+      xxxl: "nowrap",
+    }}
+    fontFamily={"Raleway"}
+    justify={"center"}
+    align={"start"}
+    mt={"100px"}
+    p={"3%"}
+    gap={"3%"}
+  >
+   
+    {isSmallScreen ? <>
+      <VStack minW={"350px"} maxW={"450px"} align={"left"} mb={"50px"}>
+      <QuoteAnimation>
+        <Card3D
+          Imageid={AIGoals}
+          Title={"Frontend AI Startup"}
+          Desc={`Personalized tasks, insights, and seamless integration for
+            productivity. Users input goals, track progress visually, and
+            receive adaptive recommendations.`}
+        />
+      </QuoteAnimation>
+    </VStack>
 
-                <HStack gap={"2.5%"} w={"60%"} p={"2% 0% 0% 0%"}>
-                  <VStack
-                   
-                    w={"8%"}
-                  >
-                    <Image loading="lazy" src={ReactLogo} />
-                  </VStack>
+    </>
+    :
+    
+    <VStack minW={"350px"} maxW={"600px"} align={"left"} mb={"50px"}>
+      <QuoteAnimation>
+        <Card3D
+          Imageid={AIGoals}
+          Title={"Frontend AI Startup"}
+          Desc={`Personalized tasks, insights, and seamless integration for
+            productivity. Users input goals, track progress visually, and
+            receive adaptive recommendations.`}
+        />
+      </QuoteAnimation>
+    </VStack>
+}
+   
+  
 
-                  <VStack
-                    
-                    w={"8%"}
-                  >
-                    <Image loading="lazy" src={ReduxLogo} />
-                  </VStack>
-
-                  <VStack
-                   
-                    w={"8%"}
-                  >
-                    <Image loading="lazy" src={chakraUIlogo} borderRadius={"100px"} />
-                  </VStack>
-                  <VStack
-                   
-                    w={"10%"}
-                  >
-                    <Image loading="lazy" src={tailwind} />
-                  </VStack>
-
-                  <VStack
-                   
-                    w={"8%"}
-                  >
-                    <Image loading="lazy" src={FramerMotion} />
-                  </VStack>
-
-                  <VStack
-                    
-                    w={"8%"}
-                  >
-                    <Image loading="lazy" src={Nodejs} />
-                  </VStack>
-
-                  <VStack
-                   
-                    w={"6%"}
-                  >
-                    <Image loading="lazy" src={Firebase} />
-                  </VStack>
-
-                  <VStack
-                   
-                    w={"8%"}
-                  >
-                    <Image loading="lazy" src={GTPApi} />
-                  </VStack>
-                </HStack>
-              </Box>
-
-              <div className="glow" style={{ borderRadius: "15px" }}></div>
-            </div>
-            
-
-            <HStack mt={"15px"} p={"2%"} align={" start"} w={"100%"} maxW={"600"} h={"100px"} bgColor={"purple.200"} borderRadius={"15px"}>
-
-<Text   fontFamily={"Raleway"} fontSize={"17px"}   > 
-Personalized tasks, insights, and seamless integration for productivity. Users input goals, track progress visually, and receive adaptive recommendations.</Text>
-
-</HStack>
-<HStack  justify={"center"} w={"100%"} transition="transform, 0.3s ease-in-out, ">
-    <a
-      style={{ marginTop: "12.5px" }}
-      target="_blank"
-      href="https://aigoals.web.app"
-    >
-      <Button
-       bgColor={"purple.400"} 
-        fontSize={"15px"}
-        p={""}
-        rightIcon={<ExternalLinkIcon />}
-      >
-        View Live Deploy
-      </Button>
-    </a>
-    <a
-      style={{ marginTop: "12.5px" }}
-      target="_blank"
-      href="https://github.com/AdminForIinRange/AIgoals"
-    >
-      <Button
-      bgColor={"purple.400"} 
-        fontSize={"15px"}
-        p={""}
-        rightIcon={<ExternalLinkIcon />}
-      >
-        View Github
-      </Button>
-    </a>
   </HStack>
-          </QuoteAnimation>
-         
-        </VStack>
 
-        
-      </HStack>
+
     </VStack>
   );
 }

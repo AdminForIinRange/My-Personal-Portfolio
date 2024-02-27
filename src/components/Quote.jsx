@@ -82,13 +82,14 @@ function QuoteAnimation({ children }) {
 
   return (
     <VStack
+
     fontSize={{
       base: "40px",
       xsm: "40px",
-      ssm: "50px",
-      sm: "70px",
-      md: "80px",
-      lg: "90px",
+      ssm: "40px",
+      sm: "50px",
+      md: "60px",
+      lg: "70px",
       xl: "100px",
       xxl: "120px",
       xxxl: "120px",

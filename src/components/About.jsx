@@ -140,7 +140,8 @@ export default function About() {
   }
 
   return (
-    <VStack justify="center" align="center" mt={"200px"}>
+    <VStack justify="center" align="center" mt={"200px"} id="About">
+      
       <VStack
       w={{
         base: "90%",

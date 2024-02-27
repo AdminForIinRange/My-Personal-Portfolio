@@ -73,20 +73,20 @@ export default function Navbar() {
       >
         <Box w={"100%"} h={"50px"}>
           <HStack justify={"center"} h={"100%"} align={"Start"}>
-            <HStack w={"90%"} justify={"center"} gap={"2%"}>
+            <HStack w={"90%"} justify={"center"} gap={"1%"}>
               <Text
                 fontWeight={500}
                 color={"wheat"}
                 fontSize={{
-                  base: "10px",
-                  xsm: "10px",
-                  ssm: "10px",
-                  sm: "10px",
-                  md: "12px",
-                  lg: "14px",
-                  xl: "17px",
-                  xxl: "17px",
-                  xxxl: "17px",
+                  base: "8.5px",
+                  xsm: "8.5px",
+                  ssm: "12.5px",
+                  sm: "12.5px",
+                  md: "12.5px",
+                  lg: "12.5px",
+                  xl: "15.5px",
+                  xxl: "22.5px",
+                  xxxl: "22.5px",
                 }}
               >
                  <a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&to=bhattaraianjesh123@gmail.com">  <Text  as={"span"} textDecorationLine={"underline"} > bhattaraianjesh123@gmail.com </Text>  </a> 
@@ -108,7 +108,7 @@ export default function Navbar() {
                   xxxl: "17px",
                 }}
               >
-                <HStack gap={"50%"}>
+                <HStack>
                   <Box
                     transition="transform 0.3s ease-in-out, boxShadow 1s ease-in-out"
                     _hover={{
@@ -166,79 +166,81 @@ export default function Navbar() {
                   xxxl: "17px",
                 }}
               >
-                <HStack gap={"50%"}>
-                  <Text></Text>
-                </HStack>
+                
               </Text>
 
               <Spacer />
 
               <ButtonGroup
+              
                 colorScheme="none"
                 variant="link"
-                gap={"10px"}
+               
                 color={"wheat"}
               >
-                <Button
-                  fontSize={{
-                    base: "10px",
-                    xsm: "10px",
-                    ssm: "10px",
-                    sm: "10px",
-                    md: "12px",
-                    lg: "14px",
-                    xl: "17px",
-                    xxl: "17px",
-                    xxxl: "17px",
-                  }}
+                <Button   fontSize={{
+                base: "8.5px",
+                xsm: "8.5px",
+                ssm: "12.5px",
+                sm: "12.5px",
+                md: "12.5px",
+                lg: "12.5px",
+                xl: "15.5px",
+                xxl: "22.5px",
+                xxxl: "22.5px",
+              }}
+                 
                 >
                   <a href="#About">About</a>
                 </Button>
 
-                <Button
-                  fontSize={{
-                    base: "10px",
-                    xsm: "10px",
-                    ssm: "10px",
-                    sm: "10px",
-                    md: "12px",
-                    lg: "14px",
-                    xl: "17px",
-                    xxl: "17px",
-                    xxxl: "17px",
-                  }}
-                >
-                  Skills
+                <Button   fontSize={{
+                base: "8.5px",
+                xsm: "8.5px",
+                ssm: "12.5px",
+                sm: "12.5px",
+                md: "12.5px",
+                lg: "12.5px",
+                xl: "15.5px",
+                xxl: "22.5px",
+                xxxl: "22.5px",
+              }}
+                
+                > <a href="#Skills">Skills</a>
+                  
                 </Button>
-                <Button
-                  fontSize={{
-                    base: "10px",
-                    xsm: "10px",
-                    ssm: "10px",
-                    sm: "10px",
-                    md: "12px",
-                    lg: "14px",
-                    xl: "17px",
-                    xxl: "17px",
-                    xxxl: "17px",
-                  }}
+                <Button   fontSize={{
+                base: "8.5px",
+                xsm: "8.5px",
+                ssm: "12.5px",
+                sm: "12.5px",
+                md: "12.5px",
+                lg: "12.5px",
+                xl: "15.5px",
+                xxl: "22.5px",
+                xxxl: "22.5px",
+              }}
+                 
                 >
-                  Projects
+                  <a href="#Projects">Projects</a>
+                  
                 </Button>
-                <Button
-                  fontSize={{
-                    base: "10px",
-                    xsm: "10px",
-                    ssm: "10px",
-                    sm: "10px",
-                    md: "12px",
-                    lg: "14px",
-                    xl: "17px",
-                    xxl: "17px",
-                    xxxl: "17px",
-                  }}
+                <Button   fontSize={{
+                base: "8.5px",
+                xsm: "8.5px",
+                ssm: "12.5px",
+                sm: "12.5px",
+                md: "12.5px",
+                lg: "12.5px",
+                xl: "15.5px",
+                xxl: "22.5px",
+                xxxl: "22.5px",
+              }}
+                 
                 >
-                  Contact
+                     <a href="#Contact">Contact</a>
+                  
+                  
                 </Button>
               </ButtonGroup>
             </HStack>
