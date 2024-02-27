@@ -281,9 +281,9 @@ export default function About() {
      sm: "600px",
      md: "400px",
      lg: "400px",
-     xl: "400px",
-     xxl: "400px",
-     xxxl: "400px",}}
+     xl: "500px",
+     xxl: "600px",
+     xxxl: "500px",}}
               w={"100%"}
               h={"300px"}
               borderRadius={"15px"}

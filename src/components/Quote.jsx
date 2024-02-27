@@ -206,7 +206,7 @@ export default function Quote() {
         >
           <Text as={"span"} fontWeight={400} fontFamily={"Raleway"}>
             {" "}
-            obscure rather than reveal. "
+            obscure rather than reveal. 
           </Text>
         </Box>
 
