@@ -176,7 +176,7 @@ export default function Projects() {
           <Text
             textAlign={"left"}
             fontFamily={"Raleway"}
-            fontSize="50px"
+            fontSize="35px"
             color={"	#f0d86e"}
           >
             uhh..., yea
@@ -188,15 +188,15 @@ export default function Projects() {
             color={"wheat"}
             fontWeight="700"
             fontSize={{
-              base: "20px",
-              xsm: "20px",
-              ssm: "20px",
-              sm: "40px",
-              md: "40px",
-              lg: "60px",
-              xl: "80px",
-              xxl: "120px",
-              xxxl: "130px",
+              base: "50px",
+              xsm: "50px",
+              ssm: "50px",
+              sm: "70px",
+              md: "90px",
+              lg: "100px",
+              xl: "100px",
+              xxl: "110px",
+              xxxl: "110px",
             }}
             whiteSpace="nowrap"
           >

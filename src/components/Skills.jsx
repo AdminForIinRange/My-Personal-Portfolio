@@ -162,15 +162,15 @@ export default function Skills() {
           color={"wheat"}
           fontWeight="700"
           fontSize={{
-            base: "20px",
-            xsm: "20px",
-            ssm: "20px",
-            sm: "40px",
-            md: "40px",
-            lg: "60px",
-            xl: "80px",
+            base: "50px",
+            xsm: "50px",
+            ssm: "50px",
+            sm: "70px",
+            md: "90px",
+            lg: "100px",
+            xl: "100px",
             xxl: "110px",
-            xxxl: "120px",
+            xxxl: "100px",
           }}
           whiteSpace="nowrap"
           className="animate__animated animate__fadeInUp"
@@ -200,9 +200,20 @@ export default function Skills() {
           <Text
             color={"	#f0d86e"}
             fontFamily={"Raleway"}
-            fontSize={"50px"}
+            fontSize={{
+              base: "30px",
+              xsm: "30px",
+              ssm: "30px",
+              sm: "40px",
+              md: "40px",
+              lg: "50px",
+              xl: "50px",
+              xxl: "50px",
+              xxxl: "50px",
+            }}
             fontWeight={700}
             p={"1% 0% 1% 0%"}
+            
           >
             Front End
           </Text>
@@ -246,7 +257,10 @@ export default function Skills() {
            xl: "60px",
            xxl: "60px",
            xxxl: "60px",
-         }} flexWrap={"wrap"}>
+         }} flexWrap={"wrap"}
+         fontSize={"12px"}
+         >
+          
               <VStack
                 transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
                 _hover={{
@@ -260,6 +274,7 @@ export default function Skills() {
               </VStack>
 
               <VStack
+            
                 transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
                 _hover={{
                   transform: "scale(1.03)",
@@ -330,7 +345,7 @@ export default function Skills() {
             <AccordionIcon />
           </AccordionButton>
 
-          <AccordionPanel border={" 0px"} p={"3%"}>
+          <AccordionPanel border={" 0px"}  p={"3%"} >
             <HStack align={"end"} gap={{
            base: "40px",
            xsm: "40px",
@@ -341,7 +356,7 @@ export default function Skills() {
            xl: "60px",
            xxl: "60px",
            xxxl: "60px",
-         }} flexWrap={"wrap"}>
+         }} flexWrap={"wrap"}    fontSize={"12px"}>
               <VStack
                 transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
                 _hover={{
@@ -527,7 +542,17 @@ export default function Skills() {
       >
         <Text
           fontFamily={"Raleway"}
-          fontSize={"50px"}
+          fontSize={{
+            base: "30px",
+            xsm: "30px",
+            ssm: "30px",
+            sm: "40px",
+            md: "40px",
+            lg: "50px",
+            xl: "50px",
+            xxl: "50px",
+            xxxl: "50px",
+          }}
           fontWeight={700}
           p={"1% 0% 1% 0%"}
           color={"	#f0d86e"}
@@ -575,7 +600,7 @@ export default function Skills() {
            xl: "60px",
            xxl: "60px",
            xxxl: "60px",
-         }} flexWrap={"wrap"}>
+         }} flexWrap={"wrap"}    fontSize={"12px"}>
               <VStack
                 transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
                 _hover={{
@@ -736,7 +761,17 @@ export default function Skills() {
       >
         <Text
           fontFamily={"Raleway"}
-          fontSize={"50px"}
+          fontSize={{
+            base: "30px",
+            xsm: "30px",
+            ssm: "30px",
+            sm: "40px",
+            md: "40px",
+            lg: "50px",
+            xl: "50px",
+            xxl: "50px",
+            xxxl: "50px",
+          }}
           fontWeight={700}
           p={"1% 0% 1% 0%"}
           color={"	#f0d86e"}
@@ -785,7 +820,7 @@ export default function Skills() {
            xl: "60px",
            xxl: "60px",
            xxxl: "60px",
-         }} flexWrap={"wrap"}>
+         }} flexWrap={"wrap"}    fontSize={"12px"} >
               <VStack
                 transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
                 _hover={{

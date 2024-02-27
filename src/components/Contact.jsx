@@ -163,7 +163,7 @@ export default function Contact() {
           <Text
             textAlign={"left"}
             fontFamily={"Raleway"}
-            fontSize="50px"
+            fontSize="35px"
             color={"	#f0d86e"}
           >
             Reach Out
@@ -175,15 +175,15 @@ export default function Contact() {
             color={"wheat"}
             fontWeight="700"
             fontSize={{
-              base: "20px",
-              xsm: "20px",
-              ssm: "20px",
-              sm: "40px",
-              md: "40px",
-              lg: "60px",
-              xl: "80px",
-              xxl: "120px",
-              xxxl: "130px",
+              base: "50px",
+              xsm: "50px",
+              ssm: "50px",
+              sm: "70px",
+              md: "90px",
+              lg: "100px",
+              xl: "100px",
+              xxl: "110px",
+              xxxl: "100px",
             }}
             whiteSpace="nowrap"
           >
@@ -198,7 +198,7 @@ export default function Contact() {
           xsm: "wrap",
           ssm: "wrap",
           sm: "wrap",
-          md: "wrap",
+          md: "nowrap",
           lg: "nowrap",
           xl: "nowrap",
           xxl: "nowrap",
@@ -207,7 +207,17 @@ export default function Contact() {
         fontFamily={"Raleway"}
         justify={"center"}
         align={"start"}
-        mt={"100px"}
+        mt={{
+          base: "0px",
+          xsm: "00px",
+          ssm: "30px",
+          sm: "40px",
+          md: "40px",
+          lg: "40px",
+          xl: "50px",
+          xxl: "50px",
+          xxxl: "50px",
+        }}
         gap={{
           base: "30px",
           xsm: "30px",
@@ -231,20 +241,20 @@ export default function Contact() {
           xxxl: "70%",
         }}
         fontSize={{
-          base: "13px",
-          xsm: "13px",
-          ssm: "13px",
-          sm: "13px",
-          md: "13px",
-          lg: "14px",
-          xl: "17px",
-          xxl: "30px",
-          xxxl: "20px",
+          base: "15.5px",
+          xsm: "15.5px",
+          ssm: "15.5px",
+          sm: "15.5px",
+          md: "15.5px",
+          lg: "15.5px",
+          xl: "15.5px",
+          xxl: "22.5px",
+          xxxl: "22.5px",
         }}
       >
         <VStack align={"center"} w={"100%"}>
           <QuoteAnimation>
-            <Text textAlign={"left"} color={"	#f0d86e"} mt={"30px"}>
+            <Text textAlign={"left"} color={"	#f0d86e"} mt={"30px"} >
               Let's collaborate to create dynamic and user-friendly web
               solutions tailored to your needs.
             </Text>
@@ -287,14 +297,23 @@ export default function Contact() {
         </VStack>
 
         <VStack align={"left"} w={"100%"}>
-          <QuoteAnimation>
+        
             <VStack>
-              <QuoteAnimation>
+           
                 <VStack
                   color={"white"}
                   w={"400px"}
                   h={"100%"}
                   borderRadius={"15px"}
+                  p={{ base: "9",
+                  xsm: "9",
+                  ssm: "5",
+                  sm: "0",
+                  md: "0",
+                  lg: "0",
+                  xl: "0",
+                  xxl: "0",
+                  xxxl: "0",}}
                 >
                   <FormControl>
                     <FormLabel htmlFor="name"> Name</FormLabel>
@@ -351,13 +370,13 @@ export default function Contact() {
                     Send
                   </Button>
                 </VStack>
-              </QuoteAnimation>
+           
             </VStack>
 
             <VStack mt={"10px"}>
               <HStack gap={"40px"} fontSize={"40px"} color="#f0d86e"></HStack>
             </VStack>
-          </QuoteAnimation>
+          
         </VStack>
       </HStack>
     </VStack>

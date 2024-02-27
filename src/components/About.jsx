@@ -163,7 +163,7 @@ export default function About() {
           <Text
             textAlign={"left"}
             fontFamily={"Raleway"}
-            fontSize="50px"
+            fontSize="35px"
             color={"	#f0d86e"}
           >
             Hi, Welcome
@@ -175,15 +175,15 @@ export default function About() {
             color={"wheat"}
             fontWeight="700"
             fontSize={{
-              base: "20px",
-              xsm: "20px",
-              ssm: "20px",
-              sm: "40px",
-              md: "40px",
-              lg: "60px",
-              xl: "80px",
-              xxl: "120px",
-              xxxl: "130px",
+              base: "50px",
+              xsm: "50px",
+              ssm: "50px",
+              sm: "70px",
+              md: "90px",
+              lg: "100px",
+              xl: "100px",
+              xxl: "110px",
+              xxxl: "100px",
             }}
             whiteSpace="nowrap"
           >
@@ -197,7 +197,7 @@ export default function About() {
           base: "wrap",
           xsm: "wrap",
           ssm: "wrap",
-          sm: "nowrap",
+          sm: "wrap",
           md: "nowrap",
           lg: "nowrap",
           xl: "nowrap",
@@ -207,7 +207,17 @@ export default function About() {
         fontFamily={"Raleway"}
         justify={"center"}
         align={"start"}
-        mt={"100px"}
+        mt={{
+          base: "20px",
+          xsm: "20px",
+          ssm: "20px",
+          sm: "100px",
+          md: "100px",
+          lg: "100px",
+          xl: "100px",
+          xxl: "100px",
+          xxxl: "100px",
+        }}
         gap={{
           base: "30px",
           xsm: "30px",
@@ -244,7 +254,7 @@ export default function About() {
       >
         <VStack align={"center"} w={"100%"}>
           <QuoteAnimation>
-            <Text textAlign={"left"} color={"	#f0d86e"} mt={"30px"}>
+            <Text textAlign={"left"} color={"	#f0d86e"} mt={"35px"}>
               As a self-taught full-stack web developer with a specializing in
               frontend, I bring together my diverse experiences and skills to
               craft captivating user interfaces and seamless web experiences.
@@ -252,11 +262,28 @@ export default function About() {
           </QuoteAnimation>
         </VStack>
 
-        <VStack align={"left"} w={"100%"}>
+        <VStack align={{ base: "center",
+                xsm: "center",
+                ssm: "center",
+                sm: "left",
+                md: "left",
+                lg: "left",
+                xl: "left",
+                xxl: "left",
+                xxxl: "left",}} w={"100%"}>
           <QuoteAnimation>
             <Box
+           
               bgColor={"#29292F"}
-     minW={"400px"}
+     minW={{  base: "350px",
+     xsm: "350px",
+     ssm: "450px",
+     sm: "600px",
+     md: "400px",
+     lg: "400px",
+     xl: "400px",
+     xxl: "400px",
+     xxxl: "400px",}}
               w={"100%"}
               h={"300px"}
               borderRadius={"15px"}

@@ -64,7 +64,6 @@ import {
 
 import { useInView } from "framer-motion";
 
-
 function QuoteAnimation({ children }) {
   const ref = useRef(null);
   const isInView = useInView(ref);
@@ -92,16 +91,45 @@ function QuoteAnimation({ children }) {
     </Box>
   );
 }
-export default function HeaderTitle() {
 
+export default function HeaderTitle() {
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth < 768); // Assuming small screen width is less than 768px
+    };
+
+    // Initial check on component mount
+    handleResize();
+
+    // Add event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup function to remove event listener
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []); // Empty dependency array to run the effect only once on mount
 
   return (
-    <Stack align={"center"} p={"3%"}   >
+    <Stack align={"center"} p={"3%"}>
       <VStack
         justify="center"
         align="left"
         mt="100px"
         textShadow="0px 0px 50px black"
+        textAlign={{
+          base: "center",
+          xsm: "center",
+          ssm: "center",
+          sm: "center",
+          md: "center",
+          lg: "left",
+          xl: "left",
+          xxl: "left",
+          xxxl: "left",
+        }}
       >
         <QuoteAnimation>
           <Box
@@ -113,10 +141,10 @@ export default function HeaderTitle() {
           >
             <Text
               fontSize={{
-                base: "15px",
-                xsm: "15px",
-                ssm: "15px",
-                sm: "15px",
+                base: "20px",
+                xsm: "20px",
+                ssm: "20px",
+                sm: "30px",
                 md: "30px",
                 lg: "35px",
                 xl: "35px",
@@ -145,20 +173,41 @@ export default function HeaderTitle() {
               fontFamily={"Raleway"}
               color={"wheat"}
               fontWeight="700"
+              textAlign={{
+                base: "center",
+                xsm: "center",
+                ssm: "center",
+                sm: "center",
+                md: "center",
+                lg: "left",
+                xl: "left",
+                xxl: "left",
+                xxxl: "left",
+              }}
               fontSize={{
-                base: "30px",
-                xsm: "30px",
-                ssm: "50px",
-                sm: "60px",
-                md: "70px",
+                base: "75px",
+                xsm: "75px",
+                ssm: "85px",
+                sm: "100px",
+                md: "120px",
                 lg: "90px",
                 xl: "120px",
                 xxl: "150px",
                 xxxl: "150px",
               }}
-              whiteSpace="nowrap"
+              whiteSpace={{
+                base: "wrap",
+                xsm: "wrap",
+                ssm: "wrap",
+                sm: "wrap",
+                md: "wrap",
+                lg: "nowrap",
+                xl: "nowrap",
+                xxl: "nowrap",
+                xxxl: "nowrap",
+              }}
             >
-                Full Stack Developer
+              Full Stack Developer
             </Text>
           </Box>
         </QuoteAnimation>
@@ -171,14 +220,36 @@ export default function HeaderTitle() {
               filter: "drop-shadow(0px 0px 10px #ECC94B)",
             }}
           >
-            <Text
+          { isSmallScreen ?  <Text
               fontSize={{
-                base: "8.5px",
-                xsm: "8.5px",
-                ssm: "12.5px",
-                sm: "12.5px",
-                md: "12.5px",
-                lg: "12.5px",
+                base: "12.5px",
+                xsm: "12.5px",
+                ssm: "13.5px",
+                sm: "15.5px",
+                md: "15.5px",
+                lg: "15.5px",
+                xl: "15.5px",
+                xxl: "22.5px",
+                xxxl: "22.5px",
+              }}
+              color={"	#fff4c4"}
+              fontFamily={"Raleway"}
+            >
+              Hello!, I'm a fervent self taught Full-Stack Developer
+              specializing in{" "}
+              <Text as={"span"} textDecoration={"underline"}>
+                frontend
+              </Text>
+              , with a knack for enhancing web experiences through both
+              UI/UX and code.
+            </Text>: <Text
+              fontSize={{
+                base: "12.5px",
+                xsm: "12.5px",
+                ssm: "13.5px",
+                sm: "15.5px",
+                md: "15.5px",
+                lg: "15.5px",
                 xl: "15.5px",
                 xxl: "22.5px",
                 xxxl: "22.5px",
@@ -193,7 +264,7 @@ export default function HeaderTitle() {
               </Text>
               , <br /> with a knack for enhancing web experiences through both
               UI/UX and code.
-            </Text>
+            </Text> }
           </Box>
         </QuoteAnimation>
       </VStack>
