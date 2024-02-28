@@ -119,8 +119,33 @@ import LinkdenScreenShot from "../../assets/linkdenScreenShot.png";
 
 import LeftRightAnimation from "../../components/Animations/LeftRightAnimation";
 import ComponentTitles from "../../components/ComponentTitle/ComponentTitle";
+import { useDispatch } from 'react-redux';
+import { ContactMe } from "../../features/modal/FormSlice";
 
 export default function Contact() {
+  const dispatch = useDispatch();
+
+const [name, setName] =  useState()
+const [email, setEmail] = useState() 
+const [message, setMessage] = useState()
+
+const [submited, setSubmited ] = useState(false)
+
+
+const onSubmit = (e) => {
+  e.preventDefault();
+  dispatch(ContactMe({ name, email, message }));
+  // Resetting form fields
+  setName('');
+  setEmail('');
+  setMessage('');
+  setSubmited(true)
+
+  // Additional logic...
+};
+
+
+
   return (
     <VStack align="center" mt={"200px"} id="Contact">
       <ComponentTitles mainTitle={"Reach Out"} subTitle={"Contact Me"} />
@@ -246,6 +271,7 @@ export default function Contact() {
         <VStack align={"left"} w={"100%"}>
           <VStack>
             <VStack
+            
               color={"	#f0d86e"}
               w={"400px"}
               h={"100%"}
@@ -262,6 +288,9 @@ export default function Contact() {
                 xxxl: "0",
               }}
             >
+             <form onSubmit={onSubmit} style={{width:'100%'}} >
+
+       
               <FormControl>
                 <FormLabel htmlFor="name"> Name</FormLabel>
                 <Input
@@ -275,7 +304,7 @@ export default function Contact() {
                   type="name"
                   w={"100%"}
                   required
-                  value={""}
+                  value={name}
                   onChange={(e) => setName(e.target.value)}
                 />
               </FormControl>
@@ -293,7 +322,7 @@ export default function Contact() {
                   required
                   autoComplete="current-email"
                   w={"100%"}
-                  value={""}
+                  value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
               </FormControl>
@@ -311,14 +340,15 @@ export default function Contact() {
                   required
                   autoComplete="current-message"
                   w={"100%"}
-                  value={""}
+                  value={message}
                   onChange={(e) => setMessage(e.target.value)}
                 />
               </FormControl>
 
-              <Button mt={"10px"} type="submit" bgColor={"	#f0d86e"}>
-                Send
+              <Button  w={"100%"} mt={"10px"} type="submit" bgColor={submited ? "green.400":"	#f0d86e"}>
+             { submited ? <> Thank you 😄 </> :  "Send"}
               </Button>
+              </form>
             </VStack>
           </VStack>
 
