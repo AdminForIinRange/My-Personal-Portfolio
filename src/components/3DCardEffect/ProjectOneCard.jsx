@@ -64,48 +64,48 @@ import {
 import React, { Children } from 'react'
 import { useRef } from "react";
 
-import AIGoals from "../assets/Screenshot 2024-02-26 124604.png";
-import JsLogo from "../assets/Logos/JavaScript-logo (1).png";
-import ReactLogo from "../assets/Logos/React-icon.svg.png";
-import NextJSlogo from "../assets/Logos/nextjs-icon-2048x1234-pqycciiu.png";
-import ReduxLogo from "../assets/Logos/redux.svg";
+import AIGoals from "../../assets/Screenshot 2024-02-26 124604.png";
+import JsLogo from "../../assets/Logos/JavaScript-logo (1).png";
+import ReactLogo from "../../assets/Logos/React-icon.svg.png";
+import NextJSlogo from "../../assets/Logos/nextjs-icon-2048x1234-pqycciiu.png";
+import ReduxLogo from "../../assets/Logos/redux.svg";
 
-import HTMLlogo from "../assets/Logos/HTML5_logo_and_wordmark.svg.png";
+import HTMLlogo from "../../assets/Logos/HTML5_logo_and_wordmark.svg.png";
 
-import CSSlogo from "../assets/Logos/CSS3_logo_and_wordmark.svg.png";
+import CSSlogo from "../../assets/Logos/CSS3_logo_and_wordmark.svg.png";
 
-import tailwind from "../assets/Logos/tailwind-css3232.logowik.png";
-import chakraUIlogo from "../assets/Logos/unnamed.jpg";
-import MaterialUI from "../assets/Logos/material-ui-icon-2048x1626-on580ia9.png";
+import tailwind from "../../assets/Logos/tailwind-css3232.logowik.png";
+import chakraUIlogo from "../../assets/Logos/unnamed.jpg";
+import MaterialUI from "../../assets/Logos/material-ui-icon-2048x1626-on580ia9.png";
 
-import BootStrap from "../assets/Logos/bootstrap-4-logo-png-transparent.png";
-import ThreeJs from "../assets/Logos/e4f86d2200d2d35c30f7b1494e96b9595ebc2751.png";
+import BootStrap from "../../assets/Logos/bootstrap-4-logo-png-transparent.png";
+import ThreeJs from "../../assets/Logos/e4f86d2200d2d35c30f7b1494e96b9595ebc2751.png";
 
-import Sass from "../assets/Logos/seal-color.png";
-import Jest from "../assets/Logos/1_i37IyHf6vnhqWIA9osxU3w.png";
-import Animatecss from "../assets/Logos/2b93f700-a724-11ea-89af-e780fd85245b.png";
-import FramerMotion from "../assets/Logos/framer-motion.svg";
+import Sass from "../../assets/Logos/seal-color.png";
+import Jest from "../../assets/Logos/1_i37IyHf6vnhqWIA9osxU3w.png";
+import Animatecss from "../../assets/Logos/2b93f700-a724-11ea-89af-e780fd85245b.png";
+import FramerMotion from "../../assets/Logos/framer-motion.svg";
 
-import Nodejs from "../assets/Logos/node-js.png";
-import Firebase from "../assets/Logos/firebase-1-logo-png-transparent.png";
+import Nodejs from "../../assets/Logos/node-js.png";
+import Firebase from "../../assets/Logos/firebase-1-logo-png-transparent.png";
 
-import mongoDB from "../assets/Logos/mongodb-leaf_256x256.png";
-import GrpahQL from "../assets/Logos/GraphQL_Logo.svg.png";
-import SocketIO from "../assets/Logos/1024px-Socket-io.svg.png";
-import GIT from "../assets/Logos/Git_icon.svg.png";
-import GTPApi from "../assets/Logos/openai-white-logomark.png";
-import PuppeteerJS from "../assets/Logos/29446482-04f7036a-841f-11e7-9872-91d1fc2ea683.png";
-import Docker from "../assets/Logos/97_Docker_logo_logos-512.webp";
+import mongoDB from "../../assets/Logos/mongodb-leaf_256x256.png";
+import GrpahQL from "../../assets/Logos/GraphQL_Logo.svg.png";
+import SocketIO from "../../assets/Logos/1024px-Socket-io.svg.png";
+import GIT from "../../assets/Logos/Git_icon.svg.png";
+import GTPApi from "../../assets/Logos/openai-white-logomark.png";
+import PuppeteerJS from "../../assets/Logos/29446482-04f7036a-841f-11e7-9872-91d1fc2ea683.png";
+import Docker from "../../assets/Logos/97_Docker_logo_logos-512.webp";
 
-import Vite from "../assets/Logos/Vitejs-logo.svg";
+import Vite from "../../assets/Logos/Vitejs-logo.svg";
 
-import VSC from "../assets/Logos/Visual_Studio_Code_1.35_icon.svg.png";
-import Figma from "../assets/Logos/1667px-Figma-logo.svg.png";
-import Github from "../assets/Logos/25231.png";
+import VSC from "../../assets/Logos/Visual_Studio_Code_1.35_icon.svg.png";
+import Figma from "../../assets/Logos/1667px-Figma-logo.svg.png";
+import Github from "../../assets/Logos/25231.png";
 
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { useNavigate } from "react-router-dom";
-export default function Card3D({Imageid, Title, Desc}) {
+export default function ProjectOneCard({Imageid, Title, Desc, WebLink, Gitlink}) {
 
     const cardRef = useRef(null);
   let bounds;
@@ -263,7 +263,7 @@ export default function Card3D({Imageid, Title, Desc}) {
               <a
                 style={{ marginTop: "12.5px" }}
                 target="_blank"
-                href="https://aigoals.web.app"
+                href={WebLink}
               >
                 <Button
                   bgColor={"purple.400"}
@@ -277,7 +277,7 @@ export default function Card3D({Imageid, Title, Desc}) {
               <a
                 style={{ marginTop: "12.5px" }}
                 target="_blank"
-                href="https://github.com/AdminForIinRange/AIgoals"
+                href={Gitlink}
               >
                 <Button
                   bgColor={"purple.400"}

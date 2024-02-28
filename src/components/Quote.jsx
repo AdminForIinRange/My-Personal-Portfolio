@@ -63,25 +63,12 @@ import {
 } from "@chakra-ui/react";
 
 import { useInView } from "framer-motion";
-function QuoteAnimation({ children }) {
-  const ref = useRef(null);
-  const isInView = useInView(ref);
-  const [onOpen, setOnOpen] = useState();
-  const [onClose, setOnClose] = useState();
+import LeftRightAnimation from "./Animations/LeftRightAnimation";
 
-  useEffect(() => {
-    const randomNumber = Math.floor(Math.random() * 2) + 1;
-    if (randomNumber === 1) {
-      setOnOpen("animate__animated animate__fadeInRight animate__fast ");
-      setOnClose("animate__animated animate__fadeOutLeft animate__fast");
-    } else {
-      setOnOpen("animate__animated animate__fadeInLeft animate__fast ");
-      setOnClose("animate__animated animate__fadeOutRight animate__fast");
-    }
-  }, [isInView]);
 
+export default function Quote() {
   return (
-    <VStack
+     <VStack
 
     fontSize={{
       base: "40px",
@@ -94,25 +81,17 @@ function QuoteAnimation({ children }) {
       xxl: "120px",
       xxxl: "120px",
     }}
-      mt={"200px"}
+    
       justify={"left"}
       align={"left"}
       p={"5%"}
       color={"wheat"}
-      ref={ref}
-      className={isInView ? onOpen : onClose}
+    
      
     >
-      {children}
-    </VStack>
-  );
-}
-
-export default function Quote() {
-  return (
-    <>
-      <QuoteAnimation>
+      <LeftRightAnimation>
         <Box
+        mt={"250px"}
           color={"	#f0d86e"}
           transition="transform 0.3s ease-in-out, boxShadow 1s ease-in-out"
           _hover={{
@@ -136,11 +115,11 @@ export default function Quote() {
             given,
           </Text>
         </Box>
-      </QuoteAnimation>
+      </LeftRightAnimation>
 
     
-        <QuoteAnimation transition="transform 0.3s ease-in-out, boxShadow 1s ease-in-out">
-          <Box
+        <LeftRightAnimation transition="transform 0.3s ease-in-out, boxShadow 1s ease-in-out">
+          <Box     mt={"350px"}
             color={"	#f0d86e"}
             transition="transform 0.3s ease-in-out, boxShadow 1s ease-in-out"
             _hover={{
@@ -179,11 +158,11 @@ export default function Quote() {
               the closest to truth,
             </Text>
           </Box>
-        </QuoteAnimation>
+        </LeftRightAnimation>
 
 
-      <QuoteAnimation>
-        <Box
+      <LeftRightAnimation>
+        <Box     mt={"350px"}
           color={"	#f0d86e"}
           transition="transform 0.3s ease-in-out, boxShadow 1s ease-in-out"
           _hover={{
@@ -233,7 +212,7 @@ export default function Quote() {
         >
           -Occam's Razor
         </Text>
-      </QuoteAnimation>
-    </>
+      </LeftRightAnimation>
+      </VStack>
   );
 }

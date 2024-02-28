@@ -62,26 +62,11 @@ import { Link } from "react-router-dom";
 import Anjesh from "../assets/AnjeshPFP.jpg";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import useScreenSize from "../hook/useScreenSize";
 
 export default function Navbar() {
-  const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const {isSmallScreen} = useScreenSize(); // Custom hook for handling screen size
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsSmallScreen(window.innerWidth < 768); // Assuming small screen width is less than 768px
-    };
-
-    // Initial check on component mount
-    handleResize();
-
-    // Add event listener for window resize
-    window.addEventListener("resize", handleResize);
-
-    // Cleanup function to remove event listener
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []); // Empty dependency array to run the effect only once on mount
 
   return (
     <Box p={"15px"} bg={"RGBA(0, 0, 0, 0.48) "}>

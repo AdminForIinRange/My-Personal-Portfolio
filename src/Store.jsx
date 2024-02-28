@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-import ModalReducer from "./features/modal/modalSlice.jsx";
+import ScreenSizeReducer from "./features/modal/ScreenSizeSlice.jsx";
 
 export const store = configureStore({
   reducer: {
-    modal: ModalReducer,
+    screenSize: ScreenSizeReducer,
   },
 });

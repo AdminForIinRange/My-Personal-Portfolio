@@ -11,12 +11,13 @@ import Home from "./pages/Home/Home.jsx";
 
 
 import "./styles/styles.css"
+import GlobalPage from "./pages/GlobalPages.jsx";
 
 // router and routes
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
-      <Route index element={<Home />} />
+      <Route index element={<GlobalPage />} />
      
      
     </Route>

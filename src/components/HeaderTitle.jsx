@@ -63,55 +63,12 @@ import {
 } from "@chakra-ui/react";
 
 import { useInView } from "framer-motion";
+import LeftRightAnimation from "./Animations/LeftRightAnimation";
+import useScreenSize from "../hook/useScreenSize";
 
-function QuoteAnimation({ children }) {
-  const ref = useRef(null);
-  const isInView = useInView(ref);
-  const [onOpen, setOnOpen] = useState(
-    "animate__animated animate__fadeInDown animate__fast "
-  );
-  const [onClose, setOnClose] = useState(
-    "animate__animated animate__fadeOutDown animate__fast"
-  );
-
-  useEffect(() => {
-    const randomNumber = Math.floor(Math.random() * 2) + 1;
-    if (randomNumber === 1) {
-      setOnOpen("animate__animated animate__fadeInDown animate__fast ");
-      setOnClose("animate__animated animate__fadeOutDown animate__fast");
-    } else {
-      setOnOpen("animate__animated animate__fadeInUp animate__fast ");
-      setOnClose("animate__animated animate__fadeOutDown animate__fast");
-    }
-  }, [isInView]);
-
-  return (
-    <Box ref={ref} className={isInView ? onOpen : onClose}>
-      {children}
-    </Box>
-  );
-}
 
 export default function HeaderTitle() {
-  const [isSmallScreen, setIsSmallScreen] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsSmallScreen(window.innerWidth < 768); // Assuming small screen width is less than 768px
-    };
-
-    // Initial check on component mount
-    handleResize();
-
-    // Add event listener for window resize
-    window.addEventListener("resize", handleResize);
-
-    // Cleanup function to remove event listener
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []); // Empty dependency array to run the effect only once on mount
-
+  const {isSmallScreen} = useScreenSize();
   return (
     <Stack align={"center"} p={"3%"}>
       <VStack
@@ -131,7 +88,7 @@ export default function HeaderTitle() {
           xxxl: "left",
         }}
       >
-        <QuoteAnimation>
+        <LeftRightAnimation>
           <Box
             transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
             _hover={{
@@ -155,12 +112,14 @@ export default function HeaderTitle() {
               color={"	#f0d86e"}
               whiteSpace={"wrap"}
             >
-              Crafting Engaging Web Experiences,
+            {  isSmallScreen ? 
+             " Crafting Engaging Web Experiences," :  "Right-Click to Customize Page :)"
+               }
             </Text>
           </Box>
-        </QuoteAnimation>
+        </LeftRightAnimation>
 
-        <QuoteAnimation>
+        <LeftRightAnimation>
           <Box
             transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
             _hover={{
@@ -210,9 +169,9 @@ export default function HeaderTitle() {
               Full Stack Developer
             </Text>
           </Box>
-        </QuoteAnimation>
+        </LeftRightAnimation>
 
-        <QuoteAnimation>
+        <LeftRightAnimation>
           <Box
             transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
             _hover={{
@@ -266,7 +225,7 @@ export default function HeaderTitle() {
               UI/UX and code.
             </Text> }
           </Box>
-        </QuoteAnimation>
+        </LeftRightAnimation>
       </VStack>
     </Stack>
   );
