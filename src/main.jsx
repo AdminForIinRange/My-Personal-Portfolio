@@ -31,6 +31,7 @@ const theme = extendTheme({
         width: "100%",
         overflowX: "hidden",
         overflowY: "auto",
+
       },
       body: {
         background: "#29292f",

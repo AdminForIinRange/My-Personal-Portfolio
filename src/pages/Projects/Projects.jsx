@@ -112,7 +112,36 @@ import LeftRightAnimation from "../../components/Animations/LeftRightAnimation";
 import useScreenSize from "../../hook/useScreenSize";
 import ComponentTitles from "../../components/ComponentTitle/ComponentTitle";
 
+import TutoringSite from "../../assets/Screenshot 2024-03-03 185041.png"
+
 export default function Projects() {
+
+
+
+  const PorjectOne = {
+    ReactLogoUse: true,
+    ReduxLogoUse: true,
+    ChakraUILogoUse: true,
+    TailwindUse: true,
+    FramerMotionUse: true,
+    NodejsUse: true,
+    FirebaseUse: true,
+    GTPApiUse: false
+  };
+
+  const PorjectTwo = {
+    ReactLogoUse: true,
+    ReduxLogoUse: true,
+    ChakraUILogoUse: true,
+    TailwindUse: false,
+    FramerMotionUse: false,
+    NodejsUse: true,
+    FirebaseUse: true,
+    GTPApiUse: false
+  };
+
+
+
   const {isSmallScreen} = useScreenSize(); // Custom hook for handling screen size
 
   return (
@@ -149,33 +178,82 @@ export default function Projects() {
       <VStack minW={"350px"} maxW={"450px"} align={"left"} mb={"50px"}>
       <LeftRightAnimation>
         <ProjectOneCard
+          Stack={PorjectOne}
           Gitlink={"https://github.com/AdminForIinRange/AIgoals"}
           WebLink={"https://aigoals.web.app/"}
           Imageid={AIGoals}
           Title={"Frontend AI Startup"}
-          Desc={`Personalized tasks, insights, and seamless integration for
-            productivity. Users input goals, track progress visually, and
-            receive adaptive recommendations.`}
+          Desc={`AIGoals is an engaging frontend application crafted for pure enjoyment. Born out of a spirit of playful exploration, this project embodies the essence of modern tech-startup culture.`}
+            MainColor={"rgb(107,70,193, 1)"}
+             SecColor={"purple"}
+           
+            
         />
       </LeftRightAnimation>
+      
     </VStack>
-
-    </>
-    :
-    
-    <VStack minW={"350px"} maxW={"600px"} align={"left"} mb={"50px"}>
+    <VStack minW={"350px"} maxW={"450px"} align={"left"} mb={"50px"}>
       <LeftRightAnimation>
         <ProjectOneCard
-        Gitlink={"https://github.com/AdminForIinRange/AIgoals"}
-        WebLink={"https://aigoals.web.app/"}
-          Imageid={AIGoals}
+      Stack={PorjectTwo}
+          Gitlink={"https://github.com/AdminForIinRange/AIgoals"}
+          WebLink={"https://aigoals.web.app/"}
+          Imageid={TutoringSite}
           Title={"Frontend AI Startup"}
           Desc={`Personalized tasks, insights, and seamless integration for
             productivity. Users input goals, track progress visually, and
             receive adaptive recommendations.`}
+            MainColor={"rgb(107,70,193, 1)"}
+             SecColor={"purple"}
+           
+           
         />
       </LeftRightAnimation>
+      
     </VStack>
+
+    </>
+    :
+    <>
+
+    <VStack minW={"350px"} maxW={"600px"} align={"left"} mb={"50px"}>
+      <LeftRightAnimation>
+        <ProjectOneCard
+         Stack={PorjectOne}
+        OnReactLogo={"true"}
+        Gitlink={"https://github.com/AdminForIinRange/AIgoals"}
+        WebLink={"https://aigoals.web.app/"}
+          Imageid={AIGoals}
+          Title={"Frontend AI Startup"}
+          Desc={`AIGoals is an engaging frontend application crafted for pure enjoyment. Born out of a spirit of playful exploration, this project embodies the essence of modern tech-startup culture.`}
+            MainColor={"rgb(107,70,193, 1)"}
+            SecColor={"purple"}
+          
+          
+        />
+      </LeftRightAnimation>
+      
+    </VStack>
+        <VStack minW={"350px"} maxW={"600px"} align={"left"} mb={"50px"}>
+      <LeftRightAnimation>
+        <ProjectOneCard
+        Stack={PorjectTwo}
+        Gitlink={"https://github.com/AdminForIinRange/AIgoals"}
+        WebLink={"https://aigoals.web.app/"}
+          Imageid={TutoringSite}
+          Title={"Tutoring Site Landing Page"}
+          Desc={`Personalized tasks, insights, and seamless integration for
+            productivity. Users input goals, track progress visually, and
+            receive adaptive recommendations.`}
+            MainColor={"teal"}
+            SecColor={"gray"}
+          
+          
+        />
+      </LeftRightAnimation>
+      
+    </VStack>
+    </>
 }
    
   

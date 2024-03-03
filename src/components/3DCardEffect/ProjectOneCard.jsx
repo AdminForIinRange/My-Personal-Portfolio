@@ -105,7 +105,20 @@ import Github from "../../assets/Logos/25231.png";
 
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { useNavigate } from "react-router-dom";
-export default function ProjectOneCard({Imageid, Title, Desc, WebLink, Gitlink}) {
+export default function ProjectOneCard({Imageid, Title, Desc, WebLink, Gitlink, Stack, MainColor, SecColor }) {
+
+  const {
+    ReactLogoUse,
+    ReduxLogoUse,
+    ChakraUILogoUse,
+    TailwindUse,
+    FramerMotionUse,
+    NodejsUse,
+    FirebaseUse,
+    GTPApiUse
+  } = Stack;
+
+
 
     const cardRef = useRef(null);
   let bounds;
@@ -156,7 +169,7 @@ export default function ProjectOneCard({Imageid, Title, Desc, WebLink, Gitlink})
   return (
     <Box  mb={"25px"} style={{
         borderRadius: "15px",
-        backgroundColor: " rgb(107,70,193, 1)",
+        backgroundColor:MainColor,
       }}
       className="card3d"
       ref={cardRef}
@@ -175,7 +188,7 @@ export default function ProjectOneCard({Imageid, Title, Desc, WebLink, Gitlink})
                   xxl: "25px",
                   xxxl: "25px",
                 }}
-                color={"purple.200"}
+                color={`${SecColor}.200`}
                 textIndent={"10px"}
               >
                 {Title}
@@ -185,41 +198,67 @@ export default function ProjectOneCard({Imageid, Title, Desc, WebLink, Gitlink})
                   <Image loading="lazy" src={Imageid} borderRadius={"10px"} />
                 </Box>
 
-                <HStack gap={"2.5%"} w={"60%"} p={"2% 0% 0% 0%"}>
-                  <VStack w={"8%"}>
+             <HStack gap={"2.5%"} w={"60%"} p={"2% 0% 0% 0%"}>
+                  { ReactLogoUse ? <VStack w={"8%"}>
                     <Image loading="lazy" src={ReactLogo} />
                   </VStack>
+                  : <></>
+}
+{ReduxLogoUse ? (
+    <VStack w={"8%"}>
+      <Image loading="lazy" src={ReduxLogo} />
+    </VStack>
+  ) : (
+    <></>
+  )}
 
-                  <VStack w={"8%"}>
-                    <Image loading="lazy" src={ReduxLogo} />
-                  </VStack>
+  {ChakraUILogoUse ? (
+    <VStack w={"8%"}>
+      <Image loading="lazy" src={chakraUIlogo} borderRadius={"100px"} />
+    </VStack>
+  ) : (
+    <></>
+  )}
 
-                  <VStack w={"8%"}>
-                    <Image
-                      loading="lazy"
-                      src={chakraUIlogo}
-                      borderRadius={"100px"}
-                    />
-                  </VStack>
-                  <VStack w={"10%"}>
-                    <Image loading="lazy" src={tailwind} />
-                  </VStack>
+  {TailwindUse ? (
+    <VStack w={"10%"}>
+      <Image loading="lazy" src={tailwind} />
+    </VStack>
+  ) : (
+    <></>
+  )}
 
-                  <VStack w={"8%"}>
-                    <Image loading="lazy" src={FramerMotion} />
-                  </VStack>
+  {FramerMotionUse ? (
+    <VStack w={"8%"}>
+      <Image loading="lazy" src={FramerMotion} />
+    </VStack>
+  ) : (
+    <></>
+  )}
 
-                  <VStack w={"8%"}>
-                    <Image loading="lazy" src={Nodejs} />
-                  </VStack>
+  {NodejsUse ? (
+    <VStack w={"8%"}>
+      <Image loading="lazy" src={Nodejs} />
+    </VStack>
+  ) : (
+    <></>
+  )}
 
-                  <VStack w={"6%"}>
-                    <Image loading="lazy" src={Firebase} />
-                  </VStack>
+  {FirebaseUse ? (
+    <VStack w={"6%"}>
+      <Image loading="lazy" src={Firebase} />
+    </VStack>
+  ) : (
+    <></>
+  )}
 
-                  <VStack w={"8%"}>
-                    <Image loading="lazy" src={GTPApi} />
-                  </VStack>
+  {GTPApiUse ? (
+    <VStack w={"8%"}>
+      <Image loading="lazy" src={GTPApi} />
+    </VStack>
+  ) : (
+    <></>
+  )}
                 </HStack>
               </Box>
 
@@ -233,7 +272,7 @@ export default function ProjectOneCard({Imageid, Title, Desc, WebLink, Gitlink})
               w={"100%"}
               maxW={"600"}
               h={"100px"}
-              bgColor={"purple.200"}
+              bgColor={`${SecColor}.200`}
               borderRadius={"15px"}
             >
               <Text
@@ -266,7 +305,7 @@ export default function ProjectOneCard({Imageid, Title, Desc, WebLink, Gitlink})
                 href={WebLink}
               >
                 <Button
-                  bgColor={"purple.400"}
+                  bgColor={`${SecColor}.400`}
                   fontSize={"15px"}
                   p={""}
                   rightIcon={<ExternalLinkIcon />}
@@ -280,7 +319,7 @@ export default function ProjectOneCard({Imageid, Title, Desc, WebLink, Gitlink})
                 href={Gitlink}
               >
                 <Button
-                  bgColor={"purple.400"}
+                  bgColor={`${SecColor}.400`}
                   fontSize={"15px"}
                   p={""}
                   rightIcon={<ExternalLinkIcon />}

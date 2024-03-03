@@ -113,7 +113,7 @@ export default function HeaderTitle() {
               whiteSpace={"wrap"}
             >
             {  isSmallScreen ? 
-             " Crafting Engaging Web Experiences," :  "Right-Click to Customize Page :)"
+             " Crafting Engaging Web Experiences," :  "Crafting Engaging Web Experiences,"
                }
             </Text>
           </Box>
