@@ -97,7 +97,7 @@ import GIT from "../../assets/Logos/Git_icon.svg.png";
 import GTPApi from "../../assets/Logos/openai-white-logomark.png";
 import PuppeteerJS from "../../assets/Logos/29446482-04f7036a-841f-11e7-9872-91d1fc2ea683.png";
 import Docker from "../../assets/Logos/97_Docker_logo_logos-512.webp";
-import Draggable from 'react-draggable';
+import Draggable from "react-draggable";
 import Vite from "../../assets/Logos/Vitejs-logo.svg";
 
 import VSC from "../../assets/Logos/Visual_Studio_Code_1.35_icon.svg.png";
@@ -112,12 +112,9 @@ import LeftRightAnimation from "../../components/Animations/LeftRightAnimation";
 import useScreenSize from "../../hook/useScreenSize";
 import ComponentTitles from "../../components/ComponentTitle/ComponentTitle";
 
-import TutoringSite from "../../assets/Screenshot 2024-03-03 185041.png"
+import TutoringSite from "../../assets/Screenshot 2024-03-03 185041.png";
 
 export default function Projects() {
-
-
-
   const PorjectOne = {
     ReactLogoUse: true,
     ReduxLogoUse: true,
@@ -126,7 +123,7 @@ export default function Projects() {
     FramerMotionUse: true,
     NodejsUse: true,
     FirebaseUse: true,
-    GTPApiUse: false
+    GTPApiUse: false,
   };
 
   const PorjectTwo = {
@@ -137,130 +134,100 @@ export default function Projects() {
     FramerMotionUse: false,
     NodejsUse: true,
     FirebaseUse: true,
-    GTPApiUse: false
+    GTPApiUse: false,
   };
 
-
-
-  const {isSmallScreen} = useScreenSize(); // Custom hook for handling screen size
+  const { isSmallScreen } = useScreenSize(); // Custom hook for handling screen size
 
   return (
     <VStack justify="center" align="center" mt={"200px"} id="Projects">
-        <ComponentTitles
-         mainTitle={"Check it out"}
-         subTitle={"Projects"}
-         />
+      <ComponentTitles mainTitle={"Check it out"} subTitle={"Projects"} />
 
-   
-      
-  <HStack
-    w={"100%"}
-    flexWrap={{
-      base: "Wrap",
-      xsm: "Wrap",
-      ssm: "Wrap",
-      sm: "Wrap",
-      md: "Wrap",
-      lg: "Wrap",
-      xl: "nowrap",
-      xxl: "nowrap",
-      xxxl: "nowrap",
-    }}
-    fontFamily={"Raleway"}
-    justify={"center"}
-    align={"start"}
-    mt={"100px"}
-    p={"3%"}
-    gap={"3%"}
-  >
-   
-    {isSmallScreen ? <>
-      <VStack minW={"350px"} maxW={"450px"} align={"left"} mb={"50px"}>
-      <LeftRightAnimation>
-        <ProjectOneCard
-          Stack={PorjectOne}
-          Gitlink={"https://github.com/AdminForIinRange/AIgoals"}
-          WebLink={"https://aigoals.web.app/"}
-          Imageid={AIGoals}
-          Title={"Frontend AI Startup"}
-          Desc={`AIGoals is an engaging frontend application crafted for pure enjoyment. Born out of a spirit of playful exploration, this project embodies the essence of modern tech-startup culture.`}
-            MainColor={"rgb(107,70,193, 1)"}
-             SecColor={"purple"}
-           
-            
-        />
-      </LeftRightAnimation>
-      
-    </VStack>
-    <VStack minW={"350px"} maxW={"450px"} align={"left"} mb={"50px"}>
-      <LeftRightAnimation>
-        <ProjectOneCard
-      Stack={PorjectTwo}
-          Gitlink={"https://github.com/AdminForIinRange/AIgoals"}
-          WebLink={"https://aigoals.web.app/"}
-          Imageid={TutoringSite}
-          Title={"Frontend AI Startup"}
-          Desc={`Personalized tasks, insights, and seamless integration for
-            productivity. Users input goals, track progress visually, and
-            receive adaptive recommendations.`}
-            MainColor={"rgb(107,70,193, 1)"}
-             SecColor={"purple"}
-           
-           
-        />
-      </LeftRightAnimation>
-      
-    </VStack>
-
-    </>
-    :
-    <>
-
-    <VStack minW={"350px"} maxW={"600px"} align={"left"} mb={"50px"}>
-      <LeftRightAnimation>
-        <ProjectOneCard
-         Stack={PorjectOne}
-        OnReactLogo={"true"}
-        Gitlink={"https://github.com/AdminForIinRange/AIgoals"}
-        WebLink={"https://aigoals.web.app/"}
-          Imageid={AIGoals}
-          Title={"Frontend AI Startup"}
-          Desc={`AIGoals is an engaging frontend application crafted for pure enjoyment. Born out of a spirit of playful exploration, this project embodies the essence of modern tech-startup culture.`}
-            MainColor={"rgb(107,70,193, 1)"}
-            SecColor={"purple"}
-          
-          
-        />
-      </LeftRightAnimation>
-      
-    </VStack>
-        <VStack minW={"350px"} maxW={"600px"} align={"left"} mb={"50px"}>
-      <LeftRightAnimation>
-        <ProjectOneCard
-        Stack={PorjectTwo}
-        Gitlink={"https://github.com/AdminForIinRange/AIgoals"}
-        WebLink={"https://aigoals.web.app/"}
-          Imageid={TutoringSite}
-          Title={"Tutoring Site Landing Page"}
-          Desc={`Personalized tasks, insights, and seamless integration for
-            productivity. Users input goals, track progress visually, and
-            receive adaptive recommendations.`}
-            MainColor={"teal"}
-            SecColor={"gray"}
-          
-          
-        />
-      </LeftRightAnimation>
-      
-    </VStack>
-    </>
-}
-   
-  
-
-  </HStack>
-
-
+      <HStack
+        w={"100%"}
+        flexWrap={{
+          base: "Wrap",
+          xsm: "Wrap",
+          ssm: "Wrap",
+          sm: "Wrap",
+          md: "Wrap",
+          lg: "Wrap",
+          xl: "nowrap",
+          xxl: "nowrap",
+          xxxl: "nowrap",
+        }}
+        fontFamily={"Raleway"}
+        justify={"center"}
+        align={"start"}
+        mt={"100px"}
+        p={"3%"}
+        gap={"3%"}
+      >
+        {isSmallScreen ? (
+          <>
+            <VStack minW={"350px"} maxW={"450px"} align={"left"} mb={"50px"}>
+              <LeftRightAnimation>
+                <ProjectOneCard
+                  Stack={PorjectOne}
+                  Gitlink={"https://github.com/AdminForIinRange/AIgoals"}
+                  WebLink={"https://aigoals.web.app/"}
+                  Imageid={AIGoals}
+                  Title={"Frontend AI Startup"}
+                  Desc={`AIGoals is an engaging frontend application crafted for pure enjoyment. Born out of a spirit of playful exploration, this project embodies the essence of modern tech-startup culture.`}
+                  MainColor={"rgb(107,70,193, 1)"}
+                  SecColor={"purple"}
+                />
+              </LeftRightAnimation>
+            </VStack>
+            <VStack minW={"350px"} maxW={"450px"} align={"left"} mb={"50px"}>
+              <LeftRightAnimation>
+                <ProjectOneCard
+                  Stack={PorjectTwo}
+                  Gitlink={"https://github.com/AdminForIinRange/Tutoring-Website"}
+                  WebLink={"https://tutorsite-68141.web.app/"}
+                  Imageid={TutoringSite}
+                  Title={"Tutoring Site Landing Page"}
+                  Desc={`I developed a tutor landing page as a personal project for fun, experimenting with different technologies and frameworks just for the joy of learning and creating.`}
+                  MainColor={"teal"}
+                  SecColor={"gray"}
+                />
+              </LeftRightAnimation>
+            </VStack>
+          </>
+        ) : (
+          <>
+            <VStack minW={"350px"} maxW={"600px"} align={"left"} mb={"50px"}>
+              <LeftRightAnimation>
+                <ProjectOneCard
+                  Stack={PorjectOne}
+                  OnReactLogo={"true"}
+                  Gitlink={"https://github.com/AdminForIinRange/AIgoals"}
+                  WebLink={"https://aigoals.web.app/"}
+                  Imageid={AIGoals}
+                  Title={"Frontend AI Startup"}
+                  Desc={`AIGoals is an engaging frontend application crafted for pure enjoyment. Born out of a spirit of playful exploration, this project embodies the essence of modern tech-startup culture.`}
+                  MainColor={"rgb(107,70,193, 1)"}
+                  SecColor={"purple"}
+                />
+              </LeftRightAnimation>
+            </VStack>
+            <VStack minW={"350px"} maxW={"600px"} align={"left"} mb={"50px"}>
+              <LeftRightAnimation>
+                <ProjectOneCard
+                  Stack={PorjectTwo}
+                  Gitlink={"https://github.com/AdminForIinRange/Tutoring-Website"}
+                  WebLink={"https://tutorsite-68141.web.app/"}
+                  Imageid={TutoringSite}
+                  Title={"Tutoring Site Landing Page"}
+                  Desc={`I developed a tutor landing page as a personal project for fun, experimenting with different technologies and frameworks just for the joy of learning and creating.`}
+                  MainColor={"teal"}
+                  SecColor={"gray"}
+                />
+              </LeftRightAnimation>
+            </VStack>
+          </>
+        )}
+      </HStack>
     </VStack>
   );
 }

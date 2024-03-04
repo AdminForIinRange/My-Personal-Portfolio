@@ -105,7 +105,7 @@ import Github from "../../assets/Logos/25231.png";
 
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { useNavigate } from "react-router-dom";
-export default function ProjectOneCard({Imageid, Title, Desc, WebLink, Gitlink, Stack, MainColor, SecColor }) {
+export default function ProjectOneCard({Imageid, Title, Desc, WebLink, Gitlink, Stack, MainColor, SecColor  }) {
 
   const {
     ReactLogoUse,
