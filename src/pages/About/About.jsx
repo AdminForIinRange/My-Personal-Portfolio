@@ -89,7 +89,7 @@ export default function About() {
           xxxl: "nowrap",
         }}
         fontFamily={"Raleway"}
-        justify={"center"}
+        justify={"left"}
         align={"start"}
         mt={{
           base: "20px",
@@ -136,7 +136,7 @@ export default function About() {
           xxxl: "20px",
         }}
       >
-        <VStack align={"center"} w={"100%"}>
+        <VStack align={"left"} w={"70%"}>
           <LeftRightAnimation>
             <Text textAlign={"left"} color={"	#f0d86e"} mt={"35px"}>
               As a self-taught full-stack web developer with a specializing in
@@ -146,7 +146,7 @@ export default function About() {
           </LeftRightAnimation>
         </VStack>
 
-        <MyImages />
+    
       </HStack>
     </VStack>
   );

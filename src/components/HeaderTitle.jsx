@@ -112,9 +112,9 @@ export default function HeaderTitle() {
               color={"	#f0d86e"}
               whiteSpace={"wrap"}
             >
-            {  isSmallScreen ? 
-             " Crafting Engaging Web Experiences," :  "Crafting Engaging Web Experiences,"
-               }
+              {isSmallScreen
+                ? " Crafting Engaging Web Experiences,"
+                : "Crafting Engaging Web Experiences,"}
             </Text>
           </Box>
         </LeftRightAnimation>
@@ -179,51 +179,55 @@ export default function HeaderTitle() {
               filter: "drop-shadow(0px 0px 10px #ECC94B)",
             }}
           >
-          { isSmallScreen ?  <Text
-              fontSize={{
-                base: "12.5px",
-                xsm: "12.5px",
-                ssm: "13.5px",
-                sm: "15.5px",
-                md: "15.5px",
-                lg: "15.5px",
-                xl: "15.5px",
-                xxl: "22.5px",
-                xxxl: "22.5px",
-              }}
-              color={"	#fff4c4"}
-              fontFamily={"Raleway"}
-            >
-              Hello!, I'm a fervent self taught Full-Stack Developer
-              specializing in{" "}
-              <Text as={"span"} textDecoration={"underline"}>
-                frontend
+            {isSmallScreen ? (
+              <Text
+                fontSize={{
+                  base: "12.5px",
+                  xsm: "12.5px",
+                  ssm: "13.5px",
+                  sm: "15.5px",
+                  md: "15.5px",
+                  lg: "15.5px",
+                  xl: "15.5px",
+                  xxl: "22.5px",
+                  xxxl: "22.5px",
+                }}
+                color={"	#fff4c4"}
+                fontFamily={"Raleway"}
+              >
+                Hello!, I'm a fervent self taught Full-Stack Developer
+                specializing in{" "}
+                <Text as={"span"} textDecoration={"underline"}>
+                  frontend
+                </Text>
+                , with a knack for enhancing web experiences through both UI/UX
+                and code.
               </Text>
-              , with a knack for enhancing web experiences through both
-              UI/UX and code.
-            </Text>: <Text
-              fontSize={{
-                base: "12.5px",
-                xsm: "12.5px",
-                ssm: "13.5px",
-                sm: "15.5px",
-                md: "15.5px",
-                lg: "15.5px",
-                xl: "15.5px",
-                xxl: "22.5px",
-                xxxl: "22.5px",
-              }}
-              color={"	#fff4c4"}
-              fontFamily={"Raleway"}
-            >
-              Hello!, I'm a fervent self taught Full-Stack Developer
-              specializing in{" "}
-              <Text as={"span"} textDecoration={"underline"}>
-                frontend
+            ) : (
+              <Text
+                fontSize={{
+                  base: "12.5px",
+                  xsm: "12.5px",
+                  ssm: "13.5px",
+                  sm: "15.5px",
+                  md: "15.5px",
+                  lg: "15.5px",
+                  xl: "15.5px",
+                  xxl: "22.5px",
+                  xxxl: "22.5px",
+                }}
+                color={"	#fff4c4"}
+                fontFamily={"Raleway"}
+              >
+                Hello!, I'm a fervent self taught Full-Stack Developer
+                specializing in{" "}
+                <Text as={"span"} textDecoration={"underline"}>
+                  frontend
+                </Text>
+                , <br /> with a knack for enhancing web experiences through both
+                UI/UX and code.
               </Text>
-              , <br /> with a knack for enhancing web experiences through both
-              UI/UX and code.
-            </Text> }
+            )}
           </Box>
         </LeftRightAnimation>
       </VStack>
