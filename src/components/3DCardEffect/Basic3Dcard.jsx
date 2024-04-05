@@ -1,8 +1,7 @@
-import { Box } from '@chakra-ui/react';
-import React, { useRef } from 'react'
+import { Box } from "@chakra-ui/react";
+import React, { useRef } from "react";
 
-export default function Basic3Dcard({imgID}) {
-    
+export default function Basic3Dcard({ imgID }) {
   const cardRef = useRef(null);
   let bounds;
 
@@ -38,7 +37,6 @@ export default function Basic3Dcard({imgID}) {
     `;
   }
 
-  
   function handleMouseEnter() {
     bounds = cardRef.current.getBoundingClientRect();
     document.addEventListener("mousemove", rotateToMouse);
@@ -52,35 +50,35 @@ export default function Basic3Dcard({imgID}) {
 
   return (
     <Box
-    bgColor={"#29292F"}
-    minW={{
-      base: "350px",
-      xsm: "350px",
-      ssm: "450px",
-      sm: "600px",
-      md: "400px",
-      lg: "400px",
-      xl: "500px",
-      xxl: "600px",
-      xxxl: "500px",
-    }}
-    w={"100%"}
-    h={"300px"}
-    borderRadius={"15px"}
-    bgImage={imgID}
-    backgroundRepeat={"no-repeat"}
-    bgSize={"cover"}
-    backgroundPosition={"center"}
-    style={{
-      borderRadius: "15px",
-      backgroundColor: "00000",
-    }}
-    className="card3d"
-    ref={cardRef}
-    onMouseEnter={handleMouseEnter}
-    onMouseLeave={handleMouseLeave}
-  >
-    <div className="glow" style={{ borderRadius: "15px" }}></div>
-  </Box>
-  )
+      bgColor={"#29292F"}
+      minW={{
+        base: "350px",
+        xsm: "350px",
+        ssm: "450px",
+        sm: "600px",
+        md: "400px",
+        lg: "400px",
+        xl: "500px",
+        xxl: "600px",
+        xxxl: "500px",
+      }}
+      w={"100%"}
+      h={"300px"}
+      borderRadius={"15px"}
+      bgImage={imgID}
+      backgroundRepeat={"no-repeat"}
+      bgSize={"cover"}
+      backgroundPosition={"center"}
+      style={{
+        borderRadius: "15px",
+        backgroundColor: "00000",
+      }}
+      className="card3d"
+      ref={cardRef}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      <div className="glow" style={{ borderRadius: "15px" }}></div>
+    </Box>
+  );
 }

@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   isSmallScreen: null,
@@ -6,17 +6,15 @@ const initialState = {
 
 export const calculateScreenSize = () => (dispatch) => {
   const isSmallScreen = window.innerWidth < 768;
-  if (isSmallScreen){
+  if (isSmallScreen) {
     dispatch(setIsSmallScreen(true));
-
-  } else{
+  } else {
     dispatch(setIsSmallScreen(false));
   }
-  
 };
 
 const screenSizeSlice = createSlice({
-  name: 'screenSize',
+  name: "screenSize",
   initialState,
   reducers: {
     setIsSmallScreen(state, action) {

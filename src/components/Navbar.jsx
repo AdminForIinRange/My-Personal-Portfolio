@@ -65,20 +65,14 @@ import { FaGithub } from "react-icons/fa";
 import useScreenSize from "../hook/useScreenSize";
 
 export default function Navbar() {
-  const {isSmallScreen} = useScreenSize(); // Custom hook for handling screen size
-
+  const { isSmallScreen } = useScreenSize(); // Custom hook for handling screen size
 
   return (
     <Box p={"15px"} bg={"RGBA(0, 0, 0, 0.48) "}>
-      <VStack
-        justify={"center"}
-        align={"center"}
-      
-        fontFamily={"Raleway"}
-      >
-        <Box w={"100%"} >
+      <VStack justify={"center"} align={"center"} fontFamily={"Raleway"}>
+        <Box w={"100%"}>
           <HStack justify={"center"} h={"100%"} align={"Start"}>
-            <HStack w={"90%"}  justify={"center"} gap={"3%"}>
+            <HStack w={"90%"} justify={"center"} gap={"3%"}>
               <Text
                 fontWeight={500}
                 color={"wheat"}
@@ -107,7 +101,6 @@ export default function Navbar() {
               </Text>
 
               <Text
-           
                 fontWeight={500}
                 color={"wheat"}
                 fontSize={{
@@ -122,7 +115,7 @@ export default function Navbar() {
                   xxxl: "17px",
                 }}
               >
-                <HStack >
+                <HStack>
                   <Box
                     transition="transform 0.3s ease-in-out, boxShadow 1s ease-in-out"
                     _hover={{
@@ -165,81 +158,83 @@ export default function Navbar() {
                 </HStack>
               </Text>
 
-            
+              {isSmallScreen ? (
+                <></>
+              ) : (
+                <>
+                  <Spacer />
+                  <ButtonGroup
+                    colorScheme="none"
+                    variant="link"
+                    color={"wheat"}
+                  >
+                    <HStack gap={"30px"}>
+                      <Button
+                        fontSize={{
+                          base: "8.5px",
+                          xsm: "8.5px",
+                          ssm: "12.5px",
+                          sm: "12.5px",
+                          md: "12.5px",
+                          lg: "12.5px",
+                          xl: "15.5px",
+                          xxl: "17.5px",
+                          xxxl: "17.5px",
+                        }}
+                      >
+                        <a href="#About">About</a>
+                      </Button>
 
-             
-{ isSmallScreen ? <></> :
-<>
-<Spacer />
-              <ButtonGroup colorScheme="none" variant="link" color={"wheat"} >
-                <HStack gap={"30px"}> 
-                <Button
-                
-                fontSize={{
-                  base: "8.5px",
-                  xsm: "8.5px",
-                  ssm: "12.5px",
-                  sm: "12.5px",
-                  md: "12.5px",
-                  lg: "12.5px",
-                  xl: "15.5px",
-                  xxl: "17.5px",
-                  xxxl: "17.5px",
-                }}
-              >
-                <a href="#About">About</a>
-              </Button>
-
-              <Button
-                  fontSize={{
-                  base: "8.5px",
-                  xsm: "8.5px",
-                  ssm: "12.5px",
-                  sm: "12.5px",
-                  md: "12.5px",
-                  lg: "12.5px",
-                  xl: "15.5px",
-                  xxl: "17.5px",
-                  xxxl: "17.5px",
-                }}
-              >
-                {" "}
-                <a href="#Skills">Skills</a>
-              </Button>
-              <Button
-                  fontSize={{
-                  base: "8.5px",
-                  xsm: "8.5px",
-                  ssm: "12.5px",
-                  sm: "12.5px",
-                  md: "12.5px",
-                  lg: "12.5px",
-                  xl: "15.5px",
-                  xxl: "17.5px",
-                  xxxl: "17.5px",
-                }}
-              >
-                <a href="#Projects">Projects</a>
-              </Button>
-              <Button
-                  fontSize={{
-                  base: "8.5px",
-                  xsm: "8.5px",
-                  ssm: "12.5px",
-                  sm: "12.5px",
-                  md: "12.5px",
-                  lg: "12.5px",
-                  xl: "15.5px",
-                  xxl: "17.5px",
-                  xxxl: "17.5px",
-                }}
-              >
-                <a href="#Contact">Contact</a>
-              </Button>
-                </HStack>
-             
-              </ButtonGroup>
-              </>}
+                      <Button
+                        fontSize={{
+                          base: "8.5px",
+                          xsm: "8.5px",
+                          ssm: "12.5px",
+                          sm: "12.5px",
+                          md: "12.5px",
+                          lg: "12.5px",
+                          xl: "15.5px",
+                          xxl: "17.5px",
+                          xxxl: "17.5px",
+                        }}
+                      >
+                        {" "}
+                        <a href="#Skills">Skills</a>
+                      </Button>
+                      <Button
+                        fontSize={{
+                          base: "8.5px",
+                          xsm: "8.5px",
+                          ssm: "12.5px",
+                          sm: "12.5px",
+                          md: "12.5px",
+                          lg: "12.5px",
+                          xl: "15.5px",
+                          xxl: "17.5px",
+                          xxxl: "17.5px",
+                        }}
+                      >
+                        <a href="#Projects">Projects</a>
+                      </Button>
+                      <Button
+                        fontSize={{
+                          base: "8.5px",
+                          xsm: "8.5px",
+                          ssm: "12.5px",
+                          sm: "12.5px",
+                          md: "12.5px",
+                          lg: "12.5px",
+                          xl: "15.5px",
+                          xxl: "17.5px",
+                          xxxl: "17.5px",
+                        }}
+                      >
+                        <a href="#Contact">Contact</a>
+                      </Button>
+                    </HStack>
+                  </ButtonGroup>
+                </>
+              )}
             </HStack>
           </HStack>
         </Box>

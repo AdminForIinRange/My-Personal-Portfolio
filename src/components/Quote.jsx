@@ -65,33 +65,28 @@ import {
 import { useInView } from "framer-motion";
 import LeftRightAnimation from "./Animations/LeftRightAnimation";
 
-
 export default function Quote() {
   return (
-     <VStack
-
-    fontSize={{
-      base: "40px",
-      xsm: "40px",
-      ssm: "40px",
-      sm: "50px",
-      md: "60px",
-      lg: "70px",
-      xl: "100px",
-      xxl: "120px",
-      xxxl: "120px",
-    }}
-    
+    <VStack
+      fontSize={{
+        base: "40px",
+        xsm: "40px",
+        ssm: "40px",
+        sm: "50px",
+        md: "60px",
+        lg: "70px",
+        xl: "100px",
+        xxl: "120px",
+        xxxl: "120px",
+      }}
       justify={"left"}
       align={"left"}
       p={"5%"}
       color={"wheat"}
-    
-     
     >
       <LeftRightAnimation>
         <Box
-        mt={"250px"}
+          mt={"250px"}
           color={"	#f0d86e"}
           transition="transform 0.3s ease-in-out, boxShadow 1s ease-in-out"
           _hover={{
@@ -117,52 +112,52 @@ export default function Quote() {
         </Box>
       </LeftRightAnimation>
 
-    
-        <LeftRightAnimation transition="transform 0.3s ease-in-out, boxShadow 1s ease-in-out">
-          <Box     mt={"350px"}
-            color={"	#f0d86e"}
-            transition="transform 0.3s ease-in-out, boxShadow 1s ease-in-out"
-            _hover={{
-              transform: "scale(1.03)",
-              filter: "drop-shadow(0px 0px 5px #ED8936)",
-            }}
-          >
-            <Text as={"span"} fontWeight={400} fontFamily={"Raleway"}>
-              {" "}
-              that encompasses all
-            </Text>
-          </Box>
-          <Box
-            color={"	#f0d86e"}
-            transition="transform 0.3s ease-in-out, boxShadow 1s ease-in-out"
-            _hover={{
-              transform: "scale(1.03)",
-              filter: "drop-shadow(0px 0px 5px #ED8936)",
-            }}
-          >
-            <Text as={"span"} fontWeight={400} fontFamily={"Raleway"}>
-              {" "}
-              variables is often
-            </Text>
-          </Box>
-          <Box
-            color={"	#f0d86e"}
-            transition="transform 0.3s ease-in-out, boxShadow 1s ease-in-out"
-            _hover={{
-              transform: "scale(1.03)",
-              filter: "drop-shadow(0px 0px 5px #ED8936)",
-            }}
-          >
-            <Text as={"span"} fontWeight={400} fontFamily={"Raleway"}>
-              {" "}
-              the closest to truth,
-            </Text>
-          </Box>
-        </LeftRightAnimation>
-
+      <LeftRightAnimation transition="transform 0.3s ease-in-out, boxShadow 1s ease-in-out">
+        <Box
+          mt={"350px"}
+          color={"	#f0d86e"}
+          transition="transform 0.3s ease-in-out, boxShadow 1s ease-in-out"
+          _hover={{
+            transform: "scale(1.03)",
+            filter: "drop-shadow(0px 0px 5px #ED8936)",
+          }}
+        >
+          <Text as={"span"} fontWeight={400} fontFamily={"Raleway"}>
+            {" "}
+            that encompasses all
+          </Text>
+        </Box>
+        <Box
+          color={"	#f0d86e"}
+          transition="transform 0.3s ease-in-out, boxShadow 1s ease-in-out"
+          _hover={{
+            transform: "scale(1.03)",
+            filter: "drop-shadow(0px 0px 5px #ED8936)",
+          }}
+        >
+          <Text as={"span"} fontWeight={400} fontFamily={"Raleway"}>
+            {" "}
+            variables is often
+          </Text>
+        </Box>
+        <Box
+          color={"	#f0d86e"}
+          transition="transform 0.3s ease-in-out, boxShadow 1s ease-in-out"
+          _hover={{
+            transform: "scale(1.03)",
+            filter: "drop-shadow(0px 0px 5px #ED8936)",
+          }}
+        >
+          <Text as={"span"} fontWeight={400} fontFamily={"Raleway"}>
+            {" "}
+            the closest to truth,
+          </Text>
+        </Box>
+      </LeftRightAnimation>
 
       <LeftRightAnimation>
-        <Box     mt={"350px"}
+        <Box
+          mt={"350px"}
           color={"	#f0d86e"}
           transition="transform 0.3s ease-in-out, boxShadow 1s ease-in-out"
           _hover={{
@@ -185,7 +180,7 @@ export default function Quote() {
         >
           <Text as={"span"} fontWeight={400} fontFamily={"Raleway"}>
             {" "}
-            obscure rather than reveal. 
+            obscure rather than reveal.
           </Text>
         </Box>
 
@@ -213,6 +208,6 @@ export default function Quote() {
           -Occam's Razor
         </Text>
       </LeftRightAnimation>
-      </VStack>
+    </VStack>
   );
 }

@@ -106,16 +106,13 @@ import { useRef } from "react";
 import LeftRightAnimation from "../../components/Animations/LeftRightAnimation";
 import ComponentTitles from "../../components/ComponentTitle/ComponentTitle";
 
-
 export default function Skills() {
   return (
-    <VStack justify="center" align="center" mt={"300px"}  id="Skills"  >
-         <ComponentTitles
-         mainTitle={"Acquired skills"}
-         subTitle={"My Skills Sets"}
-         />
-
-   
+    <VStack justify="center" align="center" mt={"300px"} id="Skills">
+      <ComponentTitles
+        mainTitle={"Acquired skills"}
+        subTitle={"My Skills Sets"}
+      />
 
       <Accordion
         color={"	#fff4c4"}
@@ -151,7 +148,6 @@ export default function Skills() {
             }}
             fontWeight={700}
             p={"1% 0% 1% 0%"}
-            
           >
             Front End
           </Text>
@@ -185,20 +181,22 @@ export default function Skills() {
           </AccordionButton>
 
           <AccordionPanel border={" 0px"} p={"3%"}>
-            <HStack align={"end"} gap={{
-           base: "40px",
-           xsm: "40px",
-           ssm: "40px",
-           sm: "40px",
-           md: "40px",
-           lg: "60px",
-           xl: "60px",
-           xxl: "60px",
-           xxxl: "60px",
-         }} flexWrap={"wrap"}
-         fontSize={"12px"}
-         >
-          
+            <HStack
+              align={"end"}
+              gap={{
+                base: "40px",
+                xsm: "40px",
+                ssm: "40px",
+                sm: "40px",
+                md: "40px",
+                lg: "60px",
+                xl: "60px",
+                xxl: "60px",
+                xxxl: "60px",
+              }}
+              flexWrap={"wrap"}
+              fontSize={"12px"}
+            >
               <VStack
                 transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
                 _hover={{
@@ -212,7 +210,6 @@ export default function Skills() {
               </VStack>
 
               <VStack
-            
                 transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
                 _hover={{
                   transform: "scale(1.03)",
@@ -283,18 +280,23 @@ export default function Skills() {
             <AccordionIcon />
           </AccordionButton>
 
-          <AccordionPanel border={" 0px"}  p={"3%"} >
-            <HStack align={"end"} gap={{
-           base: "40px",
-           xsm: "40px",
-           ssm: "40px",
-           sm: "40px",
-           md: "40px",
-           lg: "60px",
-           xl: "60px",
-           xxl: "60px",
-           xxxl: "60px",
-         }} flexWrap={"wrap"}    fontSize={"12px"}>
+          <AccordionPanel border={" 0px"} p={"3%"}>
+            <HStack
+              align={"end"}
+              gap={{
+                base: "40px",
+                xsm: "40px",
+                ssm: "40px",
+                sm: "40px",
+                md: "40px",
+                lg: "60px",
+                xl: "60px",
+                xxl: "60px",
+                xxxl: "60px",
+              }}
+              flexWrap={"wrap"}
+              fontSize={"12px"}
+            >
               <VStack
                 transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
                 _hover={{
@@ -528,17 +530,22 @@ export default function Skills() {
           </AccordionButton>
 
           <AccordionPanel border={" 0px"} p={"3%"}>
-            <HStack align={"end"} gap={{
-           base: "40px",
-           xsm: "40px",
-           ssm: "40px",
-           sm: "40px",
-           md: "40px",
-           lg: "60px",
-           xl: "60px",
-           xxl: "60px",
-           xxxl: "60px",
-         }} flexWrap={"wrap"}    fontSize={"12px"}>
+            <HStack
+              align={"end"}
+              gap={{
+                base: "40px",
+                xsm: "40px",
+                ssm: "40px",
+                sm: "40px",
+                md: "40px",
+                lg: "60px",
+                xl: "60px",
+                xxl: "60px",
+                xxxl: "60px",
+              }}
+              flexWrap={"wrap"}
+              fontSize={"12px"}
+            >
               <VStack
                 transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
                 _hover={{
@@ -748,17 +755,22 @@ export default function Skills() {
           </AccordionButton>
 
           <AccordionPanel border={" 0px"} p={"3%"}>
-            <HStack align={"end"} gap={{
-           base: "40px",
-           xsm: "40px",
-           ssm: "40px",
-           sm: "40px",
-           md: "40px",
-           lg: "60px",
-           xl: "60px",
-           xxl: "60px",
-           xxxl: "60px",
-         }} flexWrap={"wrap"}    fontSize={"12px"} >
+            <HStack
+              align={"end"}
+              gap={{
+                base: "40px",
+                xsm: "40px",
+                ssm: "40px",
+                sm: "40px",
+                md: "40px",
+                lg: "60px",
+                xl: "60px",
+                xxl: "60px",
+                xxxl: "60px",
+              }}
+              flexWrap={"wrap"}
+              fontSize={"12px"}
+            >
               <VStack
                 transition="transform, 0.3s ease-in-out, boxShadow 1s ease-in-out"
                 _hover={{

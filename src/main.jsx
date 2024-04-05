@@ -31,14 +31,13 @@ const theme = extendTheme({
         width: "100%",
         overflowX: "hidden",
         overflowY: "auto",
-
       },
       body: {
         background: "#29292f",
         height: "100%",
         width: "100%",
         overflowX: "hidden", // Hide horizontal scrollbar
-        overflowY: "auto",   // Show vertical scrollbar when needed
+        overflowY: "auto", // Show vertical scrollbar when needed
       },
     },
   },
@@ -52,5 +51,5 @@ root.render(
         <App />
       </Provider>
     </React.StrictMode>
-  </ChakraProvider>
+  </ChakraProvider>,
 );

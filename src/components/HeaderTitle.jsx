@@ -66,9 +66,8 @@ import { useInView } from "framer-motion";
 import LeftRightAnimation from "./Animations/LeftRightAnimation";
 import useScreenSize from "../hook/useScreenSize";
 
-
 export default function HeaderTitle() {
-  const {isSmallScreen} = useScreenSize();
+  const { isSmallScreen } = useScreenSize();
   return (
     <Stack align={"center"} p={"3%"}>
       <VStack

@@ -145,8 +145,6 @@ export default function About() {
             </Text>
           </LeftRightAnimation>
         </VStack>
-
-    
       </HStack>
     </VStack>
   );

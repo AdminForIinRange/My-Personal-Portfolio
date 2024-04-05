@@ -8,9 +8,7 @@ import {
 // layouts and pages
 import RootLayout from "./layouts/RootLayout.jsx";
 
-
-
-import "./styles/styles.css"
+import "./styles/styles.css";
 import GlobalPage from "./pages/GlobalPages.jsx";
 
 // router and routes
@@ -18,10 +16,8 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
       <Route index element={<GlobalPage />} />
-     
-     
-    </Route>
-  )
+    </Route>,
+  ),
 );
 
 function App() {

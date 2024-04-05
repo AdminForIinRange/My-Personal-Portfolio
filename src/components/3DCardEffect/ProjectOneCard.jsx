@@ -1,67 +1,67 @@
 import {
-    Step,
-    StepDescription,
-    Input,
-    StepIcon,
-    StepIndicator,
-    StepNumber,
-    StepSeparator,
-    StepStatus,
-    StepTitle,
-    Stepper,
-    HStack,
-    Heading,
-    InputGroup,
-    Card,
-    CardHeader,
-    FormControl,
-    FormLabel,
-    FormErrorMessage,
-    FormHelperText,
-    CardBody,
-    Highlight,
-    CardFooter,
-    Divider,
-    AspectRatio,
-    ButtonGroup,
-    Center,
-    Flex,
-    Button,
-    Text,
-    Stack,
-    Box,
-    useBreakpointValue,
-    Menu,
-    MenuButton,
-    VStack,
-    MenuList,
-    MenuItem,
-    Wrap,
-    List,
-    ListItem,
-    ListIcon,
-    OrderedList,
-    UnorderedList,
-    Grid,
-    GridItem,
-    Image,
-    Accordion,
-    AccordionItem,
-    AccordionButton,
-    AccordionPanel,
-    AccordionIcon,
-    InputLeftAddon,
-    InputRightAddon,
-    useSteps,
-    AbsoluteCenter,
-    Avatar,
-    AvatarBadge,
-    AvatarGroup,
-    Container,
-    Spacer,
-  } from "@chakra-ui/react";
+  Step,
+  StepDescription,
+  Input,
+  StepIcon,
+  StepIndicator,
+  StepNumber,
+  StepSeparator,
+  StepStatus,
+  StepTitle,
+  Stepper,
+  HStack,
+  Heading,
+  InputGroup,
+  Card,
+  CardHeader,
+  FormControl,
+  FormLabel,
+  FormErrorMessage,
+  FormHelperText,
+  CardBody,
+  Highlight,
+  CardFooter,
+  Divider,
+  AspectRatio,
+  ButtonGroup,
+  Center,
+  Flex,
+  Button,
+  Text,
+  Stack,
+  Box,
+  useBreakpointValue,
+  Menu,
+  MenuButton,
+  VStack,
+  MenuList,
+  MenuItem,
+  Wrap,
+  List,
+  ListItem,
+  ListIcon,
+  OrderedList,
+  UnorderedList,
+  Grid,
+  GridItem,
+  Image,
+  Accordion,
+  AccordionItem,
+  AccordionButton,
+  AccordionPanel,
+  AccordionIcon,
+  InputLeftAddon,
+  InputRightAddon,
+  useSteps,
+  AbsoluteCenter,
+  Avatar,
+  AvatarBadge,
+  AvatarGroup,
+  Container,
+  Spacer,
+} from "@chakra-ui/react";
 
-import React, { Children } from 'react'
+import React, { Children } from "react";
 import { useRef } from "react";
 
 import AIGoals from "../../assets/Screenshot 2024-02-26 124604.png";
@@ -105,8 +105,16 @@ import Github from "../../assets/Logos/25231.png";
 
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { useNavigate } from "react-router-dom";
-export default function ProjectOneCard({Imageid, Title, Desc, WebLink, Gitlink, Stack, MainColor, SecColor  }) {
-
+export default function ProjectOneCard({
+  Imageid,
+  Title,
+  Desc,
+  WebLink,
+  Gitlink,
+  Stack,
+  MainColor,
+  SecColor,
+}) {
   const {
     ReactLogoUse,
     ReduxLogoUse,
@@ -115,12 +123,10 @@ export default function ProjectOneCard({Imageid, Title, Desc, WebLink, Gitlink, 
     FramerMotionUse,
     NodejsUse,
     FirebaseUse,
-    GTPApiUse
+    GTPApiUse,
   } = Stack;
 
-
-
-    const cardRef = useRef(null);
+  const cardRef = useRef(null);
   let bounds;
 
   function rotateToMouse(e) {
@@ -167,168 +173,163 @@ export default function ProjectOneCard({Imageid, Title, Desc, WebLink, Gitlink, 
   }
 
   return (
-    <Box  mb={"25px"} style={{
+    <Box
+      mb={"25px"}
+      style={{
         borderRadius: "15px",
-        backgroundColor:MainColor,
+        backgroundColor: MainColor,
       }}
       className="card3d"
       ref={cardRef}
       onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave} >
-         <Text
-                textAlign={"left"}
-                fontSize={{
-                  base: "20px",
-                  xsm: "20px",
-                  ssm: "20px",
-                  sm: "20px",
-                  md: "20px",
-                  lg: "20px",
-                  xl: "25px",
-                  xxl: "25px",
-                  xxxl: "25px",
-                }}
-                color={`${SecColor}.200`}
-                textIndent={"10px"}
-              >
-                {Title}
-              </Text>
-              <Box p={"2%"} w={"100%"} h={"100%"}>
-                <Box h={"100%"} borderRadius={"15px"}>
-                  <Image loading="lazy" src={Imageid} borderRadius={"10px"} />
-                </Box>
+      onMouseLeave={handleMouseLeave}
+    >
+      <Text
+        textAlign={"left"}
+        fontSize={{
+          base: "20px",
+          xsm: "20px",
+          ssm: "20px",
+          sm: "20px",
+          md: "20px",
+          lg: "20px",
+          xl: "25px",
+          xxl: "25px",
+          xxxl: "25px",
+        }}
+        color={`${SecColor}.200`}
+        textIndent={"10px"}
+      >
+        {Title}
+      </Text>
+      <Box p={"2%"} w={"100%"} h={"100%"}>
+        <Box h={"100%"} borderRadius={"15px"}>
+          <Image loading="lazy" src={Imageid} borderRadius={"10px"} />
+        </Box>
 
-             <HStack gap={"2.5%"} w={"60%"} p={"2% 0% 0% 0%"}>
-                  { ReactLogoUse ? <VStack w={"8%"}>
-                    <Image loading="lazy" src={ReactLogo} />
-                  </VStack>
-                  : <></>
-}
-{ReduxLogoUse ? (
-    <VStack w={"8%"}>
-      <Image loading="lazy" src={ReduxLogo} />
-    </VStack>
-  ) : (
-    <></>
-  )}
+        <HStack gap={"2.5%"} w={"60%"} p={"2% 0% 0% 0%"}>
+          {ReactLogoUse ? (
+            <VStack w={"8%"}>
+              <Image loading="lazy" src={ReactLogo} />
+            </VStack>
+          ) : (
+            <></>
+          )}
+          {ReduxLogoUse ? (
+            <VStack w={"8%"}>
+              <Image loading="lazy" src={ReduxLogo} />
+            </VStack>
+          ) : (
+            <></>
+          )}
 
-  {ChakraUILogoUse ? (
-    <VStack w={"8%"}>
-      <Image loading="lazy" src={chakraUIlogo} borderRadius={"100px"} />
-    </VStack>
-  ) : (
-    <></>
-  )}
+          {ChakraUILogoUse ? (
+            <VStack w={"8%"}>
+              <Image loading="lazy" src={chakraUIlogo} borderRadius={"100px"} />
+            </VStack>
+          ) : (
+            <></>
+          )}
 
-  {TailwindUse ? (
-    <VStack w={"10%"}>
-      <Image loading="lazy" src={tailwind} />
-    </VStack>
-  ) : (
-    <></>
-  )}
+          {TailwindUse ? (
+            <VStack w={"10%"}>
+              <Image loading="lazy" src={tailwind} />
+            </VStack>
+          ) : (
+            <></>
+          )}
 
-  {FramerMotionUse ? (
-    <VStack w={"8%"}>
-      <Image loading="lazy" src={FramerMotion} />
-    </VStack>
-  ) : (
-    <></>
-  )}
+          {FramerMotionUse ? (
+            <VStack w={"8%"}>
+              <Image loading="lazy" src={FramerMotion} />
+            </VStack>
+          ) : (
+            <></>
+          )}
 
-  {NodejsUse ? (
-    <VStack w={"8%"}>
-      <Image loading="lazy" src={Nodejs} />
-    </VStack>
-  ) : (
-    <></>
-  )}
+          {NodejsUse ? (
+            <VStack w={"8%"}>
+              <Image loading="lazy" src={Nodejs} />
+            </VStack>
+          ) : (
+            <></>
+          )}
 
-  {FirebaseUse ? (
-    <VStack w={"6%"}>
-      <Image loading="lazy" src={Firebase} />
-    </VStack>
-  ) : (
-    <></>
-  )}
+          {FirebaseUse ? (
+            <VStack w={"6%"}>
+              <Image loading="lazy" src={Firebase} />
+            </VStack>
+          ) : (
+            <></>
+          )}
 
-  {GTPApiUse ? (
-    <VStack w={"8%"}>
-      <Image loading="lazy" src={GTPApi} />
-    </VStack>
-  ) : (
-    <></>
-  )}
-                </HStack>
-              </Box>
-
-              <div className="glow" style={{ borderRadius: "15px" }}></div>
-
-
-              <HStack
-              mt={"15px"}
-              p={"2%"}
-              align={" left"}
-              w={"100%"}
-              maxW={"600"}
-              h={"100px"}
-              bgColor={`${SecColor}.200`}
-              borderRadius={"15px"}
-            >
-              <Text
-              fontWeight={"500"}
-              textAlign={"Left"}
-                fontFamily={"Raleway"}
-                fontSize={{
-                  base: "15px",
-                  xsm: "15px",
-                  ssm: "15px",
-                  sm: "15px",
-                  md: "15px",
-                  lg: "15px",
-                  xl: "15px",
-                  xxl: "17px",
-                  xxxl: "17px",
-                }}
-              >
-                {Desc}
-              </Text>
-            </HStack>
-            <HStack
-              justify={"center"}
-              w={"100%"}
-              transition="transform, 0.3s ease-in-out, "
-            >
-              <a
-                style={{ marginTop: "12.5px" }}
-                target="_blank"
-                href={WebLink}
-              >
-                <Button
-                  bgColor={`${SecColor}.400`}
-                  fontSize={"15px"}
-                  p={""}
-                  rightIcon={<ExternalLinkIcon />}
-                >
-                  View Live Deploy
-                </Button>
-              </a>
-              <a
-                style={{ marginTop: "12.5px" }}
-                target="_blank"
-                href={Gitlink}
-              >
-                <Button
-                  bgColor={`${SecColor}.400`}
-                  fontSize={"15px"}
-                  p={""}
-                  rightIcon={<ExternalLinkIcon />}
-                >
-                  View Github
-                </Button>
-              </a>
-            </HStack>
-
+          {GTPApiUse ? (
+            <VStack w={"8%"}>
+              <Image loading="lazy" src={GTPApi} />
+            </VStack>
+          ) : (
+            <></>
+          )}
+        </HStack>
       </Box>
-  )
+
+      <div className="glow" style={{ borderRadius: "15px" }}></div>
+
+      <HStack
+        mt={"15px"}
+        p={"2%"}
+        align={" left"}
+        w={"100%"}
+        maxW={"600"}
+        h={"100px"}
+        bgColor={`${SecColor}.200`}
+        borderRadius={"15px"}
+      >
+        <Text
+          fontWeight={"500"}
+          textAlign={"Left"}
+          fontFamily={"Raleway"}
+          fontSize={{
+            base: "15px",
+            xsm: "15px",
+            ssm: "15px",
+            sm: "15px",
+            md: "15px",
+            lg: "15px",
+            xl: "15px",
+            xxl: "17px",
+            xxxl: "17px",
+          }}
+        >
+          {Desc}
+        </Text>
+      </HStack>
+      <HStack
+        justify={"center"}
+        w={"100%"}
+        transition="transform, 0.3s ease-in-out, "
+      >
+        <a style={{ marginTop: "12.5px" }} target="_blank" href={WebLink}>
+          <Button
+            bgColor={`${SecColor}.400`}
+            fontSize={"15px"}
+            p={""}
+            rightIcon={<ExternalLinkIcon />}
+          >
+            View Live Deploy
+          </Button>
+        </a>
+        <a style={{ marginTop: "12.5px" }} target="_blank" href={Gitlink}>
+          <Button
+            bgColor={`${SecColor}.400`}
+            fontSize={"15px"}
+            p={""}
+            rightIcon={<ExternalLinkIcon />}
+          >
+            View Github
+          </Button>
+        </a>
+      </HStack>
+    </Box>
+  );
 }

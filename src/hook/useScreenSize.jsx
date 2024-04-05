@@ -6,10 +6,8 @@ const useScreenSize = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
- 
     dispatch(calculateScreenSize());
 
-   
     const handleResize = () => {
       dispatch(calculateScreenSize());
     };
@@ -21,10 +19,8 @@ const useScreenSize = () => {
     };
   }, [dispatch]);
 
- 
-  const isSmallScreen = useSelector(state => state.screenSize.isSmallScreen);
+  const isSmallScreen = useSelector((state) => state.screenSize.isSmallScreen);
 
-  
   return { isSmallScreen };
 };
 

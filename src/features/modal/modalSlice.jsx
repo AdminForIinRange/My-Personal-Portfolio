@@ -12,13 +12,10 @@ const modalSlice = createSlice({
       state.showModal = true;
     },
     hideModalAction: (state) => {
-        state.showModal = false
-
-
-    }
+      state.showModal = false;
+    },
   },
 });
 
-
-export const {showModalAction, hideModalAction} = modalSlice.actions
-export default modalSlice.reducer
+export const { showModalAction, hideModalAction } = modalSlice.actions;
+export default modalSlice.reducer;

@@ -2,8 +2,12 @@ import React, { Suspense } from "react";
 import AnimatedCursor from "react-animated-cursor";
 
 // Lazy load components
-const LazyHeaderTitle = React.lazy(() => import("../components/HeaderTitle.jsx"));
-const LazyHoveringArrow = React.lazy(() => import("../components/HoveringArrow"));
+const LazyHeaderTitle = React.lazy(
+  () => import("../components/HeaderTitle.jsx"),
+);
+const LazyHoveringArrow = React.lazy(
+  () => import("../components/HoveringArrow"),
+);
 const LazyQuote = React.lazy(() => import("../components/Quote.jsx"));
 const LazyAbout = React.lazy(() => import("./About/About.jsx"));
 const LazySkills = React.lazy(() => import("./Skills/Skills.jsx"));
@@ -36,7 +40,7 @@ export default function GlobalPage() {
           'input[type="number"]',
           'input[type="submit"]',
           'input[type="image"]',
-          'label[for]',
+          "label[for]",
           "select",
           "textarea",
           "button",

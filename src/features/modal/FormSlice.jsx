@@ -1,4 +1,3 @@
-
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { db } from "../../Config/Firebase";
@@ -18,28 +17,28 @@ export const ContactMe = createAsyncThunk(
     } catch (error) {
       return rejectWithValue(error.message);
     }
-  }
+  },
 );
 
 const formSlice = createSlice({
-  name: 'form',
+  name: "form",
   initialState: {
-    status: 'idle',
-    error: null
+    status: "idle",
+    error: null,
   },
   extraReducers: (builder) => {
     builder
       .addCase(ContactMe.pending, (state) => {
-        state.status = 'loading';
+        state.status = "loading";
       })
       .addCase(ContactMe.fulfilled, (state) => {
-        state.status = 'idle';
+        state.status = "idle";
       })
       .addCase(ContactMe.rejected, (state, action) => {
-        state.status = 'idle';
+        state.status = "idle";
         state.error = action.payload;
       });
-  }
+  },
 });
 
 export default formSlice.reducer;

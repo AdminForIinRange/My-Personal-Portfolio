@@ -119,32 +119,29 @@ import LinkdenScreenShot from "../../assets/linkdenScreenShot.png";
 
 import LeftRightAnimation from "../../components/Animations/LeftRightAnimation";
 import ComponentTitles from "../../components/ComponentTitle/ComponentTitle";
-import { useDispatch } from 'react-redux';
+import { useDispatch } from "react-redux";
 import { ContactMe } from "../../features/modal/FormSlice";
 
 export default function Contact() {
   const dispatch = useDispatch();
 
-const [name, setName] =  useState()
-const [email, setEmail] = useState() 
-const [message, setMessage] = useState()
+  const [name, setName] = useState();
+  const [email, setEmail] = useState();
+  const [message, setMessage] = useState();
 
-const [submited, setSubmited ] = useState(false)
+  const [submited, setSubmited] = useState(false);
 
+  const onSubmit = (e) => {
+    e.preventDefault();
+    dispatch(ContactMe({ name, email, message }));
+    // Resetting form fields
+    setName("");
+    setEmail("");
+    setMessage("");
+    setSubmited(true);
 
-const onSubmit = (e) => {
-  e.preventDefault();
-  dispatch(ContactMe({ name, email, message }));
-  // Resetting form fields
-  setName('');
-  setEmail('');
-  setMessage('');
-  setSubmited(true)
-
-  // Additional logic...
-};
-
-
+    // Additional logic...
+  };
 
   return (
     <VStack align="center" mt={"200px"} id="Contact">
@@ -271,7 +268,6 @@ const onSubmit = (e) => {
         <VStack align={"left"} w={"100%"}>
           <VStack>
             <VStack
-            
               color={"	#f0d86e"}
               w={"400px"}
               h={"100%"}
@@ -288,66 +284,69 @@ const onSubmit = (e) => {
                 xxxl: "0",
               }}
             >
-             <form onSubmit={onSubmit} style={{width:'100%'}} >
+              <form onSubmit={onSubmit} style={{ width: "100%" }}>
+                <FormControl>
+                  <FormLabel htmlFor="name"> Name</FormLabel>
+                  <Input
+                    borderColor={"	#f0d86e"}
+                    transition="transform, 0.3s ease-in-out"
+                    _hover={{
+                      transform: "scale(1.03)",
+                      filter: "drop-shadow(0px 0px 10px #ECC94B)",
+                    }}
+                    id="name"
+                    type="name"
+                    w={"100%"}
+                    required
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                  />
+                </FormControl>
+                <FormControl mt={"20px"}>
+                  <FormLabel htmlFor="email">Email</FormLabel>
+                  <Input
+                    borderColor={"	#f0d86e"}
+                    transition="transform, 0.3s ease-in-out"
+                    _hover={{
+                      transform: "scale(1.03)",
+                      filter: "drop-shadow(0px 0px 10px #ECC94B)",
+                    }}
+                    id="email"
+                    type="email"
+                    required
+                    autoComplete="current-email"
+                    w={"100%"}
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                </FormControl>
+                <FormControl mt={"20px"}>
+                  <FormLabel htmlFor="message">Message</FormLabel>
+                  <Textarea
+                    borderColor={"	#f0d86e"}
+                    transition="transform, 0.3s ease-in-out"
+                    _hover={{
+                      transform: "scale(1.03)",
+                      filter: "drop-shadow(0px 0px 10px #ECC94B)",
+                    }}
+                    id="message"
+                    type="message"
+                    required
+                    autoComplete="current-message"
+                    w={"100%"}
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                  />
+                </FormControl>
 
-       
-              <FormControl>
-                <FormLabel htmlFor="name"> Name</FormLabel>
-                <Input
-                  borderColor={"	#f0d86e"}
-                  transition="transform, 0.3s ease-in-out"
-                  _hover={{
-                    transform: "scale(1.03)",
-                    filter: "drop-shadow(0px 0px 10px #ECC94B)",
-                  }}
-                  id="name"
-                  type="name"
+                <Button
                   w={"100%"}
-                  required
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                />
-              </FormControl>
-              <FormControl mt={"20px"}>
-                <FormLabel htmlFor="email">Email</FormLabel>
-                <Input
-                  borderColor={"	#f0d86e"}
-                  transition="transform, 0.3s ease-in-out"
-                  _hover={{
-                    transform: "scale(1.03)",
-                    filter: "drop-shadow(0px 0px 10px #ECC94B)",
-                  }}
-                  id="email"
-                  type="email"
-                  required
-                  autoComplete="current-email"
-                  w={"100%"}
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-              </FormControl>
-              <FormControl mt={"20px"}>
-                <FormLabel htmlFor="message">Message</FormLabel>
-                <Textarea
-                  borderColor={"	#f0d86e"}
-                  transition="transform, 0.3s ease-in-out"
-                  _hover={{
-                    transform: "scale(1.03)",
-                    filter: "drop-shadow(0px 0px 10px #ECC94B)",
-                  }}
-                  id="message"
-                  type="message"
-                  required
-                  autoComplete="current-message"
-                  w={"100%"}
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                />
-              </FormControl>
-
-              <Button  w={"100%"} mt={"10px"} type="submit" bgColor={submited ? "green.400":"	#f0d86e"}>
-             { submited ? <> Thank you 😄 </> :  "Send"}
-              </Button>
+                  mt={"10px"}
+                  type="submit"
+                  bgColor={submited ? "green.400" : "	#f0d86e"}
+                >
+                  {submited ? <> Thank you 😄 </> : "Send"}
+                </Button>
               </form>
             </VStack>
           </VStack>

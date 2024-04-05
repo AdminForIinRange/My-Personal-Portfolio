@@ -5,7 +5,6 @@ import LeftRightAnimation from "../Animations/LeftRightAnimation";
 import Basic3Dcard from "../3DCardEffect/Basic3Dcard";
 
 export default function MyImages() {
- 
   const [ImagesSelect, setImagesSelect] = useState([
     {
       id: 1,

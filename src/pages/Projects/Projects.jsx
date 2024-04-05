@@ -183,7 +183,9 @@ export default function Projects() {
               <LeftRightAnimation>
                 <ProjectOneCard
                   Stack={PorjectTwo}
-                  Gitlink={"https://github.com/AdminForIinRange/Tutoring-Website"}
+                  Gitlink={
+                    "https://github.com/AdminForIinRange/Tutoring-Website"
+                  }
                   WebLink={"https://tutorsite-68141.web.app/"}
                   Imageid={TutoringSite}
                   Title={"Tutoring Site Landing Page"}
@@ -215,7 +217,9 @@ export default function Projects() {
               <LeftRightAnimation>
                 <ProjectOneCard
                   Stack={PorjectTwo}
-                  Gitlink={"https://github.com/AdminForIinRange/Tutoring-Website"}
+                  Gitlink={
+                    "https://github.com/AdminForIinRange/Tutoring-Website"
+                  }
                   WebLink={"https://tutorsite-68141.web.app/"}
                   Imageid={TutoringSite}
                   Title={"Tutoring Site Landing Page"}
